@@ -1,0 +1,15 @@
+---
+import texts from "../data/texts.de.json";
+const t = texts.cta;
+---
+
+<section id="reserve" class="mt-24 bg-[color:var(--brand)]/80">
+    <div class="container py-16 text-center">
+        <p class="uppercase tracking-wide text-xs font-semibold">{t.eyebrow}</p>
+        <h3 class="mt-2 text-3xl md:text-4xl font-extrabold">{t.title}</h3>
+        <a
+            href="mailto:hallo@primaltraining.de?subject=Probetraining"
+            class="btn btn-primary mt-6">{t.button}</a
+        >
+    </div>
+</section>

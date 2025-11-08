@@ -1,0 +1,64 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "Über uns",
+        "reserve": "Platz reservieren"
+    },
+    "hero": {
+        "kicker": "Train hard. Live better.",
+        "titleStrong": "TRAIN HARD.",
+        "titleLight": "LIVE BETTER",
+        "subtitle": "Trainiere wie ein/e Athlet/in mit erstklassigem Coaching und smartem Programming – ob Personal Training, Klassen oder Open Gym. Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits.",
+        "cta": "Jetzt Platz sichern"
+    },
+    "features": {
+        "title": "Für die Entschlossenen",
+        "cards": [
+            {
+                "title": "Guided by Experts",
+                "text": "Unsere zertifizierten Coaches schaffen ein positives Umfeld – mit klarem Plan, ehrlichem Feedback und Spaß an harter Arbeit."
+            },
+            {
+                "title": "Dynamic Open Gym",
+                "text": "Unser Gym ist auf Training ausgelegt: freie Flächen, Plattformen, Racks. Für Kraft, Ausdauer, Mobilität – und einen starken Rücken."
+            },
+            {
+                "title": "Community First",
+                "text": "Trainiere mit Menschen, die Ziele haben wie du. Zusammen bleibt man dran und kommt messbar voran."
+            }
+        ]
+    },
+    "community": {
+        "headingBold": "JOIN THE",
+        "headingAccent": "COMMUNITY",
+        "blocks": [
+            {
+                "title": "Expert Coaching",
+                "text": "Trainer/innen, die wirklich hinsehen – mit Technik-Checks und Progress-Tracking."
+            },
+            {
+                "title": "Results‑Driven Programs",
+                "text": "Periodisierte Workouts, die klare, messbare Ergebnisse liefern."
+            },
+            {
+                "title": "A Supportive Tribe",
+                "text": "Eine Community, die dich pusht, wenn es schwer wird."
+            }
+        ],
+        "ctaLabel": "Kurse ansehen"
+    },
+    "cta": {
+        "eyebrow": "Woran wir glauben",
+        "title": "Werde Teil des Primal Tribe – heute!",
+        "button": "Platz reservieren"
+    },
+    "footer": {
+        "contact": "Kontakt",
+        "opening": "Öffnungszeiten",
+        "social": "Social"
+    },
+    "seo": {
+        "title": "PrimalTraining – Fitness Studio & Open Gym in Berlin",
+        "description": "Personal Training, Kurse und Open Gym in Berlin-Mitte. Jetzt Probetraining sichern und stärker werden."
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "PrimalTraining DE",
+  "url": "https://example.com",
+  "telephone": "+49 30 1234567",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Köpenicker Str. 12",
+    "postalCode": "10179",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "openingHours": [
+    "Mo-Fr 06:00-22:30",
+    "Sa 08:00-20:00",
+    "So 09:00-19:00"
+  ],
+  "image": [
+    "/images/hero.jpg"
+  ],
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Open Gym",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Personal Training",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Gruppenkurse",
+      "value": true
+    }
+  ]
+}

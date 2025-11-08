@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <section class="container flex flex-col">
+        <!-- full width block -->
+        <div class="flex items-center justify-center py-10">
+            <h1 class="geist-mono text-5xl">Über uns</h1>
+        </div>
+
+        <!-- block with left 2xp and left image -->
+        <div
+            class="flex flex-col flex-wrap-reverse lg:flex-row lg:items-center lg:flex-nowrap lg:items-stretch"
+        >
+            <div class="bg-(--brand) p-6 gap-4 lg:w-1/2">
+                <p class="text-xl font-mono font-extrabold mb-4">
+                    Unsere Mission
+                </p>
+                <p>
+                    Unsere Mission ist es, eine unterstützende und motivierende
+                    Umgebung zu schaffen, in der jeder seine Fitnessziele
+                    erreichen kann.
+                </p>
+            </div>
+            <img
+                src="/about_gymhelp.avif"
+                alt="Unsere Mission"
+                class="w-full h-full object-cover aspect-[16/9] order-first lg:order-none lg:w-1/2"
+                loading="lazy"
+            />
+        </div>
+        <!-- block left image , right text  -->
+        <div class="flex-col lg:flex-row lg:flex lg:items-stretch">
+            <img
+                src="/about_team.avif"
+                alt="Unser Team"
+                class="w-full h-full object-cover aspect-[16/9] lg:w-1/2"
+                loading="lazy"
+            />
+            <div class="bg-(--brand) p-6 gap-4">
+                <p class="text-xl font-mono font-extrabold mb-4">Unser Team</p>
+                <p>
+                    Unser Team besteht aus erfahrenen Trainern und freundlichem
+                    Personal, das bereit ist, Ihnen bei jedem Schritt zu helfen.
+                </p>
+            </div>
+        </div>
+
+        <!-- block with full w image, and discription over image right down angle -->
+        <div class="relative lg:h-[500px]">
+            <img
+                src="/about_strong.avif"
+                alt="Unsere Vision"
+                class="w-full h-full object-cover aspect-[16/9]"
+                loading="lazy"
+            />
+            <div
+                class="absolute inset-0 flex items-end lg:p-4 justify-start lg:w-1/2"
+            >
+                <p
+                    class="bg-opacity-80 p-6 text-white lg:text-5xl anek-tamil text-x"
+                >
+                    Unsere Vision ist es, der führende Anbieter von
+                    Fitnessdienstleistungen in der Region zu werden und unseren
+                    Mitgliedern zu helfen, ihre Ziele zu erreichen.
+                </p>
+            </div>
+        </div>
+
+        <!-- full w block and big text with button to "reserve a spot" -->
+        <div
+            class="flex flex-col items-center justify-evenly text-center gap-6 py-10 lg:h-[500px] bg-[#E9ECFF] anek-tamil"
+        >
+            <p class="text-lg">Platz reservieren</p>
+            <p class="text-3xl lg:text-5xl font-extrabold">
+                Sichern Sie sich noch heute Ihren Platz in unserem Fitnessstudio
+                und starten Sie Ihre Reise zu einem gesünderen Ich!
+            </p>
+            <a href="#reserve" class="py-4 px-4 bg-(--brand)">
+                Platz reservieren
+            </a>
+        </div>
+    </section>
+</BaseLayout>

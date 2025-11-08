@@ -1,0 +1,40 @@
+---
+import texts from "../data/texts.de.json";
+const t = texts.hero;
+---
+
+<section class="container gap-8 py-5 w-screen">
+    <div
+        class="flex flex-col justify-between gap-5 lg:flex-col lg:items-center"
+    >
+        <h1
+            class="text-5xl md:text-7xl font-extrabold leading-[0.95] tracking-tight"
+        >
+            <span>{t.titleStrong} </span><span class="text-[color:var(--brand)]"
+                >{t.titleLight}</span
+            >
+        </h1>
+        <div class="flex flex-col lg:flex-row lg:w-screen">
+            <div class="border-neutral-200 lg:w-1/2">
+                <img
+                    src="/hero_girl.avif"
+                    alt="Training im Gym"
+                    class="w-full h-full object-cover aspect-[4/3]"
+                    loading="eager"
+                />
+            </div>
+            <div
+                class="lg:w-1/2 flex flex-col justify-evenly bg-[#E9ECFF] p-10"
+            >
+                <p class="mt-2 text-5xl text-neutral-700 font-extrabold">
+                    {t.titleStrong}
+                </p>
+                <p
+                    class="mt-6 lg:text-3xl text-neutral-700 font-light geist-mono"
+                >
+                    {t.subtitle}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

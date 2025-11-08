@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100..800&family=Geist+Mono:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+        "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+:root {
+    --brand: #8da1ff;
+}
+
+html,
+body {
+    @apply h-full bg-neutral-50 text-neutral-900 antialiased;
+}
+
+.container {
+    @apply mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.btn {
+    @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition hover:opacity-90;
+}
+
+.btn-primary {
+    @apply bg-neutral-900 text-white;
+}
+
+.badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-neutral-200 text-neutral-700;
+}
+
+.card {
+    @apply bg-white p-6 shadow-sm;
+}
+
+.geist-mono {
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: light;
+    font-weight: 400;
+}
+
+.anek-tamil {
+    font-family: "Anek Tamil", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    font-variation-settings: "wdth" 100;
+}

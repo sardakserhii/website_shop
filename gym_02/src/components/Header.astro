@@ -1,0 +1,37 @@
+---
+import { matchPathname } from "astro/dist/assets/utils";
+import { site } from "../config/site";
+import texts from "../data/texts.de.json";
+const t = texts.nav;
+const { pathname } = Astro.url;
+---
+
+<header
+    class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-neutral-200"
+>
+    <div
+        class="container flex flex-wrap items-center justify-between py-4 gap-x-8"
+    >
+        <a
+            href="/"
+            class="font-extrabold tracking-tight text-xl geist-mono mb-4 lg:mb-0"
+            >Primal<span class="text-[color:var(--brand)]">Training</span></a
+        >
+        <nav
+            class="flex items-center gap-6 text-[18px] text-neutral-700 geist-mono"
+        >
+            <a href="/" class="hover:opacity-70">{t.home}</a>
+            <a href="/about" class="hover:opacity-70">{t.about}</a>
+            {
+                pathname === "/" && (
+                    <a
+                        href="#reserve"
+                        class="py-2 px-4 rounded-2xl bg-(--brand)"
+                    >
+                        Platz buchen
+                    </a>
+                )
+            }
+        </nav>
+    </div>
+</header>

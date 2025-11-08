@@ -1,0 +1,38 @@
+---
+import texts from "../data/texts.de.json";
+const t = texts.community;
+---
+
+<section id="classes" class="mt-28">
+    <div class="container">
+        <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+            <span>{t.headingBold} </span>
+            <span class="text-[color:var(--brand)]">{t.headingAccent}</span>
+        </h2>
+    </div>
+    <div class="container mt-8 grid lg:grid-cols-[1fr_2fr] gap-8 items-stretch">
+        <div class="grid gap-4">
+            {
+                t.blocks.map((b) => (
+                    <div class="card">
+                        <h3 class="font-bold">{b.title}</h3>
+                        <p class="text-neutral-700 text-sm mt-1">{b.text}</p>
+                    </div>
+                ))
+            }
+            <a
+                href="#classes"
+                class="m-auto p-4 geist-mono bg-(--brand) rounded-2xl text-white"
+                >{t.ctaLabel}</a
+            >
+        </div>
+        <div class="overflow-hidden border border-neutral-200">
+            <img
+                src="/gym_community.avif"
+                alt="Community im Training"
+                class="w-full h-full object-cover aspect-[16/9]"
+                loading="lazy"
+            />
+        </div>
+    </div>
+</section>

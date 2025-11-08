@@ -1,0 +1,40 @@
+---
+import texts from "../data/texts.de.json";
+const { features } = texts;
+---
+
+<section
+    id="about"
+    class="container mt-20 grid md:grid-cols-2 lg:grid-cols-3 lg:w-screen"
+>
+    {
+        features.cards.map((card, i) => (
+            <div
+                class={
+                    "bg-blue-100 gap-5 p-6 " + (i === 2 ? "lg:col-span-1" : "")
+                }
+            >
+                <h3 class="text-lg font-bold mb-2">{card.title}</h3>
+                <p class="text-neutral-700 text-sm leading-relaxed  geist-mono">
+                    {card.text}
+                </p>
+            </div>
+        ))
+    }
+    <div class="lg:col-span-2 overflow-hidden order-first lg:order-none">
+        <img
+            src="/atl_train.avif"
+            alt="Athletisches Training"
+            class="w-full h-full object-cover aspect-[16/9]"
+            loading="lazy"
+        />
+    </div>
+    <div class="overflow-hidden">
+        <img
+            src="/open_gym.avif"
+            alt="Open Gym Berlin"
+            class="w-full h-full object-cover aspect-[1/1]"
+            loading="lazy"
+        />
+    </div>
+</section>
