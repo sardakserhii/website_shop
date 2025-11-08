@@ -1,0 +1,145 @@
+---
+
+---
+
+<style>
+    .i-check::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-top: 1px;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+            no-repeat center / contain;
+        background-color: rgb(34 197 94); /* green-500 */
+    }
+    .i-cross::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-top: 1px;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+            no-repeat center / contain;
+        background-color: rgb(239 68 68); /* red-500 */
+    }
+</style>
+
+<!-- section with title, description, button all full width -->
+<section
+    class="w-full mx-auto my-16 flex flex-col items-center justify-center gap-12 px-4 py-16"
+>
+    <div class="text-center gap-4 flex flex-col justify-between h-full">
+        <p class="crimson-text-regular">Specifications</p>
+        <h2 class="font-mono font-bold text-3xl md:text-4xl">
+            Product Specifications
+        </h2>
+        <p class="mt-4 font-mono text-lg md:text-xl text-gray-700">
+            Explore the detailed specifications of our product to understand its
+            capabilities.
+        </p>
+    </div>
+    <div class="mt-8 flex justify-center">
+        <button class="bg-green-500 text-white font-mono py-2 px-4 rounded">
+            View Full Specifications
+        </button>
+    </div>
+    <!-- Responsive Table with sticky first column -->
+    <div class="w-full max-w-6xl">
+        <!-- Hint для мобильных -->
+        <p class="sm:hidden text-xs text-gray-500 mb-2 px-2">
+            ← Свайпните таблицу вправо →
+        </p>
+        
+        <!-- Wrapper с тенью справа на мобиле -->
+        <div class="relative overflow-x-auto border rounded-lg shadow-sm">
+            <!-- Градиент-подсказка справа -->
+            <div
+                class="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-gray-50 to-transparent sm:hidden z-10"
+            >
+            </div>
+
+            <table class="w-full border-collapse">
+                <!-- HEADER -->
+                <thead class="bg-gray-50">
+                    <tr class="text-sm font-semibold text-gray-700">
+                        <th
+                            class="sticky left-0 z-20 bg-gray-50 px-3 sm:px-6 py-4 text-left min-w-[140px] sm:min-w-[200px] border-b-2 border-gray-200"
+                        >
+                            Area
+                        </th>
+                        <th class="px-3 sm:px-6 py-4 text-left min-w-[120px] sm:min-w-[180px] border-b-2 border-gray-200">
+                            WebSurge
+                        </th>
+                        <th class="px-3 sm:px-6 py-4 text-left min-w-[120px] sm:min-w-[180px] border-b-2 border-gray-200">
+                            HyperView
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- BODY -->
+                <tbody class="text-sm text-gray-800 bg-white">
+                    <!-- ROW 1 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white hover:bg-gray-50 px-3 sm:px-6 py-4 border-b border-gray-200 transition-colors">
+                            <span class="flex items-center gap-1.5 sm:gap-2">
+                                <span class="i-check flex-shrink-0"></span>
+                                <span class="text-xs sm:text-sm">Ultra-fast browsing</span>
+                            </span>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4 border-b border-gray-200">
+                            <span class="flex items-center gap-1.5 text-xs sm:text-sm">
+                                <span class="i-check flex-shrink-0"></span> Fast browsing
+                            </span>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4 border-b border-gray-200">
+                            <span class="flex items-center gap-1.5 text-xs sm:text-sm">
+                                <span class="i-cross flex-shrink-0"></span> Moderate speeds
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- ROW 2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white hover:bg-gray-50 px-3 sm:px-6 py-4 border-b border-gray-200 transition-colors">
+                            <span class="flex items-center gap-1.5 sm:gap-2">
+                                <span class="i-check flex-shrink-0"></span>
+                                <span class="text-xs sm:text-sm">Advanced AI insights</span>
+                            </span>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4 border-b border-gray-200">
+                            <span class="flex items-center gap-1.5 text-xs sm:text-sm">
+                                <span class="i-check flex-shrink-0"></span> Basic AI
+                            </span>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4 border-b border-gray-200">
+                            <span class="flex items-center gap-1.5 text-xs sm:text-sm">
+                                <span class="i-cross flex-shrink-0"></span> No AI
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- ROW 3 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white hover:bg-gray-50 px-3 sm:px-6 py-4 border-b border-gray-200 transition-colors">
+                            <span class="flex items-center gap-1.5 sm:gap-2">
+                                <span class="i-check flex-shrink-0"></span>
+                                <span class="text-xs sm:text-sm">Seamless integration</span>
+                            </span>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4 border-b border-gray-200">
+                            <span class="flex items-center gap-1.5 text-xs sm:text-sm">
+                                <span class="i-check flex-shrink-0"></span> Customizable
+                            </span>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4 border-b border-gray-200">
+                            <span class="flex items-center gap-1.5 text-xs sm:text-sm">
+                                <span class="i-cross flex-shrink-0"></span> Complex setup
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
