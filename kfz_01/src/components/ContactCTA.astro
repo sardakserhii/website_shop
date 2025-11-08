@@ -1,0 +1,35 @@
+---
+import texts from "../data/texts.de.json";
+import { siteMeta } from "../config/site";
+---
+
+<section class="section bg-[#0F1115]">
+    <div class="container grid md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="h2">{texts.cta.title}</h2>
+            <p class="lead mt-2">{texts.cta.sub}</p>
+            <ul class="mt-4 space-y-2 text-white/80 list-disc pl-5">
+                {texts.cta.bullets.map((b) => <li>{b}</li>)}
+            </ul>
+            <div class="mt-6 space-x-3">
+                <!-- <a
+                    class="px-4 py-2 rounded-md bg-yellow-400 text-black font-semibold hover:opacity-90"
+                    href="#termin">Termin anfragen</a
+                > -->
+                <a
+                    class="px-4 py-2 rounded-md bg-yellow-400 text-black hover:bg-white/15"
+                    href={"https://wa.me/" +
+                        siteMeta.whatsapp.replace(/\s|\+/g, "")}>WhatsApp</a
+                >
+            </div>
+        </div>
+        <div class="card p-6">
+            <div class="text-sm text-white/70">Telefon: {siteMeta.phone}</div>
+            <div class="text-sm text-white/70">E-Mail: {siteMeta.email}</div>
+            <div class="text-sm text-white/70">Adresse: {siteMeta.address}</div>
+            <div class="text-sm text-white/70 mt-2">
+                Öffnungszeiten: {siteMeta.hours.join(", ")}
+            </div>
+        </div>
+    </div>
+</section>

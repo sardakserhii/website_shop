@@ -1,0 +1,61 @@
+---
+
+---
+
+<style>
+    @keyframes slide-up {
+        from {
+            transform: translateY(40px) scale(0.985);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
+<!-- block with text 33% height with big text centered -->
+<section class="flex flex-col items-center justify-start gap-4 h-screen">
+    <div class="p-4 py-8 h-1/2 lg:h-auto flex items-center justify-center">
+        <h1
+            class="text-7xl lg:text-9xl font-bold text-center crimson-text-regular"
+        >
+            Browse everything.
+        </h1>
+    </div>
+
+    <!-- block with iphone image, and background quad whiteyellow color -->
+    <div class="relative inline-block">
+        <!-- iPhone -->
+        <!-- <img
+            src="/hero_iPhone.png"
+            alt=""
+            class="block w-[360px] rounded-[32px] motion-safe:animate-[slide-up_1.25s_cubic-bezier(.22,1,.36,1)_.12s_both]"
+        /> -->
+        <picture
+            class="motion-safe:animate-[slide-up_1.25s_cubic-bezier(.22,1,.36,1)_.12s_both]"
+        >
+            <!-- для широких экранов (iPad/desktop) -->
+            <source media="(min-width: 1024px)" srcset="/hero_ipad.png" />
+
+            <!-- по умолчанию (мобильные) -->
+            <img
+                src="/hero_iPhone.png"
+                alt="Product mockup"
+                width="{iphone.width}"
+                height="{iphone.height}"
+                loading="eager"
+                decoding="async"
+                class="mx-auto"
+            />
+        </picture>
+
+        <div
+            class="pointer-events-none absolute -z-10 left-1/2 top-[100px] bottom-[0]
+           lg:w-[1095px] w-[423px] -translate-x-1/2 rounded-[100px]
+           bg-[#8b9a73]/90 shadow-lg"
+        >
+        </div>
+    </div>
+</section>

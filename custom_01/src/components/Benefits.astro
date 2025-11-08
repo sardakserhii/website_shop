@@ -1,0 +1,76 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<!-- block with h2 and 2 x p , first p have crimson-text-regular-italic and big size, second p have gray-text-regular and small size -->
+<section class="py-24 border-b border-gray-200 bg-white">
+    <div
+        class="max-w-4xl text-start px-4 md:px-0 flex flex-col justify-start lg:ml-36 gap-10 pb-12"
+    >
+        <h2 class="font-mono font-regular text-[12px] mb-6">
+            Benefits of Using Our Product
+        </h2>
+        <p class="font-mono text-2xl font-bold mb-4">We’ve cracked the code.</p>
+        <p class="text-gray-700 text-base font-mono">
+            Our product is designed to meet your needs with cutting-edge
+            technology and user-friendly features. Enjoy seamless integration,
+            robust security, and exceptional customer support that ensures you
+            get the most out of your investment.
+        </p>
+    </div>
+
+    <!-- block with 4x cards, card have icon , title, description, and col direction -->
+    <div
+        class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:w-auto px-4 md:px-0 mx-auto lg:ml-36 mr-36"
+    >
+        <div class="flex flex-col items-start">
+            <div class="mb-4">
+                <Icon name="lucide:code-2" class="size-6" />
+            </div>
+            <h3 class="font-mono font-bold text-lg mb-2">Feature One</h3>
+            <p class="font-mono text-left">
+                Description of feature one goes here. It highlights the key
+                benefits and functionalities.
+            </p>
+        </div>
+        <div class="flex flex-col items-start">
+            <div class="mb-4">
+                <Icon name="lucide:shield-check" class="size-6" />
+            </div>
+            <h3 class="font-mono font-bold text-lg mb-2">Feature Two</h3>
+            <p class="font-mono text-left">
+                Description of feature two goes here. It highlights the key
+                benefits and functionalities.
+            </p>
+        </div>
+        <div class="flex flex-col items-start">
+            <div class="mb-4">
+                <Icon name="lucide:annoyed" class="size-6" />
+            </div>
+            <h3 class="font-mono font-bold text-lg mb-2">Feature Three</h3>
+            <p class="font-mono text-left">
+                Description of feature three goes here. It highlights the key
+                benefits and functionalities.
+            </p>
+        </div>
+        <div class="flex flex-col items-start">
+            <div class="mb-4">
+                <Icon name="lucide:bluetooth" class="size-6" />
+            </div>
+            <h3 class="font-mono font-bold text-lg mb-2">Feature Four</h3>
+            <p class="font-mono text-left">
+                Description of feature four goes here. It highlights the key
+                benefits and functionalities.
+            </p>
+        </div>
+    </div>
+
+    <!-- block with full-width and responsive image -->
+    <div class="mt-12 lg:mx-24 mx-4">
+        <img
+            src="/benefits_image.png"
+            alt="Descriptive alt text"
+            class="w-full h-auto"
+        />
+    </div>
+</section>

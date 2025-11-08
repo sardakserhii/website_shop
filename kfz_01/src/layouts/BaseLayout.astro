@@ -1,0 +1,17 @@
+
+---
+import "../styles/global.css";
+import { siteMeta } from "../config/site";
+const { title = siteMeta.title, description = siteMeta.description } = Astro.props;
+---
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

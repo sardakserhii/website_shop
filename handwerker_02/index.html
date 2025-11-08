@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Meisterbetrieb für Renovierung und Innenausbau</title>
+  <meta name="description"
+    content="Ihr Partner für hochwertige Renovierungen und Innenausbau. Zuverlässig, sauber, termintreu – vom Maler bis zur Komplettsanierung." />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              50: '#FFF7ED',
+              100: '#FFEDD5',
+              200: '#FED7AA',
+              300: '#FDBA74',
+              400: '#FB923C',
+              500: '#F59E0B',
+              600: '#D97706',
+              700: '#B45309',
+              800: '#92400E',
+              900: '#78350F'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <noscript>
+    <style>
+      [data-animate] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Custom CSS for slider and animations -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Canonical + Social Cards -->
+  <link rel="canonical" href="https://meister-renovierung.de/" />
+  <meta name="theme-color" content="#F59E0B" />
+  <meta property="og:title" content="Meisterbetrieb für Renovierung und Innenausbau" />
+  <meta property="og:description"
+    content="Ihr Partner für hochwertige Renovierungen und Innenausbau. Zuverlässig, sauber, termintreu — vom Maler bis zur Komplettsanierung." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://meister-renovierung.de/" />
+  <meta property="og:image" content="https://meister-renovierung.de/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meisterbetrieb für Renovierung und Innenausbau" />
+  <meta name="twitter:description"
+    content="Ihr Partner für hochwertige Renovierungen und Innenausbau. Zuverlässig, sauber, termintreu — vom Maler bis zur Komplettsanierung." />
+  <meta name="twitter:image" content="https://meister-renovierung.de/og-image.jpg" />
+  <!-- Minimal critical CSS for first paint -->
+  <style>
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    [data-animate].in-view {
+      opacity: 1;
+      transform: none
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      [data-animate] {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #F59E0B;
+      outline-offset: 2px
+    }
+  </style>
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Meisterbetrieb für Renovierung und Innenausbau",
+            "url": "https://meister-renovierung.de/",
+            "email": "info@meister-renovierung.de",
+            "telephone": "+49-1234-567890",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Musterstraße 12",
+              "postalCode": "12345",
+              "addressLocality": "Musterstadt",
+              "addressCountry": "DE"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "url": "https://meister-renovierung.de/",
+            "name": "Meisterbetrieb für Renovierung und Innenausbau"
+          }
+        ]
+      }
+    </script>
+</head>
+
+<body class="font-[Inter],sans bg-white text-gray-800">
+  <!-- Header / Nav -->
+  <header class="site-header sticky top-0 z-40">
+    <div class="site-header__inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="#top" class="site-header__brand" aria-label="Startseite">
+        <span class="site-header__logo">M</span>
+        <span class="site-header__title">Meisterbetrieb für Renovierung und Innenausbau</span>
+      </a>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Hauptnavigation" data-open="false">
+        <ul class="primary-nav-list" role="list">
+          <li><a href="#about">Über uns</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#kalkulation">Kalkulation</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#kontakt"
+              class="cta-link site-header__cta--mobile inline-flex items-center justify-center rounded-md bg-accent-500 px-4 py-2 font-semibold text-white hover:bg-accent-600 transition-colors">Kostenlose
+              Anfrage</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__controls">
+        <a href="#kontakt"
+          class="cta-link site-header__cta inline-flex items-center justify-center rounded-full bg-accent-500 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-accent-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500 transition-colors">Kostenlose
+          Anfrage</a>
+        <button type="button"
+          class="site-header__toggle inline-flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500"
+          aria-expanded="false" aria-controls="primary-navigation" id="nav-toggle">
+          <span class="sr-only">Menü öffnen</span>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main" role="main" tabindex="-1">
+
+    <!-- Hero -->
+    <section id="top" class="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-accent-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="py-16 sm:py-24 grid md:grid-cols-2 gap-10 items-center">
+          <div data-animate class="space-y-6">
+            <h1 class="heading-display font-extrabold tracking-tight text-gray-900">
+              Meisterbetrieb für Renovierung und Innenausbau
+            </h1>
+            <p class="text-lg text-gray-700">
+              Ihr Partner für hochwertige Renovierungen und Innenausbau.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#kontakt" data-analytics="cta" data-analytics-id="hero-cta"
+                class="inline-flex items-center rounded-md bg-accent-500 px-6 py-3 font-semibold text-white shadow-sm hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500">Kostenlose
+                Anfrage senden</a>
+              <a href="#leistungen"
+                class="inline-flex items-center rounded-md border border-gray-300 px-6 py-3 font-semibold text-gray-700 hover:bg-gray-50">Unsere
+                Leistungen</a>
+            </div>
+          </div>
+          <!-- Decorative panel -->
+          <div data-animate class="hero-photo relative rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <img src="img/simone-impei-eZaKj3xAzTE-unsplash.jpg" alt="Renovierter Raum mit hellem Fenster"
+              class="w-full h-full object-cover" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="about" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div data-animate>
+            <h2 class="heading-section font-bold">Über uns</h2>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              Wir sind ein erfahrener Handwerksbetrieb für Renovierung und Innenausbau. Mit präziser Planung,
+              hochwertigen Materialien und sorgfältiger Ausführung realisieren wir Projekte für Privat- und
+              Gewerbekunden. Unser Anspruch: langlebige Ergebnisse, saubere Baustellen und verlässliche Termine.
+            </p>
+            <p class="mt-3 text-gray-700 leading-relaxed">
+              Von Malerarbeiten über Bodenverlegung und Trockenbau bis zur kompletten Sanierung begleiten wir Sie
+              kompetent und transparent.
+            </p>
+          </div>
+          <ul data-animate class="grid gap-4 md:gap-5">
+            <li class="flex items-start gap-4 p-4 border border-gray-200 rounded-lg shadow-sm">
+              <span
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                <!-- check icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M10.28 16.28a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l2.47 2.47 6.47-6.47a.75.75 0 1 1 1.06 1.06l-7 7Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">Zuverlässig</p>
+                <p class="text-sm text-gray-600">Fester Ansprechpartner und klare Zeitpläne.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4 p-4 border border-gray-200 rounded-lg shadow-sm">
+              <span
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                <!-- sparkle icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                  <path
+                    d="M11.645 20.91l-.007.002a.75.75 0 0 1-.531-.004l-.003-.001a5.718 5.718 0 0 1-.407-.176 13.116 13.116 0 0 1-3.903-3.006C4.316 15.446 3 13.237 3 10.875 3 7.385 5.686 4.5 9 4.5c1.82 0 3.56.811 4.748 2.16C14.94 5.312 16.68 4.5 18.5 4.5c3.314 0 6 2.885 6 6.375 0 2.362-1.316 4.57-3.794 6.75a13.116 13.116 0 0 1-3.903 3.006 5.72 5.72 0 0 1-.407.176l-.003.001a.75.75 0 0 1-.538.001 5.75 5.75 0 0 1-.399-.175 12.291 12.291 0 0 1-3.811-2.959 12.295 12.295 0 0 1-3.81 2.959 5.75 5.75 0 0 1-.4.175Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">Sauber</p>
+                <p class="text-sm text-gray-600">Staubarmes Arbeiten und ordentliche Übergabe.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4 p-4 border border-gray-200 rounded-lg shadow-sm">
+              <span
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                <!-- clock icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M12 2.25a9.75 9.75 0 1 0 0 19.5 9.75 9.75 0 0 0 0-19.5ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .199.079.39.22.53l3.75 3.75a.75.75 0 1 0 1.06-1.06l-3.53-3.53V6Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">Termintreu</p>
+                <p class="text-sm text-gray-600">Verlässliche Ausführung nach Vereinbarung.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie Vorher/Nachher -->
+    <section id="galerie" class="py-16 sm:py-24 bg-gray-50 border-t border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="heading-section font-bold" data-animate>Vorher / Nachher</h2>
+        <p class="mt-3 text-gray-700" data-animate>Ein Blick in unsere Arbeitsergebnisse – klare Verbesserungen in
+          Qualität und Optik.</p>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Compare Item 1 -->
+          <div class="compare" data-animate>
+            <div class="compare-surface">
+              <img src="img/before_after/1_before.jpg" alt="Vorher" class="compare-img before" loading="lazy"
+                decoding="async" width="800" height="600" />
+              <img src="img/before_after/1_after.png" alt="Nachher" class="compare-img after" loading="lazy"
+                decoding="async" width="800" height="600" />
+              <div class="compare-layer before">
+                <div class="label">Vorher</div>
+              </div>
+              <div class="compare-layer after">
+                <div class="label">Nachher</div>
+              </div>
+              <div class="compare-handle" aria-hidden="true"></div>
+              <input class="compare-range" type="range" min="0" max="100" value="50"
+                aria-label="Vorher/Nachher Schieberegler" />
+            </div>
+            <p class="mt-3 text-sm text-gray-600">Frischer Anstrich und präzise Kanten.</p>
+          </div>
+
+          <!-- Compare Item 2 -->
+          <div class="compare" data-animate>
+            <div class="compare-surface">
+              <img src="img/before_after/2.jpg" alt="Vorher" class="compare-img before" loading="lazy" decoding="async"
+                width="800" height="600" />
+              <img src="img/before_after/2_after.png" alt="Nachher" class="compare-img after" loading="lazy"
+                decoding="async" width="800" height="600" />
+              <div class="compare-layer before">
+                <div class="label">Vorher</div>
+              </div>
+              <div class="compare-layer after">
+                <div class="label">Nachher</div>
+              </div>
+              <div class="compare-handle" aria-hidden="true"></div>
+              <input class="compare-range" type="range" min="0" max="100" value="50"
+                aria-label="Vorher/Nachher Schieberegler" />
+            </div>
+            <p class="mt-3 text-sm text-gray-600">Neuer Boden – warm und strapazierfähig.</p>
+          </div>
+
+          <!-- Compare Item 3 -->
+          <div class="compare" data-animate>
+            <div class="compare-surface">
+              <img src="img/before_after/3.jpg" alt="Vorher" class="compare-img before" loading="lazy" decoding="async"
+                width="800" height="600" />
+              <img src="img/before_after/3_after.png" alt="Nachher" class="compare-img after" loading="lazy"
+                decoding="async" width="800" height="600" />
+              <div class="compare-layer before">
+                <div class="label">Vorher</div>
+              </div>
+              <div class="compare-layer after">
+                <div class="label">Nachher</div>
+              </div>
+              <div class="compare-handle" aria-hidden="true"></div>
+              <input class="compare-range" type="range" min="0" max="100" value="50"
+                aria-label="Vorher/Nachher Schieberegler" />
+            </div>
+            <p class="mt-3 text-sm text-gray-600">Badezimmer modernisiert – klar, hell, pflegeleicht.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="heading-section font-bold" data-animate>Leistungen</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="p-6 rounded-xl border border-gray-200 shadow-sm bg-white" data-animate>
+            <h3 class="font-semibold">Malerarbeiten</h3>
+            <p class="mt-2 text-sm text-gray-600">Farbkonzepte, Anstriche, Spachtelarbeiten und Tapezierarbeiten.</p>
+          </div>
+          <div class="p-6 rounded-xl border border-gray-200 shadow-sm bg-white" data-animate>
+            <h3 class="font-semibold">Bodenverlegung</h3>
+            <p class="mt-2 text-sm text-gray-600">Vinyl, Parkett, Laminat – fachgerecht und langlebig verlegt.</p>
+          </div>
+          <div class="p-6 rounded-xl border border-gray-200 shadow-sm bg-white" data-animate>
+            <h3 class="font-semibold">Trockenbau</h3>
+            <p class="mt-2 text-sm text-gray-600">Wände, Decken, Schallschutz und Dämmung nach Maß.</p>
+          </div>
+          <div class="p-6 rounded-xl border border-gray-200 shadow-sm bg-white" data-animate>
+            <h3 class="font-semibold">Badezimmer-Renovierung</h3>
+            <p class="mt-2 text-sm text-gray-600">Fliesen, Sanitär und Oberflächen – modern und pflegeleicht.</p>
+          </div>
+          <div class="p-6 rounded-xl border border-gray-200 shadow-sm bg-white" data-animate>
+            <h3 class="font-semibold">Komplettsanierung</h3>
+            <p class="mt-2 text-sm text-gray-600">Koordination aller Gewerke – alles aus einer Hand.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kalkulation -->
+    <section id="kalkulation" class="py-16 sm:py-24 bg-gray-50 border-t border-b border-gray-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="heading-section font-bold" data-animate>Kosten kalkulieren</h2>
+        <p class="mt-2 text-gray-700" data-animate>Wählen Sie die Leistung und die Fläche. Die Kalkulation dient als
+          unverbindliche Orientierung.</p>
+
+        <form id="calc-form" class="mt-8 grid gap-4 p-6 bg-white rounded-xl border border-gray-200 shadow-sm"
+          novalidate>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="grid gap-1">
+              <span class="text-sm font-medium">Leistung</span>
+              <select id="calc-type"
+                class="mt-1 w-full rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500">
+                <option value="Malerarbeiten">Malerarbeiten</option>
+                <option value="Bodenverlegung">Bodenverlegung</option>
+                <option value="Trockenbau">Trockenbau</option>
+                <option value="Badezimmer-Renovierung">Badezimmer-Renovierung</option>
+                <option value="Komplettsanierung">Komplettsanierung</option>
+              </select>
+            </label>
+            <label class="grid gap-1">
+              <span class="text-sm font-medium">Fläche (m²)</span>
+              <input id="calc-area" type="number" min="1" step="1" placeholder="z.B. 25"
+                class="mt-1 w-full rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500" />
+            </label>
+          </div>
+          <div class="flex items-center gap-3">
+            <button id="calc-btn" type="button"
+              class="inline-flex items-center rounded-md bg-accent-500 px-5 py-2.5 font-semibold text-white hover:bg-accent-600">Berechnen</button>
+            <button id="offer-btn" type="button" disabled
+              class="inline-flex items-center rounded-md border border-gray-300 px-5 py-2.5 font-semibold text-gray-700 disabled:opacity-50 hover:bg-gray-50">Angebot
+              anfordern</button>
+          </div>
+          <output id="calc-result" class="text-base text-gray-700"></output>
+        </form>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div data-animate>
+            <h2 class="heading-section font-bold">Kontakt</h2>
+            <p class="mt-2 text-gray-700">Schreiben Sie uns – wir melden uns zeitnah mit einem Angebot.</p>
+            <form id="contact-form" class="mt-6 grid gap-4 p-6 bg-white rounded-xl border border-gray-200 shadow-sm"
+              action="mailto:info@meister-renovierung.de" method="post" enctype="text/plain"
+              data-analytics="form-submit" aria-label="Kontaktformular">
+              <label class="grid gap-1">
+                <span class="text-sm font-medium">Name</span>
+                <input name="name" type="text" required
+                  class="mt-1 w-full rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500" />
+              </label>
+              <label class="grid gap-1">
+                <span class="text-sm font-medium">E‑Mail</span>
+                <input name="email" type="email" required
+                  class="mt-1 w-full rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500" />
+              </label>
+              <label class="grid gap-1">
+                <span class="text-sm font-medium">Nachricht</span>
+                <textarea id="nachricht" name="nachricht" rows="5"
+                  class="mt-1 w-full rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500"
+                  placeholder="Kurze Projektbeschreibung, gewünschter Zeitraum, PLZ..."></textarea>
+              </label>
+              <div>
+                <button type="submit"
+                  class="inline-flex items-center rounded-md bg-accent-500 px-5 py-2.5 font-semibold text-white hover:bg-accent-600"
+                  aria-label="Anfrage absenden">Absenden</button>
+              </div>
+            </form>
+          </div>
+          <div data-animate="" class="flex items-stretch in-view"
+            style="flex-direction: column;justify-content: space-between;">
+            <h2 class="heading-section font-bold">Kontaktinformationen</h2>
+            <div class="p-6 rounded-xl border border-gray-200 bg-white shadow-sm "
+              style="display: flex;flex-direction: column;justify-content: space-around;">
+
+              <ul class="mt-4 space-y-3 text-gray-700">
+                <li><span class="font-medium">Telefon:</span> 01234 567890</li>
+                <li><span class="font-medium">E‑Mail:</span> info@meister-renovierung.de</li>
+                <li><span class="font-medium">Adresse:</span> Musterstraße 12, 12345 Musterstadt</li>
+                <li><span class="font-medium">Öffnungszeiten:</span> Mo–Fr 08:00–17:00 Uhr</li>
+              </ul>
+              <div class="mt-6 p-4 rounded-lg bg-accent-50 text-accent-800 border border-accent-100 text-sm">
+                Wir besichtigen Ihr Objekt gerne vor Ort und erstellen ein individuelles Angebot.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__legal bg-gray-50 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 md:grid-cols-2 text-sm text-gray-700">
+        <article id="impressum" class="space-y-2">
+          <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Impressum</h3>
+          <p>Meisterbetrieb für Renovierung und Innenausbau<br />Musterstraße 12, 12345 Musterstadt<br />Inhaber: Max
+            Mustermann</p>
+        </article>
+        <article id="datenschutz" class="space-y-2">
+          <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Datenschutz</h3>
+          <p>Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage genutzt. Es erfolgt keine Weitergabe an
+            Dritte.</p>
+        </article>
+      </div>
+    </div>
+    <div class="site-footer__primary border-t border-gray-200 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© <span id="year"></span> Meisterbetrieb für Renovierung und Innenausbau</p>
+        <nav aria-label="Footer Navigation" class="flex items-center gap-4 text-sm font-medium">
+
+        </nav>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/script.js"></script>
+</body>
+
+</html>

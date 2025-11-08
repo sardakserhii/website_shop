@@ -1,0 +1,23 @@
+
+---
+import { siteMeta } from "../config/site";
+---
+<footer class="bg-[#0B0D12] border-t border-white/5 py-12 mt-12">
+  <div class="container grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <div class="font-semibold mb-2">Über uns</div>
+      <p class="text-white/70">Meisterbetrieb für Wartung, Reparatur und Reifenservice in {siteMeta.city}. Moderne Diagnostik, faire Preise, schnelle Termine.</p>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Kontakt</div>
+      <p class="text-white/70">{siteMeta.address}</p>
+      <p class="text-white/70">Tel: {siteMeta.phone}</p>
+      <p class="text-white/70">E-Mail: {siteMeta.email}</p>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Öffnungszeiten</div>
+      <p class="text-white/70">{siteMeta.hours.join(", ")}</p>
+    </div>
+  </div>
+  <div class="container mt-8 text-white/40 text-xs">© {new Date().getFullYear()} Werkstatt. Alle Rechte vorbehalten.</div>
+</footer>

@@ -1,0 +1,18 @@
+
+---
+import texts from "../data/texts.de.json";
+---
+<section id="bewertungen" class="section">
+  <div class="container">
+    <h2 class="h2 mb-8">{texts.testimonials.title}</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {texts.testimonials.items.map(([n,txt]) => (
+        <div class="card p-5">
+          <div class="text-yellow-300 text-xl">“</div>
+          <p class="text-white/80">{txt}</p>
+          <div class="mt-4 text-sm text-white/60">– {n}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

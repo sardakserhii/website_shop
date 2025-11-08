@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café Sonnengold</title>
+  <meta name="description" content="Café, Bäckerei & Konditorei in Ihrer Nähe – frisch gebacken, mit Liebe serviert." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: custom colors & fonts
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
+            display: ['"Playfair Display"', 'Georgia', 'serif']
+          },
+          colors: {
+            coffee: {
+              50: '#f8f4f1',
+              100:'#f3ebe4',
+              200:'#e7d9cc',
+              300:'#d6c1ad',
+              400:'#be9c7e',
+              500:'#a97859',
+              600:'#8b5e43',
+              700:'#704a35',
+              800:'#543728',
+              900:'#3a251b',
+            },
+            cream: '#f9f5ee',
+            accent: '#f97316'
+          },
+          boxShadow: {
+            soft: '0 10px 25px -10px rgba(0,0,0,.15)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+  <body class="bg-cream text-coffee-900 font-sans selection:bg-accent/20 selection:text-coffee-900">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <span class="text-2xl">☕</span>
+          <span class="font-display text-xl tracking-wide group-hover:text-accent transition">Café Sonnengold</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="hover:text-accent transition" href="index.html">Home</a>
+          <a class="hover:text-accent transition" href="menu.html">Menü</a>
+          <a class="hover:text-accent transition" href="reservierung.html">Reservierung</a>
+          <a class="hover:text-accent transition" href="#">Impressum</a>
+          <a class="hover:text-accent transition" href="#">Datenschutz</a>
+        </nav>
+        <a href="reservierung.html" class="ml-3 inline-flex items-center rounded-xl bg-accent text-white px-4 py-2 text-sm shadow-soft hover:opacity-90 transition">
+          Jetzt reservieren
+        </a>
+      </div>
+    </header>
+    <main class="pt-20">
+
+      <!-- MENU HEADER -->
+      <section class="max-w-6xl mx-auto px-4 py-10">
+        <h1 class="font-display text-3xl mb-3">Menü</h1>
+        <p class="text-coffee-700">Wählen Sie eine Kategorie oder sehen Sie alle Produkte.</p>
+
+        <!-- Category Filter (horizontal, responsive) -->
+        <div class="mt-6 flex gap-2 overflow-x-auto snap-x snap-mandatory pb-2">
+          <button data-tab="all" onclick="filterMenu('all')" class="snap-start shrink-0 px-4 py-2 rounded-full border border-coffee-200 hover:border-accent transition">Alle</button>
+          <button data-tab="breakfast" onclick="filterMenu('breakfast')" class="snap-start shrink-0 px-4 py-2 rounded-full border border-coffee-200 hover:border-accent transition">Frühstück</button>
+          <button data-tab="lunch" onclick="filterMenu('lunch')" class="snap-start shrink-0 px-4 py-2 rounded-full border border-coffee-200 hover:border-accent transition">Lunch</button>
+          <button data-tab="desserts" onclick="filterMenu('desserts')" class="snap-start shrink-0 px-4 py-2 rounded-full border border-coffee-200 hover:border-accent transition">Desserts</button>
+          <button data-tab="drinks" onclick="filterMenu('drinks')" class="snap-start shrink-0 px-4 py-2 rounded-full border border-coffee-200 hover:border-accent transition">Getränke</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card template -->
+          <article data-cat="breakfast" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1610450624105-58a2f25f7911?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=830" alt="Granola Bowl">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Granola Bowl</h3>
+                  <p class="text-sm text-coffee-700">Joghurt, Beeren, Honig</p>
+                </div>
+                <div class="font-semibold">€5,90</div>
+              </div>
+            </div>
+          </article>
+
+          <article data-cat="lunch" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1400&auto=format&fit=crop" alt="Quiche">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Quiche des Tages</h3>
+                  <p class="text-sm text-coffee-700">Saisonal, herzhaft</p>
+                </div>
+                <div class="font-semibold">€6,50</div>
+              </div>
+            </div>
+          </article>
+
+          <article data-cat="desserts" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774" alt="Cakes">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Torten Auswahl</h3>
+                  <p class="text-sm text-coffee-700">Handgemacht, wechselnd</p>
+                </div>
+                <div class="font-semibold">ab €3,90</div>
+              </div>
+            </div>
+          </article>
+
+          <article data-cat="drinks" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://plus.unsplash.com/premium_photo-1674327105076-36c4419864cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774" alt="Latte">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Latte Macchiato</h3>
+                  <p class="text-sm text-coffee-700">Mild & cremig</p>
+                </div>
+                <div class="font-semibold">€3,40</div>
+              </div>
+            </div>
+          </article>
+
+          <article data-cat="breakfast" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://plus.unsplash.com/premium_photo-1661670932712-90ba64477d0f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742" alt="Avocado Toast">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Avocado-Toast</h3>
+                  <p class="text-sm text-coffee-700">Sauerteig, Zitrone, Chili</p>
+                </div>
+                <div class="font-semibold">€6,20</div>
+              </div>
+            </div>
+          </article>
+
+          <article data-cat="desserts" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZXNlY2FrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="Cheesecake">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Käsekuchen</h3>
+                  <p class="text-sm text-coffee-700">Cremig & klassisch</p>
+                </div>
+                <div class="font-semibold">€3,90</div>
+              </div>
+            </div>
+          </article>
+
+          <article data-cat="drinks" class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VGVlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Tea">
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-medium">Hausgemachter Tee</h3>
+                  <p class="text-sm text-coffee-700">Frisch aufgebrüht</p>
+                </div>
+                <div class="font-semibold">€2,90</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <script>
+        // Default to 'all' on load
+        document.addEventListener('DOMContentLoaded', () => filterMenu('all'));
+      </script>
+    </main>
+    <footer class="mt-16 border-t border-coffee-100 bg-white/60">
+      <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl">☕</span>
+            <span class="font-display text-lg">Café Sonnengold</span>
+          </div>
+          <p class="text-sm text-coffee-700">Frisch gebacken, mit Liebe serviert.</p>
+        </div>
+        <nav class="text-sm space-y-2">
+          <a class="block hover:text-accent" href="index.html">Home</a>
+          <a class="block hover:text-accent" href="menu.html">Menü</a>
+          <a class="block hover:text-accent" href="reservierung.html">Reservierung</a>
+          <a class="block hover:text-accent" href="#">Impressum</a>
+          <a class="block hover:text-accent" href="#">Datenschutz</a>
+        </nav>
+        <div class="text-sm">
+          <p class="font-medium mb-2">Kontakt</p>
+          <p>Hauptstraße 12, 76133 Karlsruhe</p>
+          <p>+49 721 123456</p>
+          <p>hallo@sonnengold.cafe</p>
+          <div class="mt-3 flex gap-3">
+            <a aria-label="Instagram" class="hover:text-accent" href="#">Instagram</a>
+            <a aria-label="Facebook" class="hover:text-accent" href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-xs text-coffee-600 py-4 bg-white/80">© 2025 Café Sonnengold</div>
+    </footer>
+    <script>
+      // Tiny helper for menu filters (only used on menu.html)
+      window.filterMenu = (category) => {
+        const cards = document.querySelectorAll('[data-cat]');
+        cards.forEach(c => {
+          const cat = c.getAttribute('data-cat');
+          const show = category === 'all' || cat === category;
+          c.classList.toggle('hidden', !show);
+        });
+        const tabs = document.querySelectorAll('[data-tab]');
+        tabs.forEach(t => t.classList.remove('bg-accent', 'text-white'));
+        const active = document.querySelector('[data-tab="' + category + '"]');
+        if (active) active.classList.add('bg-accent','text-white');
+      };
+      // Simple success message on reservation form
+      window.handleReserve = (e) => {
+        e.preventDefault();
+        const note = document.getElementById('reserve-note');
+        if (note){ note.classList.remove('hidden'); note.scrollIntoView({behavior:'smooth', block:'center'}); }
+        e.target.reset();
+      };
+    </script>
+  </body>
+</html>

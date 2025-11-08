@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+
+const seo = {
+  title: "Home — Astro Starter",
+  description: "Clean Astro + Tailwind baseline to start shipping fast.",
+};
+---
+<BaseLayout {...seo}>
+  <section class="grid gap-8 md:grid-cols-2 items-center">
+    <div class="space-y-4">
+      <h1 class="text-3xl/tight font-bold">Kickstart your next project with Astro + Tailwind</h1>
+      <p class="text-white/70">A minimal scaffold with sensible defaults: layout, SEO, icons, and a11y-friendly components.</p>
+      <div class="flex gap-2">
+        <a href="https://astro.build" class="rounded-full bg-white/10 px-4 py-2 text-sm hover:bg-white/15 inline-flex items-center gap-2">
+          <Icon name="lucide:rocket" class="h-4 w-4" /> Astro Docs
+        </a>
+        <a href="/about" class="rounded-full bg-white/5 px-4 py-2 text-sm hover:bg-white/10">About</a>
+      </div>
+    </div>
+    <div class="rounded-[var(--radius)] border border-white/10 p-6 bg-white/5">
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div class="rounded-xl bg-white/5 p-4">
+          <p class="text-2xl font-semibold">0 JS</p>
+          <p class="text-xs text-white/60">by default</p>
+        </div>
+        <div class="rounded-xl bg-white/5 p-4">
+          <p class="text-2xl font-semibold">Tailwind</p>
+          <p class="text-xs text-white/60">v4</p>
+        </div>
+        <div class="rounded-xl bg-white/5 p-4">
+          <p class="text-2xl font-semibold">Icons</p>
+          <p class="text-xs text-white/60">lucide + SI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

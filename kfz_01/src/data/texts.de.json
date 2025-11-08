@@ -1,0 +1,179 @@
+{
+    "nav": [
+        "Start",
+        "Leistungen",
+        "Preise",
+        "Über uns",
+        "Bewertungen",
+        "Kontakt"
+    ],
+    "hero": {
+        "title": "Ihre zuverlässige KFZ-Werkstatt in {city}",
+        "sub": "Wartung, Reparatur und Reifenservice für alle Marken – transparent, schnell und fair. HU/AU täglich, Diagnose für Verbrenner & E-Autos, Ersatzwagen verfügbar.",
+        "stats": [
+            {
+                "value": "20+",
+                "label": "Jahre Erfahrung"
+            },
+            {
+                "value": "90%",
+                "label": "Termine am selben/ nächsten Tag"
+            },
+            {
+                "value": "4.8★",
+                "label": "Google-Bewertungen"
+            }
+        ],
+        "cta1": "Jetzt Termin buchen",
+        "cta2": "WhatsApp-Anfrage"
+    },
+    "trust": "Zertifizierte Partner & geprüfte Qualität: Originalteile, Herstellergarantie bleibt erhalten, digitale Serviceeinträge.",
+    "about": {
+        "badge": "About us",
+        "title": "Wir bringen Ihr Fahrzeug sicher zurück auf die Straße",
+        "text": "Kundenzufriedenheit ist unser Antrieb. Unser Meisterbetrieb verbindet moderne Diagnosetechnik mit ehrlicher Beratung. Ob Inspektion, Bremsen, Ölwechsel oder komplexe Elektronik – wir liefern präzise Arbeit, klare Preise und zuverlässige Termine.",
+        "cta": "Mehr erfahren"
+    },
+    "why": {
+        "title": "Darum entscheiden sich Kunden für uns",
+        "points": [
+            [
+                "Schneller Service",
+                "Viele Arbeiten am selben Tag, Express-Termin nach Verfügbarkeit."
+            ],
+            [
+                "Meister-Qualität",
+                "Erfahrenes Team, digitale Dokumentation der Arbeiten."
+            ],
+            [
+                "Transparente Preise",
+                "Vorab-Kostenvoranschlag, keine versteckten Kosten."
+            ],
+            [
+                "24/7 Annahme",
+                "Fahrzeugabgabe auch außerhalb der Öffnungszeiten möglich."
+            ],
+            ["Mobilität", "Ersatzwagen, Hol- & Bring-Service im Umkreis."],
+            [
+                "E-Auto fit",
+                "Hochvolt-geschult, schonende Reifen- & Bremsen-Programme."
+            ]
+        ]
+    },
+    "services": {
+        "title": "Unsere Leistungen",
+        "items": [
+            [
+                "Inspektion & Wartung",
+                "Nach Herstellervorgaben inkl. Serviceheft/ digitalem Eintrag."
+            ],
+            [
+                "Bremsen & Fahrwerk",
+                "Prüfung, Austausch, Achsvermessung – sicherer Stand & Spur."
+            ],
+            [
+                "Reifen & Räder",
+                "Montage, Auswuchten, Einlagerung, TPMS-Service."
+            ],
+            [
+                "HU/AU Vorbereitung & Abnahme",
+                "Tägliche Prüfungen in Zusammenarbeit mit TÜV/DEKRA."
+            ],
+            [
+                "Fehlerdiagnose & Elektronik",
+                "OBD-Diagnose, Software-Checks, Batterietest (12V & HV)."
+            ],
+            ["Klimaservice", "Dichtheitsprüfung, Neubefüllung, Filterwechsel."],
+            [
+                "Auspuff & Abgasanlage",
+                "Prüfung, Instandsetzung, Partikelfilter-Service."
+            ],
+            [
+                "Karosserie & Glas",
+                "Smart-Repair, Scheibentausch, Steinschlagreparatur."
+            ]
+        ]
+    },
+    "packages": {
+        "title": "Beliebte Pakete",
+        "items": [
+            [
+                "Urlaubs-Check",
+                "25 Prüfpunkte, Flüssigkeiten, Luftdruck, Licht, OBD-Scan."
+            ],
+            [
+                "Winter-Fit",
+                "Reifenwechsel, Profiltiefe, Batteriecheck, Frostschutz."
+            ],
+            ["Frische Luft", "Klima-Service + Innenraumfilter (Aktivkohle)."]
+        ]
+    },
+    "showcase": {
+        "title": "Ein Blick in unsere Arbeit",
+        "cards": [
+            [
+                "Bremsen-Service",
+                "Scheiben & Beläge, Einfahrhinweise inklusive.",
+                "brembo.avif"
+            ],
+            [
+                "Reifenwechsel & Einlagerung",
+                "Saisonwechsel in 30 Minuten.",
+                "reifen.avif"
+            ],
+            [
+                "Elektronik-Diagnose",
+                "Fehler gefunden, Ursache behoben, Update dokumentiert.",
+                "diagnosis.avif"
+            ]
+        ]
+    },
+    "usp": "Faire Preise. Klare Kommunikation. Nachweisbare Qualität – schriftlich dokumentiert.",
+    "testimonials": {
+        "title": "Das sagen unsere Kunden",
+        "items": [
+            [
+                "Branko S.",
+                "Sehr schnelle Diagnose und am selben Tag repariert. Preis wie besprochen. Absolute Empfehlung!"
+            ],
+            [
+                "Svetlana K.",
+                "Freundlicher Service, transparente Erklärung. HU/AU ohne Stress, komme gern wieder."
+            ],
+            [
+                "Jacek J.",
+                "Top Terminabwicklung über WhatsApp, Ersatzwagen war verfügbar. Werkstatt meines Vertrauens."
+            ]
+        ]
+    },
+    "cta": {
+        "title": "Lassen Sie uns starten – wir kümmern uns um Ihr Auto",
+        "sub": "Schreiben Sie uns kurz Ihr Anliegen. Wir melden uns mit Terminvorschlägen und einem fairen Angebot.",
+        "bullets": [
+            "Schnelle Rückmeldung noch heute",
+            "Abgabe schon ab 7:00 Uhr möglich",
+            "WhatsApp-Fotos vom Fahrzeug/Fehlercode willkommen"
+        ]
+    },
+    "form": {
+        "fields": {
+            "name": "Ihr Name",
+            "vehicle": "Fahrzeug (Marke/Modell, Baujahr)",
+            "email": "Ihr E-Mail",
+            "phone": "Telefon (für Rückfragen)",
+            "message": "Ihr Anliegen / Wunsch-Termin"
+        },
+        "submit": "Absenden",
+        "note": "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung zu."
+    },
+    "pricing": {
+        "title": "Faire Preise – klare Leistung",
+        "rows": [
+            ["Ölwechsel inkl. Filter", "ab 89 €", "je nach Öl/Modell"],
+            ["Bremsen vorne (Scheiben+Beläge)", "ab 239 €", "zzgl. Material"],
+            ["Klimaservice", "ab 79 €", ""],
+            ["HU/AU", "ab 149 €", "Partnerprüfung"]
+        ],
+        "disclaimer": "Preise abhängig von Marke/Modell. Genaue Kosten nach kurzer Fahrzeugprüfung."
+    }
+}

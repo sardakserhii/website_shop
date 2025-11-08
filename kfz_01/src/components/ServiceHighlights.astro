@@ -1,0 +1,19 @@
+---
+import texts from "../data/texts.de.json";
+---
+
+<section class="section bg-[#243e53]">
+    <div class="container">
+        <h2 class="h2 mb-8">{texts.packages.title}</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            {
+                texts.packages.items.map(([t, d]) => (
+                    <div class="card p-5">
+                        <div class="font-semibold">{t}</div>
+                        <div class="text-white/70 text-sm mt-1">{d}</div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

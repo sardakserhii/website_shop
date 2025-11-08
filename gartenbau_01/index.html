@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Garten — Умные решения для садоводов</title>
+  <meta name="description" content="Garten помогает автоматизировать уход за садом с помощью умных датчиков, аналитики и персонализированных рекомендаций." data-i18n-attr="content:meta.description">
+  <meta property="og:title" content="Garten — Умный сад без лишних усилий" data-i18n-attr="content:meta.ogTitle">
+  <meta property="og:description" content="Система Garten анализирует состояние почвы и растений, отправляет уведомления и оптимизирует полив." data-i18n-attr="content:meta.ogDescription">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Garten+Preview">
+  <link rel="icon" href="https://via.placeholder.com/32.png?text=G" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: {
+              50: '#f2fbf6',
+              100: '#dbf4e4',
+              300: '#8ed9ab',
+              500: '#38b26f',
+              600: '#2f9c61'
+            },
+            neutral: {
+              900: '#111827',
+              700: '#374151',
+              500: '#6b7280',
+              200: '#e5e7eb',
+              100: '#f3f4f6'
+            },
+            accent: {
+              500: '#2563eb',
+              600: '#1d4ed8'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .motion-safe\:transition {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-neutral-900 font-sans antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500" data-i18n="general.skipLink">Перейти к основному содержанию</a>
+
+  <header class="border-b border-neutral-200">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
+      <a href="#hero" class="flex items-center gap-2 text-lg font-semibold text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" aria-label="Garten — на главную" data-i18n-attr="aria-label:header.brandAria">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-500 text-white font-bold">G</span>
+        <span>Garten</span>
+      </a>
+      <nav aria-label="Основная навигация" data-i18n-attr="aria-label:header.navLabel">
+        <ul class="hidden items-center gap-8 text-sm font-medium text-neutral-700 md:flex">
+          <li><a href="#features" class="motion-safe:transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 hover:text-neutral-900" data-i18n="header.nav.features">Функции</a></li>
+          <li><a href="#testimonials" class="motion-safe:transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 hover:text-neutral-900" data-i18n="header.nav.testimonials">Отзывы</a></li>
+          <li><a href="#pricing" class="motion-safe:transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 hover:text-neutral-900" data-i18n="header.nav.pricing">Тарифы</a></li>
+          <li><a href="#faq" class="motion-safe:transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 hover:text-neutral-900" data-i18n="header.nav.faq">FAQ</a></li>
+          <li><a href="#contact" class="motion-safe:transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 hover:text-neutral-900" data-i18n="header.nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3">
+        <label for="language-select" class="sr-only" data-i18n="general.languageLabel">Язык</label>
+        <select id="language-select" class="rounded-md border border-neutral-200 bg-white px-3 py-2 text-sm text-neutral-700 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <option value="de">Deutsch</option>
+
+            <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </select>
+        <a href="#demo" class="hidden rounded-full border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-900 motion-safe:transition hover:border-primary-500 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 sm:inline-flex" data-i18n="header.buttons.demo">Демо</a>
+        <a href="#contact" class="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white shadow-sm motion-safe:transition hover:bg-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.buttons.start">Начать</a>
+        <button id="mobile-nav-toggle" type="button" class="inline-flex items-center justify-center rounded-md border border-neutral-200 p-2 text-neutral-700 motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 md:hidden" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="sr-only" data-i18n="header.openMenu">Открыть меню</span>
+          <svg class="h-6 w-6" role="img" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="md:hidden hidden border-t border-neutral-200 bg-white" aria-label="Мобильная навигация" data-i18n-attr="aria-label:header.mobileNavLabel">
+      <ul class="space-y-1 px-4 py-4">
+        <li><a href="#features" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.nav.features">Функции</a></li>
+        <li><a href="#testimonials" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.nav.testimonials">Отзывы</a></li>
+        <li><a href="#pricing" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.nav.pricing">Тарифы</a></li>
+        <li><a href="#faq" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.nav.faq">FAQ</a></li>
+        <li><a href="#contact" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.nav.contacts">Контакты</a></li>
+        <li><a href="#demo" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.buttons.demo">Демо</a></li>
+        <li><a href="#contact" class="block rounded-md px-3 py-2 text-sm font-medium text-neutral-700 motion-safe:transition hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="header.buttons.start">Начать</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="bg-primary-50">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:grid lg:grid-cols-12 lg:gap-12 lg:px-8">
+        <div class="lg:col-span-6">
+          <p class="text-sm font-semibold uppercase tracking-widest text-primary-600" data-i18n="hero.badge">Умный сад 2025</p>
+          <h1 class="mt-4 text-4xl font-bold text-neutral-900 sm:text-5xl" data-i18n="hero.title">Сделайте свой сад автономным и процветающим</h1>
+          <p class="mt-6 text-lg text-neutral-700" data-i18n="hero.description">Garten соединяет датчики, прогнозы погоды и персональные советы, помогая растениям расти лучше без лишних усилий.</p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="#pricing" class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary-300/40 motion-safe:transition hover:bg-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="hero.ctaPrimary">Выбрать тариф</a>
+            <a href="#demo" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-6 py-3 text-base font-semibold text-neutral-900 motion-safe:transition hover:border-primary-500 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="hero.ctaSecondary">Посмотреть демо</a>
+          </div>
+          <dl class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div>
+              <dt class="text-sm font-medium text-neutral-500" data-i18n="hero.stats.waterLabel">Экономия воды</dt>
+              <dd class="mt-2 text-2xl font-semibold text-neutral-900" data-i18n="hero.stats.waterValue">до 30%</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-neutral-500" data-i18n="hero.stats.accuracyLabel">Точность рекомендаций</dt>
+              <dd class="mt-2 text-2xl font-semibold text-neutral-900" data-i18n="hero.stats.accuracyValue">98%</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-neutral-500" data-i18n="hero.stats.gardenersLabel">Счастливые садоводы</dt>
+              <dd class="mt-2 text-2xl font-semibold text-neutral-900" data-i18n="hero.stats.gardenersValue">10 000+</dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="mt-12 lg:col-span-6 lg:mt-0">
+          <figure class="relative overflow-hidden rounded-3xl bg-white shadow-xl shadow-primary-500/10">
+            <img src="image/d9e70402-3d62-497f-bb93-9d575e73e654.png" width="960" height="640" class="h-full w-full object-cover" alt="Интерфейс панели Garten с показателями полива и аналитикой" loading="lazy" data-i18n-attr="alt:hero.figure.alt">
+            <figcaption class="absolute bottom-4 left-4 rounded-md bg-white/90 px-4 py-2 text-sm font-medium text-neutral-700 shadow" data-i18n="hero.figure.caption">AI‑аналитика в реальном времени</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <section id="features" class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-semibold text-neutral-900 sm:text-4xl" data-i18n="features.title">Всё, что нужно для здорового сада</h2>
+          <p class="mt-4 text-base text-neutral-700" data-i18n="features.subtitle">Комбинация умных датчиков, автоматизации и персональных советов берёт на себя рутину, оставляя вам удовольствие от процесса.</p>
+        </div>
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm shadow-primary-500/5 focus-within:ring-2 focus-within:ring-primary-500">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold text-neutral-900" data-i18n="features.sensors.title">Мульти‑датчики</h3>
+              <span class="rounded-full bg-primary-500 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white" data-i18n="features.sensors.badge">AI Sense</span>
+            </div>
+            <p class="mt-4 text-sm text-neutral-600" data-i18n="features.sensors.description">Контролируйте влажность, pH и освещенность в каждой грядке с точностью лаборатории.</p>
+            <ul class="mt-6 space-y-3 text-sm text-neutral-700">
+              <li class="flex items-start gap-2"><span aria-hidden="true" class="mt-1 inline-block h-2 w-2 rounded-full bg-primary-500"></span><span data-i18n="features.sensors.bullet1">Автокалибровка каждые 24 часа.</span></li>
+              <li class="flex items-start gap-2"><span aria-hidden="true" class="mt-1 inline-block h-2 w-2 rounded-full bg-primary-500"></span><span data-i18n="features.sensors.bullet2">Сигналы в приложении и по Email.</span></li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm shadow-primary-500/5">
+            <h3 class="text-xl font-semibold text-neutral-900" data-i18n="features.irrigation.title">Умный полив</h3>
+            <p class="mt-4 text-sm text-neutral-600" data-i18n="features.irrigation.description">Автоматическое управление насосами и клапанами по расписанию и состоянию растений.</p>
+            <figure class="mt-6 rounded-xl bg-neutral-100 p-4">
+              <img src="image/scheme.png" width="120" height="120" alt="Схема подключения умного полива" loading="lazy" class="mx-auto" data-i18n-attr="alt:features.irrigation.alt">
+              <figcaption class="mt-3 text-xs text-neutral-500" data-i18n="features.irrigation.caption">*Замените иллюстрацию на брендовый рендер</figcaption>
+            </figure>
+          </article>
+          <article class="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm shadow-primary-500/5">
+            <h3 class="text-xl font-semibold text-neutral-900" data-i18n="features.tips.title">Персональные советы</h3>
+            <p class="mt-4 text-sm text-neutral-600" data-i18n="features.tips.description">Получайте рекомендации по уходу на основе сезона, погоды и истории ваших растений.</p>
+            <div class="mt-6 rounded-lg bg-primary-50 p-4">
+              <time datetime="2025-03-28" class="text-xs font-medium uppercase tracking-wide text-primary-600" data-i18n="features.tips.date">28 марта 2025</time>
+              <p class="mt-2 text-sm text-neutral-700" data-i18n="features.tips.quote">«Полейте грядку №4 — уровень влажности 28% при норме 40%.»</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="bg-neutral-100">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-semibold text-neutral-900 sm:text-4xl" data-i18n="testimonials.title">Проверено сообществом садоводов</h2>
+            <p class="mt-4 text-base text-neutral-700" data-i18n="testimonials.subtitle">Сотни клубов и ботанических садов выбирают Garten, чтобы оптимизировать ресурсы и делиться опытом.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
+            <img src="https://via.placeholder.com/120x48.png?text=EcoClub" width="120" height="48" loading="lazy" alt="Логотип EcoClub — зелёный лист на белом фоне" class="h-12 w-auto object-contain" data-i18n-attr="alt:testimonials.logoEco">
+            <img src="https://via.placeholder.com/120x48.png?text=Gardenia" width="120" height="48" loading="lazy" alt="Логотип Gardenia — розовый бутон и надпись Gardenia" class="h-12 w-auto object-contain" data-i18n-attr="alt:testimonials.logoGardenia">
+            <img src="https://via.placeholder.com/120x48.png?text=GreenLab" width="120" height="48" loading="lazy" alt="Логотип GreenLab — зелёная лабораторная колба с листом" class="h-12 w-auto object-contain" data-i18n-attr="alt:testimonials.logoGreenlab">
+            <img src="https://via.placeholder.com/120x48.png?text=PlantIQ" width="120" height="48" loading="lazy" alt="Логотип PlantIQ — минималистичное растение в квадрате" class="h-12 w-auto object-contain" data-i18n-attr="alt:testimonials.logoPlantiq">
+          </div>
+        </div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <article class="rounded-2xl bg-white p-8 shadow-lg shadow-primary-500/10">
+            <blockquote class="text-base text-neutral-700" data-i18n="testimonials.quote1">«За сезон снизили расход воды на 28%. Интерфейс понятный, а тревоги приходят до того, как растения страдают.»</blockquote>
+            <footer class="mt-6 flex items-center gap-4">
+              <img src="https://via.placeholder.com/64.png?text=AV" width="64" height="64" class="h-14 w-14 rounded-full object-cover" alt="Портрет Анны Мюллер" loading="lazy" data-i18n-attr="alt:testimonials.person1.alt">
+              <div>
+                <p class="text-sm font-semibold text-neutral-900" data-i18n="testimonials.person1.name">Анна Мюллер</p>
+                <p class="text-xs text-neutral-500" data-i18n="testimonials.person1.role">Основатель сообщества «Grünes Haus»</p>
+              </div>
+            </footer>
+          </article>
+          <article class="rounded-2xl bg-white p-8 shadow-lg shadow-primary-500/10">
+            <blockquote class="text-base text-neutral-700" data-i18n="testimonials.quote2">«Garten стал стандартом в нашем ботаническом саду Берлина. Задачи распределяются автоматически, а отчёты готовы в один клик.»</blockquote>
+            <footer class="mt-6 flex items-center gap-4">
+              <img src="https://via.placeholder.com/64.png?text=IM" width="64" height="64" class="h-14 w-14 rounded-full object-cover" alt="Портрет Лукаса Шнайдера" loading="lazy" data-i18n-attr="alt:testimonials.person2.alt">
+              <div>
+                <p class="text-sm font-semibold text-neutral-900" data-i18n="testimonials.person2.name">Лукас Шнайдер</p>
+                <p class="text-xs text-neutral-500" data-i18n="testimonials.person2.role">Куратор Ботанического сада Берлина</p>
+              </div>
+            </footer>
+          </article>
+          <article class="rounded-2xl bg-white p-8 shadow-lg shadow-primary-500/10">
+            <blockquote class="text-base text-neutral-700" data-i18n="testimonials.quote3">«Настройки учат новичков садоводству: система подсказок объясняет, почему и что делать.»</blockquote>
+            <footer class="mt-6 flex items-center gap-4">
+              <img src="https://via.placeholder.com/64.png?text=OK" width="64" height="64" class="h-14 w-14 rounded-full object-cover" alt="Портрет Клары Фогель" loading="lazy" data-i18n-attr="alt:testimonials.person3.alt">
+              <div>
+                <p class="text-sm font-semibold text-neutral-900" data-i18n="testimonials.person3.name">Клара Фогель</p>
+                <p class="text-xs text-neutral-500" data-i18n="testimonials.person3.role">Руководитель сообщества UrbanGrow Berlin</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <article>
+            <h2 class="text-3xl font-semibold text-neutral-900 sm:text-4xl" data-i18n="demo.title">Попробуйте интерактивную демо-панель</h2>
+            <p class="mt-4 text-base text-neutral-700" data-i18n="demo.description">Обновления в реальном времени, сценарии полива и автоматизация наглядно показывают, как Garten экономит ваши ресурсы.</p>
+            <ul class="mt-6 space-y-3 text-sm text-neutral-600">
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-primary-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor" role="img" aria-label="Преимущество" data-i18n-attr="aria-label:demo.bulletIconLabel">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293A1 1 0 105.293 10.707l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-i18n="demo.bullet1">Сценарии на основе прогноза погоды и истории поливов.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-primary-500 mt-0.5" viewBox="0 0 20 20" fill="currentColor" role="img" aria-label="Преимущество" data-i18n-attr="aria-label:demo.bulletIconLabel">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293A1 1 0 105.293 10.707l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-i18n="demo.bullet2">Голосовые подсказки и push-уведомления для команды.</span>
+              </li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-accent-500 px-6 py-3 text-base font-semibold text-white motion-safe:transition hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500" data-i18n="demo.cta">Запросить доступ</a>
+          </article>
+          <div class="relative rounded-3xl bg-neutral-900 p-6 text-white shadow-2xl shadow-primary-500/20">
+            <p class="text-sm uppercase tracking-widest text-neutral-300" data-i18n="demo.card.tag">Live Dashboard</p>
+            <h3 class="mt-3 text-2xl font-semibold" data-i18n="demo.card.headline">Урожайность ↑12% в этом сезоне</h3>
+            <div class="mt-8 space-y-4 text-sm text-neutral-200">
+              <div class="flex items-center justify-between rounded-xl bg-neutral-800 px-4 py-3">
+                <span data-i18n="demo.card.soilLabel">Влажность почвы</span>
+                <span class="font-semibold text-primary-300" data-i18n="demo.card.soilValue">42%</span>
+              </div>
+              <div class="flex items-center justify-between rounded-xl bg-neutral-800 px-4 py-3">
+                <span data-i18n="demo.card.lightLabel">Индекс освещения</span>
+                <span class="font-semibold text-primary-300" data-i18n="demo.card.lightValue">Норма</span>
+              </div>
+              <div class="flex items-center justify-between rounded-xl bg-neutral-800 px-4 py-3">
+                <span data-i18n="demo.card.actionLabel">Следующее действие</span>
+                <span class="font-semibold text-primary-300" data-i18n="demo.card.actionValue">Проверить pH</span>
+              </div>
+            </div>
+            <p class="mt-8 text-xs text-neutral-400" data-i18n="demo.card.footnote">*Данные примерочные. Замените на реальную вырезку из приложения.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="bg-primary-50">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-semibold text-neutral-900 sm:text-4xl" data-i18n="pricing.title">Прозрачные тарифы для любого масштаба</h2>
+          <p class="mt-4 text-base text-neutral-700" data-i18n="pricing.subtitle">Выбирайте пакет, который соответствует размеру вашего сада или агрокоманды.</p>
+        </div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <article class="flex flex-col rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm shadow-primary-500/10">
+            <h3 class="text-xl font-semibold text-neutral-900" data-i18n="pricing.starter.name">Starter</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="pricing.starter.description">Для домашних теплиц до 10 датчиков.</p>
+            <p class="mt-6 text-4xl font-bold text-neutral-900"><span data-i18n="pricing.starter.price">€59</span><span class="text-sm font-medium text-neutral-500" data-i18n="pricing.starter.priceNote">/мес</span></p>
+            <ul class="mt-6 space-y-3 text-sm text-neutral-600">
+              <li data-i18n="pricing.starter.feature1">До 2 сценариев полива</li>
+              <li data-i18n="pricing.starter.feature2">История данных 6 месяцев</li>
+              <li data-i18n="pricing.starter.feature3">Email уведомления</li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-full border border-neutral-200 px-5 py-3 text-sm font-semibold text-neutral-900 motion-safe:transition hover:border-primary-500 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="pricing.starter.cta">Начать бесплатно</a>
+          </article>
+          <article class="flex flex-col rounded-3xl border-2 border-primary-500 bg-white p-8 shadow-xl shadow-primary-500/20">
+            <span class="self-start rounded-full bg-primary-500 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white" data-i18n="pricing.grow.badge">Популярный</span>
+            <h3 class="mt-4 text-xl font-semibold text-neutral-900" data-i18n="pricing.grow.name">Grow</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="pricing.grow.description">Оптимально для фермерских кооперативов.</p>
+            <p class="mt-6 text-4xl font-bold text-neutral-900"><span data-i18n="pricing.grow.price">€129</span><span class="text-sm font-medium text-neutral-500" data-i18n="pricing.grow.priceNote">/мес</span></p>
+            <ul class="mt-6 space-y-3 text-sm text-neutral-600">
+              <li data-i18n="pricing.grow.feature1">Неограниченные сценарии</li>
+              <li data-i18n="pricing.grow.feature2">История данных 24 месяца</li>
+              <li data-i18n="pricing.grow.feature3">Push + SMS уведомления</li>
+              <li data-i18n="pricing.grow.feature4">Доступ для команды до 10 участников</li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-full bg-primary-500 px-5 py-3 text-sm font-semibold text-white motion-safe:transition hover:bg-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="pricing.grow.cta">Выбрать тариф</a>
+          </article>
+          <article class="flex flex-col rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm shadow-primary-500/10">
+            <h3 class="text-xl font-semibold text-neutral-900" data-i18n="pricing.enterprise.name">Enterprise</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="pricing.enterprise.description">Для ботанических садов и агрохолдингов.</p>
+            <p class="mt-6 text-4xl font-bold text-neutral-900" data-i18n="pricing.enterprise.price">По запросу</p>
+            <ul class="mt-6 space-y-3 text-sm text-neutral-600">
+              <li data-i18n="pricing.enterprise.feature1">API и кастомные интеграции</li>
+              <li data-i18n="pricing.enterprise.feature2">Безлимитный исторический архив</li>
+              <li data-i18n="pricing.enterprise.feature3">Обучение и dedicated менеджер</li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-full border border-neutral-200 px-5 py-3 text-sm font-semibold text-neutral-900 motion-safe:transition hover:border-primary-500 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="pricing.enterprise.cta">Запросить консультацию</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="bg-white">
+      <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-semibold text-neutral-900 sm:text-4xl" data-i18n="faq.title">Частые вопросы</h2>
+          <p class="mt-4 text-base text-neutral-700" data-i18n="faq.subtitle">Если не нашли ответ — свяжитесь с нами, и мы поможем подобрать решение.</p>
+        </div>
+        <div class="mt-12 space-y-6">
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm shadow-primary-500/5">
+            <h3 class="text-lg font-semibold text-neutral-900" data-i18n="faq.q1">Нужно ли прокладывать проводку для датчиков?</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="faq.a1">Нет, датчики Garten работают на солнечных панелях и общаются по защищённой сети LoRaWAN.</p>
+          </article>
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm shadow-primary-500/5">
+            <h3 class="text-lg font-semibold text-neutral-900" data-i18n="faq.q2">Можно ли интегрировать систему с существующим поливом?</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="faq.a2">Да, у нас есть совместимость с популярными контроллерами Hunter, RainBird и Gardena. Доступны адаптеры.</p>
+          </article>
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm shadow-primary-500/5">
+            <h3 class="text-lg font-semibold text-neutral-900" data-i18n="faq.q3">Как Garten помогает командам?</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="faq.a3">Вы назначаете задачи участникам, отслеживаете прогресс и получаете отчёты по каждому участку сада.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-neutral-900 text-white">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2">
+          <article>
+            <h2 class="text-3xl font-semibold sm:text-4xl" data-i18n="contact.title">Готовы цифровизировать свой сад?</h2>
+            <p class="mt-4 text-base text-neutral-200" data-i18n="contact.subtitle">Заполните форму — и мы подготовим персональную презентацию и расчёт ROI на основе ваших данных.</p>
+            <address class="mt-8 not-italic text-sm text-neutral-300">
+              <strong class="block text-white" data-i18n="contact.address.title">Garten HQ</strong>
+              <span data-i18n="contact.address.street">Gartenstraße 12</span><br>
+              <span data-i18n="contact.address.city">Берлин, Германия 10969</span><br>
+              <a href="tel:+493022123456" class="text-primary-300 underline motion-safe:transition hover:text-primary-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 focus-visible:ring-offset-neutral-900" data-i18n="contact.address.phone">+49 30 2212 3456</a>
+            </address>
+          </article>
+          <form class="rounded-3xl bg-white p-8 text-neutral-900 shadow-lg shadow-primary-500/20" aria-label="Форма обратной связи" data-i18n-attr="aria-label:contact.form.ariaLabel">
+            <h3 class="text-xl font-semibold text-neutral-900" data-i18n="contact.form.title">Получить консультацию</h3>
+            <p class="mt-2 text-sm text-neutral-600" data-i18n="contact.form.note">* Все поля обязательны для заполнения.</p>
+            <div class="mt-6 space-y-4">
+              <label class="block text-sm font-medium text-neutral-700" for="contact-name" data-i18n="contact.form.nameLabel">Имя</label>
+              <input id="contact-name" name="name" type="text" required class="w-full rounded-lg border-neutral-200 text-neutral-900 focus:border-primary-500 focus:ring-primary-500">
+              <label class="block text-sm font-medium text-neutral-700" for="contact-email" data-i18n="contact.form.emailLabel">Email</label>
+              <input id="contact-email" name="email" type="email" required class="w-full rounded-lg border-neutral-200 text-neutral-900 focus:border-primary-500 focus:ring-primary-500">
+              <label class="block text-sm font-medium text-neutral-700" for="contact-size" data-i18n="contact.form.sizeLabel">Размер участка</label>
+              <select id="contact-size" name="size" required class="w-full rounded-lg border-neutral-200 text-neutral-900 focus:border-primary-500 focus:ring-primary-500">
+                <option value="" data-i18n="contact.form.sizePlaceholder">Выберите</option>
+                <option data-i18n="contact.form.sizeOption1">До 1 га</option>
+                <option data-i18n="contact.form.sizeOption2">1–5 га</option>
+                <option data-i18n="contact.form.sizeOption3">5–20 га</option>
+                <option data-i18n="contact.form.sizeOption4">20+ га</option>
+              </select>
+              <label class="block text-sm font-medium text-neutral-700" for="contact-message" data-i18n="contact.form.messageLabel">Комментарий</label>
+              <textarea id="contact-message" name="message" rows="4" class="w-full rounded-lg border-neutral-200 text-neutral-900 focus:border-primary-500 focus:ring-primary-500" placeholder="Опишите ваши задачи" data-i18n-attr="placeholder:contact.form.messagePlaceholder"></textarea>
+            </div>
+            <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-primary-500 px-5 py-3 text-sm font-semibold text-white motion-safe:transition hover:bg-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="contact.form.submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div>
+          <h4 class="text-lg font-semibold text-neutral-900" data-i18n="footer.aboutTitle">О компании</h4>
+          <p class="mt-3 text-sm text-neutral-600" data-i18n="footer.aboutDescription">Garten развивает устойчивое сельское хозяйство и городское садоводство, помогая людям выращивать больше при меньшем расходе ресурсов.</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div>
+            <h5 class="text-sm font-semibold uppercase tracking-widest text-neutral-500" data-i18n="footer.resourcesTitle">Ресурсы</h5>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-600">
+              <li><a href="#" class="motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="footer.resources.api">Документация API</a></li>
+              <li><a href="#" class="motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="footer.resources.community">Сообщество</a></li>
+              <li><a href="#" class="motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="footer.resources.partners">Партнёры</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-sm font-semibold uppercase tracking-widest text-neutral-500" data-i18n="footer.legalTitle">Юридическая информация</h5>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-600">
+              <li><a href="#" class="motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="footer.legal.privacy">Политика конфиденциальности</a></li>
+              <li><a href="#" class="motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="footer.legal.terms">Условия использования</a></li>
+              <li><a href="#" class="motion-safe:transition hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500" data-i18n="footer.legal.cookies">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-neutral-500" data-i18n="footer.copyright" data-i18n-html="true">© <time datetime="2025">2025</time> Garten. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const translations = {
+        ru: {
+          meta: {
+            title: 'Garten — Умные решения для садоводов',
+            description: 'Garten помогает автоматизировать уход за садом с помощью умных датчиков, аналитики и персонализированных рекомендаций.',
+            ogTitle: 'Garten — Умный сад без лишних усилий',
+            ogDescription: 'Система Garten анализирует состояние почвы и растений, отправляет уведомления и оптимизирует полив.'
+          },
+          general: {
+            skipLink: 'Перейти к основному содержанию',
+            languageLabel: 'Язык'
+          },
+          header: {
+            brandAria: 'Garten — на главную',
+            navLabel: 'Основная навигация',
+            nav: {
+              features: 'Функции',
+              testimonials: 'Отзывы',
+              pricing: 'Тарифы',
+              faq: 'FAQ',
+              contacts: 'Контакты'
+            },
+            buttons: {
+              demo: 'Демо',
+              start: 'Начать'
+            },
+            openMenu: 'Открыть меню',
+            mobileNavLabel: 'Мобильная навигация'
+          },
+          hero: {
+            badge: 'Умный сад 2025',
+            title: 'Сделайте свой сад автономным и процветающим',
+            description: 'Garten соединяет датчики, прогнозы погоды и персональные советы, помогая растениям расти лучше без лишних усилий.',
+            ctaPrimary: 'Выбрать тариф',
+            ctaSecondary: 'Посмотреть демо',
+            stats: {
+              waterLabel: 'Экономия воды',
+              waterValue: 'до 30%',
+              accuracyLabel: 'Точность рекомендаций',
+              accuracyValue: '98%',
+              gardenersLabel: 'Счастливые садоводы',
+              gardenersValue: '10 000+'
+            },
+            figure: {
+              alt: 'Интерфейс панели Garten с показателями полива и аналитикой',
+              caption: 'AI‑аналитика в реальном времени'
+            }
+          },
+          features: {
+            title: 'Всё, что нужно для здорового сада',
+            subtitle: 'Комбинация умных датчиков, автоматизации и персональных советов берёт на себя рутину, оставляя вам удовольствие от процесса.',
+            sensors: {
+              title: 'Мульти‑датчики',
+              badge: 'AI Sense',
+              description: 'Контролируйте влажность, pH и освещенность в каждой грядке с точностью лаборатории.',
+              bullet1: 'Автокалибровка каждые 24 часа.',
+              bullet2: 'Сигналы в приложении и по Email.'
+            },
+            irrigation: {
+              title: 'Умный полив',
+              description: 'Автоматическое управление насосами и клапанами по расписанию и состоянию растений.',
+              alt: 'Схема подключения умного полива',
+              caption: '*Замените иллюстрацию на брендовый рендер'
+            },
+            tips: {
+              title: 'Персональные советы',
+              description: 'Получайте рекомендации по уходу на основе сезона, погоды и истории ваших растений.',
+              date: '28 марта 2025',
+              quote: '«Полейте грядку №4 — уровень влажности 28% при норме 40%.»'
+            }
+          },
+          testimonials: {
+            title: 'Проверено сообществом садоводов',
+            subtitle: 'Сотни клубов и ботанических садов выбирают Garten, чтобы оптимизировать ресурсы и делиться опытом.',
+            logoEco: 'Логотип EcoClub — зелёный лист на белом фоне',
+            logoGardenia: 'Логотип Gardenia — розовый бутон и надпись Gardenia',
+            logoGreenlab: 'Логотип GreenLab — зелёная лабораторная колба с листом',
+            logoPlantiq: 'Логотип PlantIQ — минималистичное растение в квадрате',
+            quote1: '«За сезон снизили расход воды на 28%. Интерфейс понятный, а тревоги приходят до того, как растения страдают.»',
+            person1: {
+              name: 'Анна Мюллер',
+              role: 'Основатель сообщества «Grünes Haus»',
+              alt: 'Портрет Анны Мюллер'
+            },
+            quote2: '«Garten стал стандартом в нашем ботаническом саду Берлина. Задачи распределяются автоматически, а отчёты готовы в один клик.»',
+            person2: {
+              name: 'Лукас Шнайдер',
+              role: 'Куратор Ботанического сада Берлина',
+              alt: 'Портрет Лукаса Шнайдера'
+            },
+            quote3: '«Настройки учат новичков садоводству: система подсказок объясняет, почему и что делать.»',
+            person3: {
+              name: 'Клара Фогель',
+              role: 'Руководитель сообщества UrbanGrow Berlin',
+              alt: 'Портрет Клары Фогель'
+            }
+          },
+          demo: {
+            title: 'Попробуйте интерактивную демо-панель',
+            description: 'Обновления в реальном времени, сценарии полива и автоматизация наглядно показывают, как Garten экономит ваши ресурсы.',
+            bulletIconLabel: 'Преимущество',
+            bullet1: 'Сценарии на основе прогноза погоды и истории поливов.',
+            bullet2: 'Голосовые подсказки и push-уведомления для команды.',
+            cta: 'Запросить доступ',
+            card: {
+              tag: 'Live Dashboard',
+              headline: 'Урожайность ↑12% в этом сезоне',
+              soilLabel: 'Влажность почвы',
+              soilValue: '42%',
+              lightLabel: 'Индекс освещения',
+              lightValue: 'Норма',
+              actionLabel: 'Следующее действие',
+              actionValue: 'Проверить pH',
+              footnote: '*Данные примерочные. Замените на реальную вырезку из приложения.'
+            }
+          },
+          pricing: {
+            title: 'Прозрачные тарифы для любого масштаба',
+            subtitle: 'Выбирайте пакет, который соответствует размеру вашего сада или агрокоманды.',
+            starter: {
+              name: 'Starter',
+              description: 'Для домашних теплиц до 10 датчиков.',
+              price: '€59',
+              priceNote: '/мес',
+              feature1: 'До 2 сценариев полива',
+              feature2: 'История данных 6 месяцев',
+              feature3: 'Email уведомления',
+              cta: 'Начать бесплатно'
+            },
+            grow: {
+              badge: 'Популярный',
+              name: 'Grow',
+              description: 'Оптимально для фермерских кооперативов.',
+              price: '€129',
+              priceNote: '/мес',
+              feature1: 'Неограниченные сценарии',
+              feature2: 'История данных 24 месяца',
+              feature3: 'Push + SMS уведомления',
+              feature4: 'Доступ для команды до 10 участников',
+              cta: 'Выбрать тариф'
+            },
+            enterprise: {
+              name: 'Enterprise',
+              description: 'Для ботанических садов и агрохолдингов.',
+              price: 'По запросу',
+              feature1: 'API и кастомные интеграции',
+              feature2: 'Безлимитный исторический архив',
+              feature3: 'Обучение и dedicated менеджер',
+              cta: 'Запросить консультацию'
+            }
+          },
+          faq: {
+            title: 'Частые вопросы',
+            subtitle: 'Если не нашли ответ — свяжитесь с нами, и мы поможем подобрать решение.',
+            q1: 'Нужно ли прокладывать проводку для датчиков?',
+            a1: 'Нет, датчики Garten работают на солнечных панелях и общаются по защищённой сети LoRaWAN.',
+            q2: 'Можно ли интегрировать систему с существующим поливом?',
+            a2: 'Да, у нас есть совместимость с популярными контроллерами Hunter, RainBird и Gardena. Доступны адаптеры.',
+            q3: 'Как Garten помогает командам?',
+            a3: 'Вы назначаете задачи участникам, отслеживаете прогресс и получаете отчёты по каждому участку сада.'
+          },
+          contact: {
+            title: 'Готовы цифровизировать свой сад?',
+            subtitle: 'Заполните форму — и мы подготовим персональную презентацию и расчёт ROI на основе ваших данных.',
+            address: {
+              title: 'Garten HQ',
+              street: 'Gartenstraße 12',
+              city: 'Берлин, Германия 10969',
+              phone: '+49 30 2212 3456'
+            },
+            form: {
+              ariaLabel: 'Форма обратной связи',
+              title: 'Получить консультацию',
+              note: '* Все поля обязательны для заполнения.',
+              nameLabel: 'Имя',
+              emailLabel: 'Email',
+              sizeLabel: 'Размер участка',
+              sizePlaceholder: 'Выберите',
+              sizeOption1: 'До 1 га',
+              sizeOption2: '1–5 га',
+              sizeOption3: '5–20 га',
+              sizeOption4: '20+ га',
+              messageLabel: 'Комментарий',
+              messagePlaceholder: 'Опишите ваши задачи',
+              submit: 'Отправить'
+            }
+          },
+          footer: {
+            aboutTitle: 'О компании',
+            aboutDescription: 'Garten развивает устойчивое сельское хозяйство и городское садоводство, помогая людям выращивать больше при меньшем расходе ресурсов.',
+            resourcesTitle: 'Ресурсы',
+            resources: {
+              api: 'Документация API',
+              community: 'Сообщество',
+              partners: 'Партнёры'
+            },
+            legalTitle: 'Юридическая информация',
+            legal: {
+              privacy: 'Политика конфиденциальности',
+              terms: 'Условия использования',
+              cookies: 'Cookies'
+            },
+            copyright: '© <time datetime="2025">2025</time> Garten. Все права защищены.'
+          }
+        },
+        en: {
+          meta: {
+            title: 'Garten — Smart Solutions for Gardeners',
+            description: 'Garten automates garden care with smart sensors, analytics, and personalized recommendations.',
+            ogTitle: 'Garten — A Smarter Garden With Less Effort',
+            ogDescription: 'Garten monitors soil and plants, sends timely alerts, and optimizes irrigation automatically.'
+          },
+          general: {
+            skipLink: 'Skip to main content',
+            languageLabel: 'Language'
+          },
+          header: {
+            brandAria: 'Garten — go to homepage',
+            navLabel: 'Main navigation',
+            nav: {
+              features: 'Features',
+              testimonials: 'Testimonials',
+              pricing: 'Pricing',
+              faq: 'FAQ',
+              contacts: 'Contact'
+            },
+            buttons: {
+              demo: 'Demo',
+              start: 'Get Started'
+            },
+            openMenu: 'Open menu',
+            mobileNavLabel: 'Mobile navigation'
+          },
+          hero: {
+            badge: 'Smart Garden 2025',
+            title: 'Make your garden autonomous and thriving',
+            description: 'Garten unites sensors, weather forecasts, and personal advice so plants grow better with less effort.',
+            ctaPrimary: 'Choose a plan',
+            ctaSecondary: 'Watch the demo',
+            stats: {
+              waterLabel: 'Water savings',
+              waterValue: 'up to 30%',
+              accuracyLabel: 'Recommendation accuracy',
+              accuracyValue: '98%',
+              gardenersLabel: 'Happy growers',
+              gardenersValue: '10,000+'
+            },
+            figure: {
+              alt: 'Garten dashboard showing irrigation metrics and analytics',
+              caption: 'AI analytics in real time'
+            }
+          },
+          features: {
+            title: 'Everything your garden needs to stay healthy',
+            subtitle: 'Smart sensors, automation, and personal guidance take care of the routine so you can enjoy the process.',
+            sensors: {
+              title: 'Multi-sensors',
+              badge: 'AI Sense',
+              description: 'Track moisture, pH, and light in every bed with lab-level precision.',
+              bullet1: 'Self-calibrates every 24 hours.',
+              bullet2: 'In-app alerts and email notifications.'
+            },
+            irrigation: {
+              title: 'Smart irrigation',
+              description: 'Automatically controls pumps and valves based on schedule and plant condition.',
+              alt: 'Smart irrigation wiring diagram',
+              caption: '*Replace the illustration with a branded render'
+            },
+            tips: {
+              title: 'Personal recommendations',
+              description: 'Receive care tips based on season, weather, and the history of your plants.',
+              date: 'March 28, 2025',
+              quote: '"Water bed #4 — moisture level at 28% while the target is 40%."'
+            }
+          },
+          testimonials: {
+            title: 'Trusted by the gardening community',
+            subtitle: 'Hundreds of clubs and botanical gardens choose Garten to optimise resources and share their expertise.',
+            logoEco: 'EcoClub logo — green leaf on white background',
+            logoGardenia: 'Gardenia logo — pink blossom with wordmark',
+            logoGreenlab: 'GreenLab logo — green laboratory flask with leaf',
+            logoPlantiq: 'PlantIQ logo — minimalist plant inside a square',
+            quote1: '"We cut water usage by 28% in one season. The interface is intuitive and alerts arrive before plants suffer."',
+            person1: {
+              name: 'Anna Müller',
+              role: 'Founder of the Grünes Haus community',
+              alt: 'Portrait of Anna Müller'
+            },
+            quote2: '"Garten became the standard in our Berlin botanical garden. Tasks are distributed automatically and reports take one click."',
+            person2: {
+              name: 'Lukas Schneider',
+              role: 'Curator of the Berlin Botanical Garden',
+              alt: 'Portrait of Lukas Schneider'
+            },
+            quote3: '"The settings coach newcomers: the assistant explains what to do and why."',
+            person3: {
+              name: 'Clara Vogel',
+              role: 'Head of the UrbanGrow Berlin collective',
+              alt: 'Portrait of Clara Vogel'
+            }
+          },
+          demo: {
+            title: 'Try the interactive demo dashboard',
+            description: 'Real-time updates, irrigation scenarios, and automation show exactly how Garten saves your resources.',
+            bulletIconLabel: 'Advantage',
+            bullet1: 'Scenarios based on weather forecasts and irrigation history.',
+            bullet2: 'Voice prompts and push notifications for the team.',
+            cta: 'Request access',
+            card: {
+              tag: 'Live Dashboard',
+              headline: 'Yield ↑12% this season',
+              soilLabel: 'Soil moisture',
+              soilValue: '42%',
+              lightLabel: 'Light index',
+              lightValue: 'Optimal',
+              actionLabel: 'Next action',
+              actionValue: 'Check pH',
+              footnote: '*Sample data. Replace with a real app screenshot.'
+            }
+          },
+          pricing: {
+            title: 'Transparent plans for every scale',
+            subtitle: 'Choose the package that matches the size of your garden or agri team.',
+            starter: {
+              name: 'Starter',
+              description: 'For home greenhouses with up to 10 sensors.',
+              price: '€59',
+              priceNote: '/mo',
+              feature1: 'Up to 2 irrigation scenarios',
+              feature2: '6 months of data history',
+              feature3: 'Email notifications',
+              cta: 'Start for free'
+            },
+            grow: {
+              badge: 'Popular',
+              name: 'Grow',
+              description: 'Perfect for farming cooperatives.',
+              price: '€129',
+              priceNote: '/mo',
+              feature1: 'Unlimited scenarios',
+              feature2: '24 months of data history',
+              feature3: 'Push + SMS notifications',
+              feature4: 'Team access for up to 10 members',
+              cta: 'Choose a plan'
+            },
+            enterprise: {
+              name: 'Enterprise',
+              description: 'For botanical gardens and agroholdings.',
+              price: 'On request',
+              feature1: 'API and custom integrations',
+              feature2: 'Unlimited historical archive',
+              feature3: 'Training and a dedicated manager',
+              cta: 'Request a consultation'
+            }
+          },
+          faq: {
+            title: 'Frequently asked questions',
+            subtitle: "Didn't find the answer? Contact us and we will tailor a solution.",
+            q1: 'Do the sensors require wiring?',
+            a1: 'No, Garten sensors run on solar power and communicate via a secure LoRaWAN network.',
+            q2: 'Can I integrate the system with existing irrigation?',
+            a2: 'Yes, we support popular controllers such as Hunter, RainBird, and Gardena. Adapters are available.',
+            q3: 'How does Garten support teams?',
+            a3: 'Assign tasks to teammates, track progress, and receive reports for every garden area.'
+          },
+          contact: {
+            title: 'Ready to digitise your garden?',
+            subtitle: 'Fill out the form and we will prepare a tailored presentation and ROI estimate based on your data.',
+            address: {
+              title: 'Garten HQ',
+              street: 'Gartenstraße 12',
+              city: 'Berlin, Germany 10969',
+              phone: '+49 30 2212 3456'
+            },
+            form: {
+              ariaLabel: 'Contact form',
+              title: 'Request a consultation',
+              note: '* All fields are required.',
+              nameLabel: 'Name',
+              emailLabel: 'Email',
+              sizeLabel: 'Plot size',
+              sizePlaceholder: 'Select',
+              sizeOption1: 'Up to 1 ha',
+              sizeOption2: '1–5 ha',
+              sizeOption3: '5–20 ha',
+              sizeOption4: '20+ ha',
+              messageLabel: 'Comment',
+              messagePlaceholder: 'Describe your goals',
+              submit: 'Send'
+            }
+          },
+          footer: {
+            aboutTitle: 'About',
+            aboutDescription: 'Garten advances sustainable agriculture and urban gardening, helping people grow more while using fewer resources.',
+            resourcesTitle: 'Resources',
+            resources: {
+              api: 'API documentation',
+              community: 'Community',
+              partners: 'Partners'
+            },
+            legalTitle: 'Legal',
+            legal: {
+              privacy: 'Privacy policy',
+              terms: 'Terms of use',
+              cookies: 'Cookies'
+            },
+            copyright: '© <time datetime="2025">2025</time> Garten. All rights reserved.'
+          }
+        },
+        de: {
+          meta: {
+            title: 'Garten — Intelligente Lösungen für Gärtner',
+            description: 'Garten automatisiert die Gartenpflege mit smarten Sensoren, Analysen und personalisierten Empfehlungen.',
+            ogTitle: 'Garten — Ein smarter Garten ohne Zusatzaufwand',
+            ogDescription: 'Garten überwacht Boden und Pflanzen, sendet rechtzeitige Hinweise und optimiert die Bewässerung automatisch.'
+          },
+          general: {
+            skipLink: 'Zum Hauptinhalt springen',
+            languageLabel: 'Sprache'
+          },
+          header: {
+            brandAria: 'Garten — zur Startseite',
+            navLabel: 'Hauptnavigation',
+            nav: {
+              features: 'Funktionen',
+              testimonials: 'Erfahrungsberichte',
+              pricing: 'Preise',
+              faq: 'FAQ',
+              contacts: 'Kontakt'
+            },
+            buttons: {
+              demo: 'Demo',
+              start: 'Jetzt starten'
+            },
+            openMenu: 'Menü öffnen',
+            mobileNavLabel: 'Mobile Navigation'
+          },
+          hero: {
+            badge: 'Smart Garden 2025',
+            title: 'Machen Sie Ihren Garten autonom und erfolgreich',
+            description: 'Garten verbindet Sensoren, Wetterprognosen und persönliche Empfehlungen, damit Pflanzen mit weniger Aufwand besser wachsen.',
+            ctaPrimary: 'Tarif wählen',
+            ctaSecondary: 'Demo ansehen',
+            stats: {
+              waterLabel: 'Wassereinsparung',
+              waterValue: 'bis zu 30 %',
+              accuracyLabel: 'Empfehlungsgenauigkeit',
+              accuracyValue: '98 %',
+              gardenersLabel: 'Zufriedene Gärtner',
+              gardenersValue: '10.000+'
+            },
+            figure: {
+              alt: 'Garten-Dashboard mit Bewässerungsmetriken und Analysen',
+              caption: 'KI-Analysen in Echtzeit'
+            }
+          },
+          features: {
+            title: 'Alles, was Ihr Garten für gesundes Wachstum braucht',
+            subtitle: 'Intelligente Sensoren, Automatisierung und persönliche Betreuung übernehmen Routineaufgaben, damit Sie den Prozess genießen.',
+            sensors: {
+              title: 'Multi-Sensoren',
+              badge: 'AI Sense',
+              description: 'Überwachen Sie Feuchtigkeit, pH-Wert und Licht in jedem Beet mit Laborpräzision.',
+              bullet1: 'Selbstkalibrierung alle 24 Stunden.',
+              bullet2: 'App-Benachrichtigungen und E-Mail-Alarme.'
+            },
+            irrigation: {
+              title: 'Intelligente Bewässerung',
+              description: 'Steuert Pumpen und Ventile automatisch nach Zeitplan und Pflanzenzustand.',
+              alt: 'Schema der intelligenten Bewässerungssteuerung',
+              caption: '*Ersetzen Sie die Illustration durch ein Markenrendering'
+            },
+            tips: {
+              title: 'Personalisierte Tipps',
+              description: 'Erhalten Sie Pflegeempfehlungen basierend auf Saison, Wetter und Historie Ihrer Pflanzen.',
+              date: '28. März 2025',
+              quote: '"Bewässern Sie Beet Nr. 4 – Feuchtigkeit 28 %, Ziel 40 %."'
+            }
+          },
+          testimonials: {
+            title: 'Bewährt in der Gartengemeinschaft',
+            subtitle: 'Hunderte Clubs und botanische Gärten wählen Garten, um Ressourcen zu optimieren und Erfahrungen zu teilen.',
+            logoEco: 'EcoClub-Logo – grünes Blatt auf weißem Hintergrund',
+            logoGardenia: 'Gardenia-Logo – rosa Blüte mit Wortmarke',
+            logoGreenlab: 'GreenLab-Logo – grüne Laborflasche mit Blatt',
+            logoPlantiq: 'PlantIQ-Logo – minimalistisches Blatt im Quadrat',
+            quote1: '"Wir haben den Wasserverbrauch in einer Saison um 28 % gesenkt. Die Oberfläche ist verständlich und Warnungen kommen, bevor Pflanzen leiden."',
+            person1: {
+              name: 'Anna Müller',
+              role: 'Gründerin der Community "Grünes Haus"',
+              alt: 'Porträt von Anna Müller'
+            },
+            quote2: '"Garten ist in unserem Botanischen Garten in Berlin zum Standard geworden. Aufgaben verteilen sich automatisch und Berichte sind mit einem Klick fertig."',
+            person2: {
+              name: 'Lukas Schneider',
+              role: 'Kurator des Botanischen Gartens Berlin',
+              alt: 'Porträt von Lukas Schneider'
+            },
+            quote3: '"Die Einstellungen bringen Einsteigerinnen und Einsteigern das Gärtnern bei: Das Hilfesystem erklärt das Warum und das Wie."',
+            person3: {
+              name: 'Clara Vogel',
+              role: 'Leiterin der UrbanGrow Berlin Community',
+              alt: 'Porträt von Clara Vogel'
+            }
+          },
+          demo: {
+            title: 'Testen Sie das interaktive Demo-Dashboard',
+            description: 'Echtzeit-Updates, Bewässerungsszenarien und Automatisierung zeigen anschaulich, wie Garten Ressourcen spart.',
+            bulletIconLabel: 'Vorteil',
+            bullet1: 'Szenarien auf Basis von Wetterprognosen und Bewässerungshistorie.',
+            bullet2: 'Sprachhinweise und Push-Benachrichtigungen für das Team.',
+            cta: 'Zugang anfordern',
+            card: {
+              tag: 'Live-Dashboard',
+              headline: 'Ertrag ↑12 % in dieser Saison',
+              soilLabel: 'Bodenfeuchtigkeit',
+              soilValue: '42 %',
+              lightLabel: 'Lichtindex',
+              lightValue: 'Im Soll',
+              actionLabel: 'Nächste Aktion',
+              actionValue: 'pH prüfen',
+              footnote: '*Beispieldaten. Durch einen echten App-Ausschnitt ersetzen.'
+            }
+          },
+          pricing: {
+            title: 'Transparente Tarife für jede Größenordnung',
+            subtitle: 'Wählen Sie das Paket, das zur Größe Ihres Gartens oder Teams passt.',
+            starter: {
+              name: 'Starter',
+              description: 'Für Gewächshäuser zu Hause mit bis zu 10 Sensoren.',
+              price: '€59',
+              priceNote: '/Monat',
+              feature1: 'Bis zu 2 Bewässerungsszenarien',
+              feature2: 'Datenhistorie 6 Monate',
+              feature3: 'E-Mail-Benachrichtigungen',
+              cta: 'Kostenlos starten'
+            },
+            grow: {
+              badge: 'Beliebt',
+              name: 'Grow',
+              description: 'Ideal für landwirtschaftliche Kooperationen.',
+              price: '€129',
+              priceNote: '/Monat',
+              feature1: 'Unbegrenzte Szenarien',
+              feature2: 'Datenhistorie 24 Monate',
+              feature3: 'Push- und SMS-Benachrichtigungen',
+              feature4: 'Teamzugang für bis zu 10 Personen',
+              cta: 'Tarif wählen'
+            },
+            enterprise: {
+              name: 'Enterprise',
+              description: 'Für botanische Gärten und Agrarunternehmen.',
+              price: 'Auf Anfrage',
+              feature1: 'API und individuelle Integrationen',
+              feature2: 'Unbegrenztes Datenarchiv',
+              feature3: 'Schulungen und persönlicher Manager',
+              cta: 'Beratung anfordern'
+            }
+          },
+          faq: {
+            title: 'Häufige Fragen',
+            subtitle: 'Nicht fündig geworden? Kontaktieren Sie uns und wir finden die passende Lösung.',
+            q1: 'Müssen die Sensoren verkabelt werden?',
+            a1: 'Nein, Garten-Sensoren werden solar betrieben und kommunizieren über ein sicheres LoRaWAN-Netz.',
+            q2: 'Lässt sich die Lösung in eine bestehende Bewässerung integrieren?',
+            a2: 'Ja, wir sind mit gängigen Steuerungen wie Hunter, RainBird und Gardena kompatibel. Adapter sind verfügbar.',
+            q3: 'Wie unterstützt Garten Teams?',
+            a3: 'Weisen Sie Aufgaben zu, verfolgen Sie den Fortschritt und erhalten Sie Berichte für jede Gartenfläche.'
+          },
+          contact: {
+            title: 'Bereit, Ihren Garten zu digitalisieren?',
+            subtitle: 'Füllen Sie das Formular aus – wir erstellen eine individuelle Präsentation und ROI-Berechnung auf Basis Ihrer Daten.',
+            address: {
+              title: 'Garten HQ',
+              street: 'Gartenstraße 12',
+              city: 'Berlin, Deutschland 10969',
+              phone: '+49 30 2212 3456'
+            },
+            form: {
+              ariaLabel: 'Kontaktformular',
+              title: 'Beratung anfordern',
+              note: '* Alle Felder sind Pflichtfelder.',
+              nameLabel: 'Name',
+              emailLabel: 'E-Mail',
+              sizeLabel: 'Flächengröße',
+              sizePlaceholder: 'Auswählen',
+              sizeOption1: 'Bis 1 ha',
+              sizeOption2: '1–5 ha',
+              sizeOption3: '5–20 ha',
+              sizeOption4: 'Über 20 ha',
+              messageLabel: 'Kommentar',
+              messagePlaceholder: 'Beschreiben Sie Ihre Ziele',
+              submit: 'Senden'
+            }
+          },
+          footer: {
+            aboutTitle: 'Über uns',
+            aboutDescription: 'Garten fördert nachhaltige Landwirtschaft und urbanes Gärtnern, damit Menschen mit weniger Ressourcen mehr ernten.',
+            resourcesTitle: 'Ressourcen',
+            resources: {
+              api: 'API-Dokumentation',
+              community: 'Community',
+              partners: 'Partner'
+            },
+            legalTitle: 'Rechtliches',
+            legal: {
+              privacy: 'Datenschutzerklärung',
+              terms: 'Nutzungsbedingungen',
+              cookies: 'Cookies'
+            },
+            copyright: '© <time datetime="2025">2025</time> Garten. Alle Rechte vorbehalten.'
+          }
+        }
+      };
+
+      const supportedLanguages = Object.keys(translations);
+      const languageSelect = document.getElementById('language-select');
+
+      const getTranslation = (language, path) => {
+        return path.split('.').reduce((value, segment) => (value && value[segment] !== undefined ? value[segment] : undefined), translations[language]);
+      };
+
+      const applyLanguage = (language) => {
+        const lang = supportedLanguages.includes(language) ? language : 'ru';
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-i18n]').forEach((element) => {
+          const key = element.getAttribute('data-i18n');
+          const translation = getTranslation(lang, key);
+          if (translation === undefined) {
+            return;
+          }
+          if (element.dataset.i18nHtml === 'true') {
+            element.innerHTML = translation;
+          } else {
+            element.textContent = translation;
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-attr]').forEach((element) => {
+          const attrPairs = element.getAttribute('data-i18n-attr');
+          if (!attrPairs) {
+            return;
+          }
+          attrPairs.split(',').forEach((pair) => {
+            const [attr, key] = pair.split(':').map((str) => (str ? str.trim() : str));
+            if (!attr || !key) {
+              return;
+            }
+            const translation = getTranslation(lang, key);
+            if (translation === undefined) {
+              return;
+            }
+            element.setAttribute(attr, translation);
+          });
+        });
+
+        if (languageSelect && languageSelect.value !== lang) {
+          languageSelect.value = lang;
+        }
+
+        try {
+          localStorage.setItem('garten-lang', lang);
+        } catch (error) {
+          // ignore storage errors
+        }
+      };
+
+      let storedLanguage;
+      try {
+        storedLanguage = localStorage.getItem('garten-lang');
+      } catch (error) {
+        storedLanguage = null;
+      }
+
+      const browserLanguage = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+      const defaultLanguage = supportedLanguages.includes(storedLanguage)
+        ? storedLanguage
+        : supportedLanguages.includes(browserLanguage)
+          ? browserLanguage
+          : 'ru';
+
+      applyLanguage(defaultLanguage);
+
+      if (languageSelect) {
+        languageSelect.value = defaultLanguage;
+        languageSelect.addEventListener('change', (event) => {
+          applyLanguage(event.target.value);
+        });
+      }
+
+      const toggle = document.getElementById('mobile-nav-toggle');
+      const menu = document.getElementById('mobile-nav');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('hidden');
+        });
+      }
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-fade-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('[data-animate]').forEach((el) => {
+          el.classList.add('opacity-0', 'translate-y-6', 'motion-safe:transition', 'motion-safe:duration-700');
+          observer.observe(el);
+        });
+      }
+    })();
+  </script>
+  <style>
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in-up 0.7s ease-out forwards;
+    }
+  </style>
+</body>
+</html>

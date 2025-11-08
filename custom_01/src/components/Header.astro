@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header
+    class="border rounded-2xl border-white/10 bg-white/5 shadow-lg shadow-black/5 backdrop-blur-md"
+>
+    <div
+        class="flex flex-wrap items-center justify-evenly gap-4 px-4 py-6 md:px-0"
+    >
+        <div class="lg:order-1 flex items-center gap-2">
+            <Icon
+                name="lucide:sparkles"
+                class="size-5 opacity-70 group-hover:opacity-100"
+            />
+
+            <a href="/"
+                ><p class="font-sans text-4xl font-medium tracking-tighter">
+                    Area
+                </p></a
+            >
+        </div>
+
+        <div class="lg:order-3 rounded-full bg-[#485C11] px-6 py-2 text-sm">
+            <a href="/learn-more" class="text-white">Learn more</a>
+        </div>
+        <nav class="w-screen lg:w-auto justify-center lg:order-2">
+            <ul class="flex items-center gap-6 justify-between">
+                <li>
+                    <a href="/about">Über mich</a>
+                </li>
+                <li>
+                    <a href="/projects">Projekte</a>
+                </li>
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/contact">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

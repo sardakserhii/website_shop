@@ -1,0 +1,35 @@
+@import "tailwindcss";
+:root {
+    color-scheme: dark;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    @apply bg-[#16181D] text-white;
+}
+.container {
+    @apply mx-auto px-4 max-w-6xl;
+}
+.section {
+    @apply py-16 md:py-24;
+}
+.h2 {
+    @apply text-2xl md:text-4xl font-bold tracking-tight;
+}
+.lead {
+    @apply text-[#c6cdda] text-lg md:text-xl;
+}
+.card {
+    @apply rounded-2xl bg-[#292C34] border border-white/5 shadow-lg;
+}
+.button-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-xl bg-yellow-400 text-black font-semibold hover:opacity-90;
+}
+.button-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15;
+}
+.badge {
+    @apply inline-flex items-center text-xs uppercase tracking-wider px-2 py-1 rounded-full bg-white/10;
+}

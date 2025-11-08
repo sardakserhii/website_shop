@@ -1,0 +1,17 @@
+ <!-- фоновые «пилюли» -->
+        <div
+            class="pointer-events-none absolute -z-10 left-0 right-0 top-[100px] bottom-0"
+        >
+            <!-- левая -->
+            <div
+                class="absolute left-[-32px] top-0 bottom-0 w-32
+             rounded-[48px] bg-[#8b9a73] opacity-90 blur-[0px] shadow-lg"
+            >
+            </div>
+            <!-- правая -->
+            <div
+                class="absolute right-[-32px] top-0 bottom-0 w-32
+             rounded-[48px] bg-[#8b9a73] opacity-90 blur-[0px] shadow-lg"
+            >
+            </div>
+        </div>

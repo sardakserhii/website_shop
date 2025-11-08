@@ -1,0 +1,30 @@
+---
+import { siteMeta } from "../config/site";
+import texts from "../data/texts.de.json";
+---
+
+<header class="sticky top-0 z-50 bg-[#243e53]/50 backdrop-blur">
+    <div class="container flex items-center justify-between h-20">
+        <a href="/" class="font-bold"
+            >Werkstatt<span class="text-[#F0E714]">.de</span></a
+        >
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+            {
+                texts.nav.map((n) => (
+                    <a
+                        class="hover:text-yellow-300"
+                        href={"#" + n.toLowerCase().replace(/\s/g, "-")}
+                    >
+                        {n}
+                    </a>
+                ))
+            }
+        </nav>
+        <div class="flex items-center gap-2">
+            <a
+                class="px-10 py-2 bg-[#F0E714] text-[#101C26] rounded-[2px] hover:bg-yellow-500 text-sm font-medium"
+                href="#kontakt">Anrufen</a
+            >
+        </div>
+    </div>
+</header>

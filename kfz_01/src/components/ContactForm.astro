@@ -1,0 +1,35 @@
+
+---
+import texts from "../data/texts.de.json";
+---
+<section id="kontakt" class="section">
+  <div class="container">
+    <h2 class="h2 mb-6">Kontakt</h2>
+    <form class="card p-6 grid md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Form demo – integrate your handler (Vercel, Resend, Formspree)');">
+      <label class="flex flex-col gap-1">
+        <span>{texts.form.fields.name}*</span>
+        <input required class="bg-white/10 rounded-xl px-3 py-2" name="name" />
+      </label>
+      <label class="flex flex-col gap-1">
+        <span>{texts.form.fields.vehicle}</span>
+        <input class="bg-white/10 rounded-xl px-3 py-2" name="vehicle" />
+      </label>
+      <label class="flex flex-col gap-1">
+        <span>{texts.form.fields.email}*</span>
+        <input required type="email" class="bg-white/10 rounded-xl px-3 py-2" name="email" />
+      </label>
+      <label class="flex flex-col gap-1">
+        <span>{texts.form.fields.phone}</span>
+        <input class="bg-white/10 rounded-xl px-3 py-2" name="phone" />
+      </label>
+      <label class="md:col-span-2 flex flex-col gap-1">
+        <span>{texts.form.fields.message}*</span>
+        <textarea required class="bg-white/10 rounded-xl px-3 py-2 h-28" name="message" placeholder="z.B. Inspektion, Bremsen quietschen, HU/AU fällig bis …"></textarea>
+      </label>
+      <div class="md:col-span-2 flex items-center justify-between">
+        <small class="text-white/60">{texts.form.note}</small>
+        <button class="button-primary" type="submit">{texts.form.submit}</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import texts from "../data/texts.de.json";
+---
+
+<section id="preise" class="section bg-[#F3F4F6]">
+    <div class="container">
+        <h2 class="h2 mb-6 text-[#101C26]">{texts.pricing.title}</h2>
+        <div class="card overflow-hidden">
+            <table class="w-full text-sm">
+                <thead class="bg-white/5">
+                    <tr
+                        ><th class="text-left p-3">Leistung</th><th
+                            class="text-left p-3">Preis</th
+                        ><th class="text-left p-3">Hinweise</th></tr
+                    >
+                </thead>
+                <tbody>
+                    {
+                        texts.pricing.rows.map(([l, p, h]) => (
+                            <tr class="border-t border-white/5">
+                                <>
+                                    <td class="p-3">{l}</td>
+                                    <td class="p-3">{p}</td>
+                                    <td class="p-3 text-white/60">{h}</td>
+                                </>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <p class="text-[#101C26] text-sm mt-3">{texts.pricing.disclaimer}</p>
+    </div>
+</section>

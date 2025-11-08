@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>
+    Meisterbetrieb für Renovierung und Innenausbau | Professionelle Handwerker
+  </title>
+  <meta name="description"
+    content="Ihr Meisterbetrieb für Renovierung, Innenausbau, Badezimmer, Küche und Malerarbeiten. Erfahrene Handwerker mit garantierter Qualität. Kostenlose Beratung und Angebot." />
+  <meta property="og:title" content="Meisterbetrieb für Renovierung und Innenausbau" />
+  <meta property="og:description"
+    content="Professionelle Renovierungs- und Innenausbau-Dienstleistungen von erfahrenen Meistern." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <noscript>
+    Bitte aktivieren Sie JavaScript, um alle Funktionen dieser Seite nutzen zu
+    können.
+  </noscript>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <div class="branding">
+        <span class="branding__title">Meisterbetrieb Renovierung</span>
+        <span class="branding__subtitle">Innenausbau &amp; Sanierung</span>
+      </div>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <ul class="nav__list">
+          <li><a href="#hero" data-scroll="hero">Startseite</a></li>
+          <li><a href="#services" data-scroll="services">Leistungen</a></li>
+          <li><a href="#gallery" data-scroll="gallery">Projekte</a></li>
+          <li><a href="#calculator" data-scroll="calculator">Kalkulator</a></li>
+          <li><a href="#contact" data-scroll="contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn btn-primary header-cta" type="button" data-scroll="contact">
+        Angebot anfragen
+      </button>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen"
+        type="button" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden data-mobile-menu>
+    <div class="mobile-menu__content">
+      <button class="menu-close" type="button" aria-label="Menü schließen" data-menu-close>
+        ×
+      </button>
+      <nav aria-label="Mobile Navigation">
+        <ul>
+          <li><a href="#hero" data-scroll="hero">Startseite</a></li>
+          <li><a href="#services" data-scroll="services">Leistungen</a></li>
+          <li><a href="#gallery" data-scroll="gallery">Projekte</a></li>
+          <li><a href="#calculator" data-scroll="calculator">Kalkulator</a></li>
+          <li><a href="#contact" data-scroll="contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn-primary btn-wide" data-scroll="contact">
+        Angebot anfragen
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__background">
+        <img src="assets/images/Modern_kitchen_after_renovation_a5c463b7.png" alt="Moderne Küche nach der Renovierung"
+          loading="lazy" />
+        <div class="hero__overlay"></div>
+
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <p class="eyebrow">Ihr Meisterbetrieb</p>
+          <h1>
+            Ihr Meisterbetrieb für Renovierung<br />
+            und Innenausbau
+          </h1>
+          <p>
+            Professionelle Handwerksleistungen mit über 15 Jahren Erfahrung.
+            Von der Planung bis zur Fertigstellung – alles aus einer Hand.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn-primary btn-large" data-scroll="calculator" type="button">
+              Kostenlos Angebot erhalten
+            </button>
+            <button class="btn btn-outline btn-large" data-scroll="gallery" type="button">
+              Projekte ansehen
+            </button>
+          </div>
+          <dl class="hero__stats">
+            <div>
+              <dt>Jahre Erfahrung</dt>
+              <dd>15+</dd>
+            </div>
+            <div>
+              <dt>Abgeschlossene Projekte</dt>
+              <dd>500+</dd>
+            </div>
+            <div>
+              <dt>Kundenzufriedenheit</dt>
+              <dd>98%</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__slider">
+          <div class="before-after" data-before-label="Vorher" data-after-label="Nachher"
+            data-category="Küche Renovierung">
+            <img src="assets/images/Modern_kitchen_after_renovation_a5c463b7.png" alt="Moderne Küche nach Renovierung"
+              class="before-after__image before-after__image--after" loading="lazy" />
+            <div class="before-after__before">
+              <img src="assets/images/Old_kitchen_before_renovation_6edaa084.png" alt="Küche vor der Renovierung"
+                class="before-after__image" loading="lazy" />
+            </div>
+            <div class="before-after__label before-after__label--after"></div>
+            <div class="before-after__label before-after__label--before"></div>
+            <div class="before-after__category"></div>
+            <div class="before-after__divider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100"
+              aria-valuenow="50" aria-label="Vorher-Nachher Schieberegler">
+              <span class="before-after__thumb" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <header class="section-header">
+          <h2>Unsere Leistungen</h2>
+          <p>
+            Professionelle Handwerksleistungen für alle Bereiche der
+            Renovierung und des Innenausbaus.
+          </p>
+        </header>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔨</div>
+            <h3>Renovierung</h3>
+            <p>
+              Komplette Renovierungen von Wohnungen, Häusern und
+              Geschäftsräumen mit professioneller Planung und Ausführung.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📐</div>
+            <h3>Innenausbau</h3>
+            <p>
+              Trockenbau, Decken- und Wandverkleidungen sowie individuelle
+              Raumgestaltung nach Ihren Wünschen.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🛁</div>
+            <h3>Badezimmer</h3>
+            <p>
+              Moderne Badsanierung mit hochwertigen Materialien, von der
+              Planung bis zur schlüsselfertigen Übergabe.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🍽️</div>
+            <h3>Küche</h3>
+            <p>
+              Küchenumbau und -sanierung mit perfekter Abstimmung aller
+              Installationen und Anschlüsse.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h3>Malerarbeiten</h3>
+            <p>
+              Professionelle Maler- und Tapezierarbeiten für Innen- und
+              Außenbereiche in höchster Qualität.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🧰</div>
+            <h3>Bodenverlegung</h3>
+            <p>
+              Verlegung von Parkett, Laminat, Fliesen und weiteren
+              Bodenbelägen mit präziser Handwerkskunst.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <header class="section-header">
+          <h2>Unsere Projekte</h2>
+          <p>
+            Sehen Sie die Qualität unserer Arbeit anhand von
+            Vorher-Nachher-Beispielen abgeschlossener Projekte.
+          </p>
+        </header>
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <div class="before-after" data-before-label="Vorher" data-after-label="Nachher" data-category="Küche">
+              <img src="assets/images/Modern_kitchen_after_renovation_a5c463b7.png" alt="Küche nach Renovierung"
+                class="before-after__image before-after__image--after" loading="lazy" />
+              <div class="before-after__before">
+                <img src="assets/images/Old_kitchen_before_renovation_6edaa084.png" alt="Küche vor Renovierung"
+                  class="before-after__image" loading="lazy" />
+              </div>
+              <div class="before-after__label before-after__label--after"></div>
+              <div class="before-after__label before-after__label--before"></div>
+              <div class="before-after__category"></div>
+              <div class="before-after__divider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100"
+                aria-valuenow="50" aria-label="Vorher-Nachher Schieberegler">
+                <span class="before-after__thumb" aria-hidden="true"></span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <div class="before-after" data-before-label="Vorher" data-after-label="Nachher" data-category="Badezimmer">
+              <img src="assets/images/Modern_bathroom_after_renovation_126ccd7d.png" alt="Badezimmer nach Renovierung"
+                class="before-after__image before-after__image--after" loading="lazy" />
+              <div class="before-after__before">
+                <img src="assets/images/Old_bathroom_before_renovation_49221ca7.png" alt="Badezimmer vor Renovierung"
+                  class="before-after__image" loading="lazy" />
+              </div>
+              <div class="before-after__label before-after__label--after"></div>
+              <div class="before-after__label before-after__label--before"></div>
+              <div class="before-after__category"></div>
+              <div class="before-after__divider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100"
+                aria-valuenow="50" aria-label="Vorher-Nachher Schieberegler">
+                <span class="before-after__thumb" aria-hidden="true"></span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <div class="before-after" data-before-label="Vorher" data-after-label="Nachher" data-category="Wohnzimmer">
+              <img src="assets/images/Modern_living_room_after_3d0c0269.png" alt="Wohnzimmer nach Renovierung"
+                class="before-after__image before-after__image--after" loading="lazy" />
+              <div class="before-after__before">
+                <img src="assets/images/Old_living_room_before_e6e31543.png" alt="Wohnzimmer vor Renovierung"
+                  class="before-after__image" loading="lazy" />
+              </div>
+              <div class="before-after__label before-after__label--after"></div>
+              <div class="before-after__label before-after__label--before"></div>
+              <div class="before-after__category"></div>
+              <div class="before-after__divider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100"
+                aria-valuenow="50" aria-label="Vorher-Nachher Schieberegler">
+                <span class="before-after__thumb" aria-hidden="true"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator" id="calculator">
+      <div class="container">
+        <header class="section-header">
+          <h2>Kostenvoranschlag berechnen</h2>
+          <p>Erhalten Sie eine erste Kostenschätzung für Ihr Projekt.</p>
+        </header>
+
+        <form class="calculator-form" data-calculator novalidate>
+          <fieldset>
+            <legend>Gewünschte Leistungen *</legend>
+            <div class="calculator-grid">
+              <label>
+                <input type="checkbox" name="services" value="painting" />
+                Malerarbeiten
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="flooring" />
+                Bodenverlegung
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="bathroom" />
+                Badezimmer
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="kitchen" />
+                Küche
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="drywall" />
+                Trockenbau
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="electrical" />
+                Elektrik
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="calculator-input">
+            <span>Fläche in Quadratmetern *</span>
+            <input type="number" name="area" min="1" max="1000" placeholder="z. B. 50" required />
+          </label>
+
+          <label class="calculator-input">
+            <span>Projektumfang *</span>
+            <select name="scope" required>
+              <option value="" selected disabled>Bitte wählen</option>
+              <option value="small">Kleine Reparatur</option>
+              <option value="partial">Teilrenovierung</option>
+              <option value="full">Vollrenovierung</option>
+            </select>
+          </label>
+
+          <label class="calculator-input">
+            <span>Zeitrahmen *</span>
+            <select name="timeline" required>
+              <option value="" selected disabled>Bitte wählen</option>
+              <option value="flexible">Flexibel</option>
+              <option value="normal">Normal (2-4 Wochen)</option>
+              <option value="urgent">Dringend (1-2 Wochen)</option>
+            </select>
+          </label>
+
+          <button class="btn btn-primary btn-wide" type="submit">
+            Kostenvoranschlag berechnen
+          </button>
+
+          <p class="form-feedback" data-calculator-feedback aria-live="polite"></p>
+
+          <div class="calculator-result" data-calculator-result hidden>
+            <p class="calculator-result__title">Geschätzte Kosten</p>
+            <p class="calculator-result__value" data-calculator-value>0 €</p>
+            <p class="calculator-result__note">
+              Unverbindliche Schätzung. Das endgültige Angebot erhalten Sie nach
+              einem persönlichen Beratungsgespräch.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact__inner">
+        <header class="section-header">
+          <h2>Kontaktieren Sie uns</h2>
+          <p>
+            Wir freuen uns auf Ihre Anfrage und beraten Sie gerne kostenlos zu
+            Ihrem Projekt.
+          </p>
+        </header>
+
+        <div class="contact__grid">
+          <form class="contact-form" data-contact-form novalidate>
+            <div class="form-group">
+              <label for="contact-name">Name *</label>
+              <input id="contact-name" name="name" type="text" required placeholder="Max Mustermann" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">E-Mail *</label>
+              <input id="contact-email" name="email" type="email" required placeholder="max@beispiel.de" />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Telefon *</label>
+              <input id="contact-phone" name="phone" type="tel" required placeholder="+49 123 456789" />
+            </div>
+            <div class="form-group">
+              <label for="contact-service">Gewünschte Leistung *</label>
+              <select id="contact-service" name="service" required>
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="renovation">Renovierung</option>
+                <option value="interior">Innenausbau</option>
+                <option value="bathroom">Badezimmer</option>
+                <option value="kitchen">Küche</option>
+                <option value="painting">Malerarbeiten</option>
+                <option value="flooring">Bodenverlegung</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Nachricht *</label>
+              <textarea id="contact-message" name="message" rows="5" required
+                placeholder="Beschreiben Sie Ihr Projekt..."></textarea>
+            </div>
+            <button class="btn btn-primary btn-wide" type="submit">
+              Anfrage senden
+            </button>
+            <p class="form-feedback" data-contact-feedback aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-info">
+            <article>
+              <h3>Adresse</h3>
+              <p>
+                Musterstraße 123<br />
+                12345 Berlin<br />
+                Deutschland
+              </p>
+            </article>
+            <article>
+              <h3>Telefon</h3>
+              <p>
+                <a href="tel:+491234567890">+49 (0) 123 456 7890</a>
+              </p>
+            </article>
+            <article>
+              <h3>E-Mail</h3>
+              <p>
+                <a href="mailto:info@meisterbetrieb.de">info@meisterbetrieb.de</a>
+              </p>
+            </article>
+            <article>
+              <h3>Öffnungszeiten</h3>
+              <p>
+                Mo - Fr: 07:00 - 18:00<br />
+                Sa: 08:00 - 14:00<br />
+                So: Geschlossen
+              </p>
+            </article>
+            <article class="contact-highlight">
+              <h3>Kostenlose Beratung</h3>
+              <p>
+                Vereinbaren Sie einen unverbindlichen Termin mit unseren
+                Experten. Wir beraten Sie umfassend und persönlich.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h3>Meisterbetrieb Renovierung</h3>
+        <p>
+          Ihr zuverlässiger Partner für professionelle Renovierungs- und
+          Innenausbau-Arbeiten mit über 15 Jahren Erfahrung.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#hero" data-scroll="hero">Startseite</a></li>
+          <li><a href="#services" data-scroll="services">Leistungen</a></li>
+          <li><a href="#gallery" data-scroll="gallery">Projekte</a></li>
+          <li><a href="#calculator" data-scroll="calculator">Kalkulator</a></li>
+          <li><a href="#contact" data-scroll="contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Leistungen</h3>
+        <ul>
+          <li>Renovierung</li>
+          <li>Innenausbau</li>
+          <li>Badezimmer</li>
+          <li>Küche</li>
+          <li>Malerarbeiten</li>
+          <li>Bodenverlegung</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Newsletter</h3>
+        <form class="newsletter" data-newsletter novalidate>
+          <label class="sr-only" for="newsletter-email">E-Mail</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="Ihre E-Mail" required />
+          <button class="btn btn-primary" type="submit">Abonnieren</button>
+        </form>
+        <p class="form-feedback" data-newsletter-feedback aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Meisterbetrieb Renovierung. Alle Rechte vorbehalten.</p>
+      <div class="footer__links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>

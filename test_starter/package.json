@@ -1,0 +1,22 @@
+{
+  "name": "my-astro-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.15.3",
+    "astro-icon": "^1.1.5",
+    "@iconify-json/lucide": "^1.2.71",
+    "@iconify-json/simple-icons": "^1.2.56",
+    "@tailwindcss/vite": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  },
+  "devDependencies": {}
+}

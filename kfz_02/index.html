@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KFZ-Meisterbetrieb | Inspektion, Service &amp; Reparatur</title>
+  <meta name="description"
+    content="KFZ-Meisterbetrieb für Inspektion, Service und Reparatur in Ihrer Region. Jetzt Leistungen entdecken und Termin online buchen." />
+  <meta property="og:title" content="KFZ-Meisterbetrieb – Termin online buchen" />
+  <meta property="og:description"
+    content="Kompetenter KFZ-Service mit 26 Jahren Erfahrung. Schnell, fair, freundlich. Online-Terminbuchung, Leistungen und Bewertungen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/kfz-werkstatt" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=KFZ+Werkstatt" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: "#0F3D3D",
+              light: "#F5F7F8",
+              accent: "#D75736",
+              accentDark: "#C74C2D",
+              accentHover: "#E06040",
+              emerald: "#135B5B",
+              textAccent: "#C04A2C",
+            },
+            text: {
+              base: "#121417",
+              subtle: "#6B7780",
+              light: "#EAF1F2",
+            },
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+            display: ["Manrope", "Inter", "system-ui", "sans-serif"],
+          },
+          boxShadow: {
+            card: "0 30px 60px -30px rgba(15, 61, 61, 0.4)",
+            glow: "0 10px 30px rgba(15, 61, 61, 0.35)",
+          },
+          maxWidth: {
+            "7xl": "80rem",
+          },
+          letterSpacing: {
+            widehero: "-0.01em",
+            chip: "0.04em",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    body {
+      font-feature-settings: "liga" 1, "kern" 1;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-text-base bg-brand-light antialiased">
+  <a href="#hauptinhalt"
+    class="skip-link sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-1/2 focus:-translate-x-1/2 focus:bg-brand-dark focus:text-white focus:px-6 focus:py-3 focus:rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Zum
+    Inhalt springen</a>
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md transition duration-300 ease-out" data-header>
+    <div class="mx-auto flex h-20 max-w-7xl items-center gap-6 px-6 lg:h-24 xl:px-10">
+      <a href="#hero" class="flex items-center gap-3" aria-label="KFZ Meisterbetrieb Startseite">
+        <span
+          class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">
+          KFZ
+        </span>
+        <span class="flex flex-col">
+          <span
+            class="font-display text-lg font-semibold tracking-wide text-brand-dark header-logotext">Meisterbetrieb</span>
+          <span class="text-sm font-medium uppercase tracking-chip text-text-subtle header-logotext">Service &amp;
+            Diagnose</span>
+        </span>
+      </a>
+      <nav class="ml-auto hidden items-center gap-x-8 text-sm font-medium text-white lg:flex"
+        aria-label="Hauptnavigation">
+        <a class="transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          href="#leistungen">Leistungen</a>
+        <a class="transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          href="#prozess">Ablauf</a>
+        <a class="transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          href="#bewertungen">Bewertungen</a>
+        <a class="transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          href="#partner">Partner</a>
+        <a class="transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          href="#faq">FAQ</a>
+        <a class="transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          href="#kontakt">Kontakt</a>
+      </nav>
+      <div class="ml-auto flex items-center gap-3 lg:ml-0">
+        <a href="#kontakt"
+          class="hidden items-center justify-center rounded-xl border border-transparent bg-brand-accent px-5 py-2.5 text-base font-semibold text-brand-dark transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark lg:inline-flex">Termin
+          buchen</a>
+        <button type="button"
+          class="inline-flex items-center justify-center rounded-xl border border-transparent bg-brand-accent px-4 py-2 text-base font-semibold text-brand-dark shadow-md transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark lg:hidden"
+          data-menu-btn aria-expanded="false" aria-controls="mobile-menu">
+          Menü
+        </button>
+      </div>
+    </div>
+    <!-- Mobile navigation -->
+    <div id="mobile-menu"
+      class="pointer-events-none absolute inset-x-0 top-full origin-top scale-y-95 opacity-0 transition-all duration-300 ease-out lg:hidden"
+      hidden>
+      <div class="mx-4 rounded-2xl border border-text-subtle/10 bg-white shadow-lg">
+        <nav class="flex flex-col gap-2 p-4 text-base font-medium text-text-base" aria-label="Mobile Navigation">
+          <a href="#leistungen"
+            class="rounded-xl px-5 py-3 transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">Leistungen</a>
+          <a href="#prozess"
+            class="rounded-xl px-5 py-3 transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">Ablauf</a>
+          <a href="#bewertungen"
+            class="rounded-xl px-5 py-3 transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">Bewertungen</a>
+          <a href="#partner"
+            class="rounded-xl px-5 py-3 transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">Partner</a>
+          <a href="#faq"
+            class="rounded-xl px-5 py-3 transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">FAQ</a>
+          <a href="#kontakt"
+            class="rounded-xl px-5 py-3 transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">Kontakt</a>
+          <a href="#termin"
+            class="mt-2 inline-flex items-center justify-center rounded-xl bg-brand-accent px-5 py-3 text-base font-semibold text-brand-dark transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark">Termin
+            buchen</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="hauptinhalt">
+    <!-- Hero -->
+    <section id="hero" class="relative overflow-hidden bg-brand-dark pt-24 pb-20 text-white sm:pt-28 md:pt-32 lg:pt-36">
+      <div class="absolute inset-0" aria-hidden="true">
+        <figure class="h-full w-full">
+          <img src="https://images.unsplash.com/photo-1578589318472-9e84f3abb4d9?auto=format&fit=crop&w=2000&q=80"
+            alt="" loading="lazy" class="h-full w-full object-cover opacity-70" />
+          <figcaption class="sr-only">Mechaniker arbeitet an einem Fahrzeug in der Werkstatt</figcaption>
+        </figure>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/50"></div>
+      </div>
+      <div class="relative mx-auto flex max-w-7xl flex-col gap-12 px-6 xl:px-10">
+        <div class="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div class="lg:col-span-6 xl:col-span-5">
+            <span
+              class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-white backdrop-blur">KFZ-Meisterbetrieb
+              &ndash; Seit 1998</span>
+            <h1 class="mt-6 font-display text-4xl font-semibold tracking-widehero text-white sm:text-5xl md:text-6xl">
+              Inspektion, Service &amp; Reparatur für alle Marken
+            </h1>
+            <p class="mt-6 max-w-xl text-lg text-text-light">
+              Wir kombinieren meisterhafte Handwerkskunst mit digitaler Transparenz. Von HU/AU bis Hochvoltdiagnose:
+              Ihr Fahrzeug ist bei uns in besten Händen.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a href="#leistungen"
+                class="inline-flex items-center justify-center rounded-xl bg-brand-accent px-6 py-3 text-base font-semibold text-brand-dark shadow-glow transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-dark">Leistungen
+                ansehen</a>
+              <a href="#termin"
+                class="inline-flex items-center justify-center rounded-xl border border-white/60 px-6 py-3 text-base font-semibold text-white transition hover:border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">Termin
+                buchen</a>
+            </div>
+            <ul class="mt-10 grid grid-cols-1 gap-6 text-sm text-text-light sm:grid-cols-2">
+              <li class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6 text-brand-accent" role="img" aria-label="Ersatzwagen verfügbar">
+                  <title>Ersatzwagen</title>
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 13l3-6h8.5a2 2 0 011.79 1.1l1.2 2.4A2 2 0 0116.7 13H3z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M5 17a2 2 0 100-4 2 2 0 000 4zM17 17a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+                Ersatzwagen &amp; Hol- &amp; Bringservice
+              </li>
+              <li class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6 text-brand-accent" role="img"
+                  aria-label="Transparente Onlinefreigabe">
+                  <title>Digitale Freigabe</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 7h14M5 12h9M5 17h5" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 15l2 2 3-3" />
+                </svg>
+                Digitale Freigaben &amp; Live-Updates
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 lg:col-start-8 xl:col-span-7 xl:col-start-7">
+            <div class="relative rounded-3xl bg-white/10 p-6 shadow-card backdrop-blur-xl sm:p-10">
+              <figure class="aspect-[4/3] overflow-hidden rounded-2xl border border-white/20">
+                <img src="img/olivie-zemanova-96zZwduNsGI-unsplash.jpg" alt="Diagnose eines Fahrzeugs in der Werkstatt"
+                  loading="lazy" class="h-full w-full object-cover" />
+              </figure>
+              <figcaption class="mt-6 space-y-4 text-sm text-text-light">
+                <p class="font-semibold uppercase tracking-chip text-white">Schnell. Fair. Freundlich.</p>
+                <p>
+                  Unsere Meister führen jede Diagnose mit modernster Technik durch – inklusive Sicherheitsscan für
+                  E-Fahrzeuge.
+                </p>
+                <div class="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-chip text-white">
+                  <span class="rounded-full border border-white/20 px-4 py-1">E-Autos</span>
+                  <span class="rounded-full border border-white/20 px-4 py-1">Werkstattersatzwagen</span>
+                  <span class="rounded-full border border-white/20 px-4 py-1">Expressservice</span>
+                </div>
+              </figcaption>
+            </div>
+          </div>
+        </div>
+        <!-- Quick services chips -->
+        <div id="quick-services" class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur xl:px-8">
+          <h2 class="text-lg font-semibold text-white">Schnellzugriff</h2>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            <a href="#leistungen"
+              class="inline-flex items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Ölwechsel</a>
+            <a href="#leistungen"
+              class="inline-flex items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">HU/AU</a>
+            <a href="#leistungen"
+              class="inline-flex items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Bremsen</a>
+            <a href="#leistungen"
+              class="inline-flex items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Reifen</a>
+            <a href="#leistungen"
+              class="inline-flex items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Elektrik</a>
+            <a href="#leistungen"
+              class="inline-flex items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Klimaservice</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Intro / About -->
+    <section id="about" class="relative overflow-hidden py-20 sm:py-24 md:py-28">
+      <div class="absolute inset-x-0 top-12 flex justify-center" aria-hidden="true">
+        <div class="h-40 w-40 rounded-full bg-brand-accent/20 blur-3xl"></div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="grid gap-12 lg:grid-cols-[1.2fr,1fr] lg:items-center">
+          <div class="space-y-6">
+            <span
+              class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Über
+              uns</span>
+            <h2
+              class="font-display text-3xl font-semibold tracking-tight text-brand-dark sm:text-4xl md:text-[2.75rem]">
+              Manufaktur-Qualität trifft digitale Werkstattprozesse
+            </h2>
+            <p class="text-base text-text-subtle md:text-lg">
+              Seit über 26 Jahren verbinden wir solide Mechanik mit datengetriebener Diagnose. Unser Team aus
+              zertifizierten Meistern und Diagnosetechnikern betreut jährlich über 1.000 Fahrzeuge – vom Oldtimer bis
+              zum E-Auto.
+            </p>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <article class="rounded-2xl border border-brand-dark/10 bg-white p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-brand-dark">Transparenz in jedem Schritt</h3>
+                <p class="mt-2 text-sm text-text-subtle">
+                  Sie erhalten Foto-/Video-Reports direkt aufs Smartphone, inklusive Kostenvoranschlag und
+                  Freigabeoptionen.
+                </p>
+              </article>
+              <article class="rounded-2xl border border-brand-dark/10 bg-white p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-brand-dark">Green Repair</h3>
+                <p class="mt-2 text-sm text-text-subtle">
+                  Reparatur vor Austausch: wir verlängern Produktlebenszyklen, nutzen recycelte Teile und entsorgen
+                  fachgerecht.
+                </p>
+              </article>
+            </div>
+          </div>
+          <div class="relative flex justify-center lg:justify-end">
+            <div class="relative h-full max-w-md rounded-[2.5rem] border border-brand-dark/10 bg-white p-8 shadow-glow">
+              <div class="absolute -left-8 top-12 hidden h-16 w-16 rounded-2xl bg-brand-accent/80 blur-xl lg:block"
+                aria-hidden="true"></div>
+              <div class="space-y-6">
+                <h3 class="text-xl font-semibold text-brand-dark">Werkstattstatus in Echtzeit</h3>
+                <ul class="space-y-4 text-sm text-text-subtle">
+                  <li class="flex gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    Live-Tracking des Reparaturfortschritts inklusive Prognose der Fertigstellung.
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    AI-gestützte Serviceempfehlungen basierend auf Fahrprofil &amp; Symptomen.
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                    Bezahl- und Terminoptionen papierlos auf jedem Endgerät.
+                  </li>
+                </ul>
+                <button type="button"
+                  class="inline-flex items-center gap-2 rounded-xl border border-brand-dark px-4 py-3 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+                  aria-label="Demo der digitalen Werkstattoberfläche ansehen">
+                  Demo anfordern
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.75" class="h-4 w-4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Leistungen -->
+    <section id="leistungen" class="bg-brand-light py-20 sm:py-24 md:py-28" aria-labelledby="leistungen-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <span
+              class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Leistungen</span>
+            <h2 id="leistungen-heading"
+              class="mt-4 font-display text-3xl font-semibold text-brand-dark sm:text-4xl md:text-[2.5rem]">
+              Unser Leistungsspektrum im Überblick
+            </h2>
+            <p class="mt-3 max-w-2xl text-base text-text-subtle">
+              Modular aufgebaut, transparent bepreist und mit klarer Dauer. Wählen Sie nach Bedarf oder lassen Sie
+              sich vom System passende Kombinationen vorschlagen.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <button type="button"
+              class="inline-flex items-center gap-2 rounded-xl border border-brand-textAccent px-4 py-2.5 text-sm font-semibold text-brand-textAccent transition hover:bg-brand-accent/10 hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Alle Leistungen anzeigen
+            </button>
+            <button type="button"
+              class="inline-flex items-center gap-2 rounded-xl bg-brand-accent px-4 py-2.5 text-base font-semibold text-brand-dark transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-dark">
+              Preisliste herunterladen
+            </button>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Service card -->
+          <article
+            class="group flex h-full flex-col rounded-2xl border-t-4 border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-accent focus-within:-translate-y-1 focus-within:border-brand-accent focus-within:shadow-lg">
+            <div class="flex items-center gap-4">
+              <span
+                class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark/10 text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6" role="img" aria-label="Inspektion">
+                  <title>Inspektion</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 5h14v14H5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6v6H9z" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-dark">Premium Inspektion</h3>
+                <p class="text-xs font-semibold uppercase tracking-chip text-text-subtle">Dauer: 90 min · ab 159 €</p>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-2 text-sm text-text-subtle">
+              <li>OE-konforme Wartung inkl. digitalem Serviceeintrag</li>
+              <li>Ersatzteile in Herstellerqualität</li>
+              <li>Software-Updates &amp; Sicherheitschecks</li>
+            </ul>
+            <a href="#termin"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Mehr erfahren
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article
+            class="group flex h-full flex-col rounded-2xl border-t-4 border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-accent focus-within:-translate-y-1 focus-within:border-brand-accent focus-within:shadow-lg">
+            <div class="flex items-center gap-4">
+              <span
+                class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark/10 text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6" role="img" aria-label="Bremsenservice">
+                  <title>Bremsenservice</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-dark">Bremsenservice</h3>
+                <p class="text-xs font-semibold uppercase tracking-chip text-text-subtle">Dauer: 60 min · ab 129 €</p>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-2 text-sm text-text-subtle">
+              <li>Präzisionsmessung &amp; Prüfstand</li>
+              <li>Keramik- &amp; Performanceoptionen</li>
+              <li>Softwarekalibrierung für Assistenzsysteme</li>
+            </ul>
+            <a href="#termin"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Mehr erfahren
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article
+            class="group flex h-full flex-col rounded-2xl border-t-4 border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-accent focus-within:-translate-y-1 focus-within:border-brand-accent focus-within:shadow-lg">
+            <div class="flex items-center gap-4">
+              <span
+                class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark/10 text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6" role="img" aria-label="Diagnose Hochvolt">
+                  <title>Hochvoltdiagnose</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4 14h7l-1 8L20 10h-7l1-8z" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-dark">E-Mobil Diagnose</h3>
+                <p class="text-xs font-semibold uppercase tracking-chip text-text-subtle">Dauer: 75 min · ab 179 €</p>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-2 text-sm text-text-subtle">
+              <li>Hochvolt-Sicherheit &amp; Zellbalance</li>
+              <li>Thermomanagement-Checks &amp; Updates</li>
+              <li>Persönlicher Lade-Infrastrukturcheck</li>
+            </ul>
+            <a href="#termin"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Mehr erfahren
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article
+            class="group flex h-full flex-col rounded-2xl border-t-4 border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-accent focus-within:-translate-y-1 focus-within:border-brand-accent focus-within:shadow-lg">
+            <div class="flex items-center gap-4">
+              <span
+                class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark/10 text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6" role="img" aria-label="Reifen &amp; Fahrwerk">
+                  <title>Reifenservice</title>
+                  <circle cx="12" cy="12" r="7" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-dark">Reifen &amp; Fahrwerk</h3>
+                <p class="text-xs font-semibold uppercase tracking-chip text-text-subtle">Dauer: 45 min · ab 89 €</p>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-2 text-sm text-text-subtle">
+              <li>4D-Achsvermessung &amp; Spurweitenoptimierung</li>
+              <li>Einlagerung mit Klimakontrolle</li>
+              <li>Performance-, Allwetter- &amp; Eco-Konfiguration</li>
+            </ul>
+            <a href="#termin"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Mehr erfahren
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article
+            class="group flex h-full flex-col rounded-2xl border-t-4 border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-accent focus-within:-translate-y-1 focus-within:border-brand-accent focus-within:shadow-lg">
+            <div class="flex items-center gap-4">
+              <span
+                class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark/10 text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6" role="img" aria-label="Elektrik &amp; Diagnose">
+                  <title>Elektrikdiagnose</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 17h16M12 7v10" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-dark">Elektrik &amp; Diagnose</h3>
+                <p class="text-xs font-semibold uppercase tracking-chip text-text-subtle">Dauer: 60 min · ab 99 €</p>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-2 text-sm text-text-subtle">
+              <li>Fehlercodeanalyse &amp; Drainage-Test</li>
+              <li>Kalibrierung von Assistenzsystemen (ADAS)</li>
+              <li>Software-Updates &amp; Remote-Diagnose</li>
+            </ul>
+            <a href="#termin"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Mehr erfahren
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article
+            class="group flex h-full flex-col rounded-2xl border-t-4 border-transparent bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-accent focus-within:-translate-y-1 focus-within:border-brand-accent focus-within:shadow-lg">
+            <div class="flex items-center gap-4">
+              <span
+                class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark/10 text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="h-6 w-6" role="img" aria-label="Klimaservice">
+                  <title>Klimaservice</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8h18M3 16h18M7 8v8M17 8v8" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-dark">Klimaservice Pro</h3>
+                <p class="text-xs font-semibold uppercase tracking-chip text-text-subtle">Dauer: 40 min · ab 79 €</p>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-2 text-sm text-text-subtle">
+              <li>Desinfektion &amp; Ozonbehandlung</li>
+              <li>Hochdruck-Leaktest &amp; UV-Kontrolle</li>
+              <li>Kältemittel R134a &amp; R1234yf</li>
+            </ul>
+            <a href="#termin"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Mehr erfahren
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Prozess -->
+    <section id="prozess" class="py-20 sm:py-24 md:py-28" aria-labelledby="prozess-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span
+              class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Ablauf</span>
+            <h2 id="prozess-heading"
+              class="mt-4 font-display text-3xl font-semibold text-brand-dark sm:text-4xl md:text-[2.5rem]">
+              So läuft Ihr Werkstattbesuch bei uns
+            </h2>
+            <p class="mt-3 max-w-xl text-base text-text-subtle">
+              Transparent, nachvollziehbar und effizient – mit klarer Kommunikation über alle Kanäle hinweg.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-brand-dark/10 bg-white p-8 shadow-sm">
+            <ol class="space-y-6 text-sm text-text-subtle">
+              <li class="flex gap-4">
+                <span
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">1</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-dark">Annahme</h3>
+                  <p>Digitale Check-in-Station mit Schnellfiltern wie „Heute frei“ oder „Ersatzwagen benötigt“.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">2</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-dark">Diagnose</h3>
+                  <p>Live-Dokumentation mit Foto-/Video-Befunden und Priorisierung nach Sicherheitsrelevanz.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">3</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-dark">Freigabe</h3>
+                  <p>Sie entscheiden am Smartphone: Teilfreigaben, Rückfragen im Chat oder Alternativangebote.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">4</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-dark">Reparatur</h3>
+                  <p>Realtime-Status, Teileverfügbarkeit, Nachhaltigkeits-Einsparungen im Überblick.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">5</span>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-dark">Abholung</h3>
+                  <p>Digitale Bezahlung, Garantiesiegel, Kalendereintrag für den nächsten Service in 12 Monaten.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- USP Section -->
+    <section id="qualitaet" class="relative overflow-hidden bg-brand-dark py-20 text-white sm:py-24 md:py-28">
+      <div
+        class="absolute inset-y-0 left-1/2 hidden w-1/2 bg-[url('https://images.unsplash.com/photo-1597002914607-8f77f9c3e906?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-50 lg:block">
+        <span class="sr-only">Mechaniker-Team bei der Arbeit</span>
+      </div>
+      <div class="mx-auto flex max-w-7xl flex-col gap-10 px-6 lg:grid lg:grid-cols-12 lg:items-center xl:px-10">
+        <div class="lg:col-span-6 xl:col-span-5">
+          <span
+            class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-white">Unser
+            Versprechen</span>
+          <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-[2.5rem]">
+            Schnell. Fair. Freundlich.
+          </h2>
+          <p class="mt-4 text-base text-text-light">
+            Jede Reparatur wird von unseren Meister:innen doppelt geprüft. Wir setzen auf hochwertige Ersatzteile,
+            transparente Preise und Kommunikation in Echtzeit.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#termin"
+              class="inline-flex items-center justify-center rounded-xl bg-brand-accent px-6 py-3 text-base font-semibold text-brand-dark shadow-glow transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-dark">Jetzt
+              Termin sichern</a>
+            <a href="#kontakt"
+              class="inline-flex items-center justify-center rounded-xl border border-white/60 px-6 py-3 text-base font-semibold text-white transition hover:border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">Kontakt
+              aufnehmen</a>
+          </div>
+          <dl class="mt-10 grid gap-6 sm:grid-cols-2">
+            <div>
+              <dt class="text-sm uppercase tracking-chip text-white/70">Durchschnittliche Bewertung</dt>
+              <dd class="mt-2 font-display text-3xl font-semibold text-white">4,9/5 ★</dd>
+            </div>
+            <div>
+              <dt class="text-sm uppercase tracking-chip text-white/70">CO₂ Einsparung</dt>
+              <dd class="mt-2 font-display text-3xl font-semibold text-white">+37% p.a.</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="relative lg:col-span-6 lg:col-start-7 xl:col-span-7">
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <figure class="aspect-[16/10] overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=80"
+                alt="Mechaniker zeigt Kunden den Reparaturbericht" loading="lazy" class="h-full w-full object-cover" />
+            </figure>
+            <figcaption class="mt-6 space-y-4 text-sm text-text-light">
+              <p>
+                Unsere Kund:innen erhalten bei jeder Übergabe ein digitales Service-Booklet mit allen Details,
+                Garantieumfang und Empfehlungen.
+              </p>
+              <a href="#bewertungen"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                Bewertungen lesen
+                <span aria-hidden="true">→</span>
+              </a>
+            </figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kennzahlen -->
+    <section id="kennzahlen" class="py-20 sm:py-24 md:py-28" aria-labelledby="kennzahlen-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="text-center">
+          <span
+            class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Kennzahlen</span>
+          <h2 id="kennzahlen-heading"
+            class="mt-4 font-display text-3xl font-semibold text-brand-dark sm:text-4xl md:text-[2.5rem]">
+            Vertrauen, das wächst
+          </h2>
+        </div>
+        <dl class="mt-12 grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-3xl border border-brand-dark/10 bg-white p-8 shadow-sm">
+            <dt class="text-sm uppercase tracking-chip text-text-subtle">Fahrzeuge pro Jahr</dt>
+            <dd class="mt-3 font-display text-4xl font-semibold text-brand-dark">1K+</dd>
+          </div>
+          <div class="rounded-3xl border border-brand-dark/10 bg-white p-8 shadow-sm">
+            <dt class="text-sm uppercase tracking-chip text-text-subtle">Jahre Erfahrung</dt>
+            <dd class="mt-3 font-display text-4xl font-semibold text-brand-dark">26</dd>
+          </div>
+          <div class="rounded-3xl border border-brand-dark/10 bg-white p-8 shadow-sm">
+            <dt class="text-sm uppercase tracking-chip text-text-subtle">Partner &amp; Netzwerke</dt>
+            <dd class="mt-3 font-display text-4xl font-semibold text-brand-dark">18+</dd>
+          </div>
+          <div class="rounded-3xl border border-brand-dark/10 bg-white p-8 shadow-sm">
+            <dt class="text-sm uppercase tracking-chip text-text-subtle">Durchschnittliche Wartezeit</dt>
+            <dd class="mt-3 font-display text-4xl font-semibold text-brand-dark">24h</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <!-- Testimonials Carousel -->
+    <section id="bewertungen" class="bg-brand-light py-20 sm:py-24 md:py-28" aria-labelledby="bewertungen-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <span
+              class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Bewertungen</span>
+            <h2 id="bewertungen-heading"
+              class="mt-4 font-display text-3xl font-semibold text-brand-dark sm:text-4xl md:text-[2.5rem]">
+              Stimmen unserer Kund:innen
+            </h2>
+            <p class="mt-3 max-w-xl text-base text-text-subtle">
+              Jede Bewertung wird verifiziert und mit dem Fahrzeugmodell verknüpft. Das Carousel unterstützt Tastatur,
+              Maus und Touch.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button type="button"
+              class="inline-flex items-center rounded-xl border border-brand-textAccent px-4 py-2 text-sm font-semibold text-brand-textAccent transition hover:bg-brand-accent/10 hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent"
+              data-carousel-prev aria-controls="testimonial-carousel" aria-label="Vorherige Bewertung">
+              Zurück
+            </button>
+            <button type="button"
+              class="inline-flex items-center rounded-xl bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-dark transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-dark"
+              data-carousel-next aria-controls="testimonial-carousel" aria-label="Nächste Bewertung">
+              Weiter
+            </button>
+          </div>
+        </div>
+        <div id="testimonial-carousel" class="relative mt-12" role="region" aria-roledescription="carousel"
+          aria-label="Kundenbewertungen" data-carousel>
+          <div class="overflow-hidden">
+            <ul
+              class="flex gap-6 transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-transform"
+              data-carousel-track>
+              <li class="min-w-[100%] sm:min-w-[50%] lg:min-w-[33.333%]" role="group" aria-roledescription="slide"
+                aria-label="1 von 4">
+                <article class="h-full rounded-3xl border border-brand-dark/10 bg-white p-6 shadow-sm">
+                  <header class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=facearea&w=96&h=96&q=80"
+                      alt="Porträt von Sven Richter" width="48" height="48" class="h-12 w-12 rounded-full object-cover"
+                      loading="lazy" />
+                    <div>
+                      <h3 class="text-base font-semibold text-brand-dark">Sven Richter</h3>
+                      <p class="text-xs text-text-subtle">Audi A6 · 05.02.2025</p>
+                    </div>
+                  </header>
+                  <p class="mt-4 text-sm text-text-subtle">
+                    Schnelle Diagnose, klare Kostenübersicht und super freundlich. Besonders beeindruckt hat mich die
+                    digitale Fahrzeugakte mit Fotos und Empfehlungen.
+                  </p>
+                  <div class="mt-4 flex items-center gap-1 text-brand-accent" aria-label="5 von 5 Sternen">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </article>
+              </li>
+              <li class="min-w-[100%] sm:min-w-[50%] lg:min-w-[33.333%]" role="group" aria-roledescription="slide"
+                aria-label="2 von 4">
+                <article class="h-full rounded-3xl border border-brand-dark/10 bg-white p-6 shadow-sm">
+                  <header class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=facearea&w=96&h=96&q=80"
+                      alt="Porträt von Aylin Özdemir" width="48" height="48" class="h-12 w-12 rounded-full object-cover"
+                      loading="lazy" />
+                    <div>
+                      <h3 class="text-base font-semibold text-brand-dark">Aylin Özdemir</h3>
+                      <p class="text-xs text-text-subtle">VW ID.3 · 19.01.2025</p>
+                    </div>
+                  </header>
+                  <p class="mt-4 text-sm text-text-subtle">
+                    Endlich eine Werkstatt, die sich mit E-Autos wirklich auskennt. Die Hochvoltdiagnose war schnell
+                    und verständlich erklärt. Top!
+                  </p>
+                  <div class="mt-4 flex items-center gap-1 text-brand-accent" aria-label="5 von 5 Sternen">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </article>
+              </li>
+              <li class="min-w-[100%] sm:min-w-[50%] lg:min-w-[33.333%]" role="group" aria-roledescription="slide"
+                aria-label="3 von 4">
+                <article class="h-full rounded-3xl border border-brand-dark/10 bg-white p-6 shadow-sm">
+                  <header class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?auto=format&fit=facearea&w=96&h=96&q=80"
+                      alt="Porträt von Laura Stein" width="48" height="48" class="h-12 w-12 rounded-full object-cover"
+                      loading="lazy" />
+                    <div>
+                      <h3 class="text-base font-semibold text-brand-dark">Laura Stein</h3>
+                      <p class="text-xs text-text-subtle">BMW X1 · 08.12.2024</p>
+                    </div>
+                  </header>
+                  <p class="mt-4 text-sm text-text-subtle">
+                    Die Terminbuchung war kinderleicht. Besonders gut: Push-Nachrichten bei jedem Reparaturschritt
+                    und ein kostenloser Ersatzwagen.
+                  </p>
+                  <div class="mt-4 flex items-center gap-1 text-brand-accent" aria-label="5 von 5 Sternen">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </article>
+              </li>
+              <li class="min-w-[100%] sm:min-w-[50%] lg:min-w-[33.333%]" role="group" aria-roledescription="slide"
+                aria-label="4 von 4">
+                <article class="h-full rounded-3xl border border-brand-dark/10 bg-white p-6 shadow-sm">
+                  <header class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1541534401786-2077eed87a74?auto=format&fit=facearea&w=96&h=96&q=80"
+                      alt="Porträt von Marco Lenz" width="48" height="48" class="h-12 w-12 rounded-full object-cover"
+                      loading="lazy" />
+                    <div>
+                      <h3 class="text-base font-semibold text-brand-dark">Marco Lenz</h3>
+                      <p class="text-xs text-text-subtle">Mercedes C-Klasse · 22.11.2024</p>
+                    </div>
+                  </header>
+                  <p class="mt-4 text-sm text-text-subtle">
+                    Faire Preise und super Beratung. Die Visualisierung der Reparaturkosten mit Alternativen ist sehr
+                    hilfreich gewesen.
+                  </p>
+                  <div class="mt-4 flex items-center gap-1 text-brand-accent" aria-label="5 von 5 Sternen">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 flex justify-center gap-2" data-carousel-dots>
+            <button type="button"
+              class="h-2.5 w-2.5 rounded-full bg-brand-accent/40 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+              aria-label="Bewertung 1 anzeigen" data-carousel-dot></button>
+            <button type="button"
+              class="h-2.5 w-2.5 rounded-full bg-brand-accent/20 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+              aria-label="Bewertung 2 anzeigen" data-carousel-dot></button>
+            <button type="button"
+              class="h-2.5 w-2.5 rounded-full bg-brand-accent/20 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+              aria-label="Bewertung 3 anzeigen" data-carousel-dot></button>
+            <button type="button"
+              class="h-2.5 w-2.5 rounded-full bg-brand-accent/20 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+              aria-label="Bewertung 4 anzeigen" data-carousel-dot></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Case Study -->
+    <section id="case" class="py-20 sm:py-24 md:py-28" aria-labelledby="case-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr,1fr] lg:items-center">
+          <div>
+            <span
+              class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Einblicke</span>
+            <h2 id="case-heading"
+              class="mt-4 font-display text-3xl font-semibold text-brand-dark sm:text-4xl md:text-[2.5rem]">
+              Projekt: Hochvoltbatterie-Refresh für E-Flotten
+            </h2>
+            <p class="mt-3 text-base text-text-subtle">
+              Für eine regionale Lieferflotte haben wir ein vollumfängliches Wartungskonzept für 24 E-Vans erstellt,
+              inklusive Predictive Maintenance und Ladeoptimierung.
+            </p>
+            <ul class="mt-6 space-y-4 text-sm text-text-subtle">
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                15% längere Reichweite durch Zellbalancing &amp; Thermomanagement.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                Automatisierte Reports für Flottenmanager.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-accent"></span>
+                Schulung des Teams für sichere Hochvoltarbeiten.
+              </li>
+            </ul>
+            <a href="#kontakt"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-textAccent transition hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">
+              Projekt anfragen
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <figure class="overflow-hidden rounded-[2rem] border border-brand-dark/10 bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=80"
+              alt="Techniker überprüft die Hochvoltbatterie eines Lieferwagens" loading="lazy"
+              class="h-full w-full rounded-[1.75rem] object-cover" />
+            <figcaption class="sr-only">Hochvoltbatterieprüfung</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Partner -->
+    <section id="partner" class="bg-brand-light py-16 sm:py-20" aria-labelledby="partner-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="text-center">
+          <span
+            class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">Partner
+            &amp; Netzwerke</span>
+          <h2 id="partner-heading"
+            class="mt-4 font-display text-2xl font-semibold text-brand-dark sm:text-3xl md:text-[2.25rem]">
+            Vertrauen durch starke Kooperationen
+          </h2>
+        </div>
+        <ul class="mt-10 grid items-center gap-6 text-text-subtle sm:grid-cols-3 lg:grid-cols-6">
+          <li
+            class="flex items-center justify-center rounded-2xl bg-white px-4 py-6 opacity-70 transition hover:opacity-100">
+            <span class="text-sm font-semibold uppercase tracking-chip">Bosch</span>
+          </li>
+          <li
+            class="flex items-center justify-center rounded-2xl bg-white px-4 py-6 opacity-70 transition hover:opacity-100">
+            <span class="text-sm font-semibold uppercase tracking-chip">Continental</span>
+          </li>
+          <li
+            class="flex items-center justify-center rounded-2xl bg-white px-4 py-6 opacity-70 transition hover:opacity-100">
+            <span class="text-sm font-semibold uppercase tracking-chip">Allianz</span>
+          </li>
+          <li
+            class="flex items-center justify-center rounded-2xl bg-white px-4 py-6 opacity-70 transition hover:opacity-100">
+            <span class="text-sm font-semibold uppercase tracking-chip">ZF</span>
+          </li>
+          <li
+            class="flex items-center justify-center rounded-2xl bg-white px-4 py-6 opacity-70 transition hover:opacity-100">
+            <span class="text-sm font-semibold uppercase tracking-chip">DEKRA</span>
+          </li>
+          <li
+            class="flex items-center justify-center rounded-2xl bg-white px-4 py-6 opacity-70 transition hover:opacity-100">
+            <span class="text-sm font-semibold uppercase tracking-chip">FairGarage</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <section id="faq" class="py-20 sm:py-24 md:py-28" aria-labelledby="faq-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="text-center">
+          <span
+            class="inline-flex items-center rounded-full bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-brand-textAccent">FAQ</span>
+          <h2 id="faq-heading"
+            class="mt-4 font-display text-3xl font-semibold text-brand-dark sm:text-4xl md:text-[2.5rem]">
+            Häufige Fragen
+          </h2>
+        </div>
+        <dl class="mx-auto mt-12 max-w-3xl space-y-4" data-accordion>
+          <div class="rounded-2xl border border-brand-dark/10 bg-white">
+            <dt>
+              <button type="button"
+                class="flex w-full items-center justify-between rounded-2xl px-6 py-4 text-left text-base font-semibold text-brand-dark transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+                data-accordion-trigger aria-expanded="true" aria-controls="faq-panel-1" id="faq-1">
+                Wie funktioniert die Online-Terminbuchung?
+                <span aria-hidden="true" class="ml-4 text-2xl text-brand-accent">−</span>
+              </button>
+            </dt>
+            <dd id="faq-panel-1" role="region" aria-labelledby="faq-1" class="px-6 pb-6 text-sm text-text-subtle">
+              Wählen Sie Leistungen (Einzel- oder Kombipakete), anschließend sehen Sie verfügbare Slots inklusive
+              Dauer und Preis. Nach Eingabe Ihrer Fahrzeugdaten bestätigen Sie den Termin und erhalten eine
+              Bestätigung per Mail sowie eine Option zum Kalenderexport.
+            </dd>
+          </div>
+          <div class="rounded-2xl border border-brand-dark/10 bg-white">
+            <dt>
+              <button type="button"
+                class="flex w-full items-center justify-between rounded-2xl px-6 py-4 text-left text-base font-semibold text-brand-dark transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+                data-accordion-trigger aria-expanded="false" aria-controls="faq-panel-2" id="faq-2">
+                Welche Ersatzteile werden verwendet?
+                <span aria-hidden="true" class="ml-4 text-2xl text-brand-accent">+</span>
+              </button>
+            </dt>
+            <dd id="faq-panel-2" role="region" aria-labelledby="faq-2"
+              class="hidden px-6 pb-6 text-sm text-text-subtle">
+              Wir verwenden ausschließlich Teile in OE-Qualität. Auf Wunsch bieten wir nachhaltige Alternativen mit
+              geprüften Rebuild-Komponenten an. Alle Teile sind rückverfolgbar dokumentiert.
+            </dd>
+          </div>
+          <div class="rounded-2xl border border-brand-dark/10 bg-white">
+            <dt>
+              <button type="button"
+                class="flex w-full items-center justify-between rounded-2xl px-6 py-4 text-left text-base font-semibold text-brand-dark transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+                data-accordion-trigger aria-expanded="false" aria-controls="faq-panel-3" id="faq-3">
+                Gibt es einen Hol- &amp; Bringservice?
+                <span aria-hidden="true" class="ml-4 text-2xl text-brand-accent">+</span>
+              </button>
+            </dt>
+            <dd id="faq-panel-3" role="region" aria-labelledby="faq-3"
+              class="hidden px-6 pb-6 text-sm text-text-subtle">
+              Ja, innerhalb des Stadtgebiets holen wir Ihr Fahrzeug kostenfrei ab. Darüber hinaus bieten wir einen
+              günstigen Bringservice an.
+            </dd>
+          </div>
+          <div class="rounded-2xl border border-brand-dark/10 bg-white">
+            <dt>
+              <button type="button"
+                class="flex w-full items-center justify-between rounded-2xl px-6 py-4 text-left text-base font-semibold text-brand-dark transition hover:bg-brand-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+                data-accordion-trigger aria-expanded="false" aria-controls="faq-panel-4" id="faq-4">
+                Wie werden Daten gespeichert?
+                <span aria-hidden="true" class="ml-4 text-2xl text-brand-accent">+</span>
+              </button>
+            </dt>
+            <dd id="faq-panel-4" role="region" aria-labelledby="faq-4"
+              class="hidden px-6 pb-6 text-sm text-text-subtle">
+              Alle Dokumentationen werden DSGVO-konform auf EU-Servern gespeichert. Sie entscheiden, welche Daten für
+              zukünftige Termine behalten werden.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <!-- Kontakt / Termin -->
+    <section id="kontakt" class="bg-brand-dark py-20 text-white sm:py-24 md:py-28" aria-labelledby="kontakt-heading">
+      <div class="mx-auto max-w-7xl px-6 xl:px-10">
+        <div class="flex flex-col gap-12 lg:grid lg:grid-cols-[1.4fr,1fr]">
+          <div>
+            <span
+              class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-chip text-white">Kontakt</span>
+            <h2 id="kontakt-heading"
+              class="mt-4 font-display text-3xl font-semibold text-white sm:text-4xl md:text-[2.5rem]">
+              Wir freuen uns auf Ihre Anfrage
+            </h2>
+            <p class="mt-3 max-w-xl text-base text-text-light">
+              Ob Termin, Beratung oder Notfall: unser Team reagiert innerhalb von 30 Minuten während der Öffnungszeiten.
+            </p>
+            <div class="mt-8 grid gap-6 md:grid-cols-2">
+              <address class="not-italic text-sm text-text-light">
+                <h3 class="text-lg font-semibold text-white">Adresse</h3>
+                <p class="mt-2">
+                  Meisterbetrieb GmbH<br />
+                  Werkstattstraße 12<br />
+                  60311 Frankfurt am Main
+                </p>
+              </address>
+              <div class="text-sm text-text-light">
+                <h3 class="text-lg font-semibold text-white">Kontakt</h3>
+                <p class="mt-2">
+                  Telefon: <a class="underline hover:text-brand-light" href="tel:+49691234567">+49 69 123 4567</a><br />
+                  E-Mail: <a class="underline hover:text-brand-light"
+                    href="mailto:service@meisterbetrieb.de">service@meisterbetrieb.de</a>
+                </p>
+                <p class="mt-4">
+                  Öffnungszeiten: Mo–Fr 07:30–18:30 Uhr<br />
+                  Sa 09:00–14:00 Uhr
+                </p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <h3 class="text-xl font-semibold text-white">Direkte Termin-Anfrage</h3>
+            <form class="mt-6 space-y-4" id="termin" aria-label="Termin Formular">
+              <div>
+                <label class="block text-sm font-semibold text-white" for="service">Service auswählen</label>
+                <select id="service" name="service"
+                  class="mt-2 block w-full rounded-xl border border-transparent bg-white/90 px-4 py-3 text-sm text-brand-dark shadow focus:border-brand-emerald focus:outline-none focus:ring-2 focus:ring-brand-emerald">
+                  <option>Inspektion</option>
+                  <option>Reifenwechsel</option>
+                  <option>Bremsenservice</option>
+                  <option>Diagnose</option>
+                  <option>Klimaservice</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-white" for="date">Wunschtermin</label>
+                <input type="date" id="date" name="date"
+                  class="mt-2 block w-full rounded-xl border border-transparent bg-white/90 px-4 py-3 text-sm text-brand-dark shadow focus:border-brand-emerald focus:outline-none focus:ring-2 focus:ring-brand-emerald"
+                  min="" required />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-white" for="time">Zeitslot</label>
+                <select id="time" name="time"
+                  class="mt-2 block w-full rounded-xl border border-transparent bg-white/90 px-4 py-3 text-sm text-brand-dark shadow focus:border-brand-emerald focus:outline-none focus:ring-2 focus:ring-brand-emerald">
+                  <option>08:00–09:30</option>
+                  <option>10:00–11:30</option>
+                  <option>12:30–14:00</option>
+                  <option>15:00–16:30</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-white" for="contact-name">Name &amp; Fahrzeug</label>
+                <input type="text" id="contact-name" name="contact-name"
+                  class="mt-2 block w-full rounded-xl border border-transparent bg-white/90 px-4 py-3 text-sm text-brand-dark shadow focus:border-brand-emerald focus:outline-none focus:ring-2 focus:ring-brand-emerald"
+                  placeholder="z. B. Laura Stein · BMW X1" required />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-white" for="email">E-Mail</label>
+                <input type="email" id="email" name="email"
+                  class="mt-2 block w-full rounded-xl border border-transparent bg-white/90 px-4 py-3 text-sm text-brand-dark shadow focus:border-brand-emerald focus:outline-none focus:ring-2 focus:ring-brand-emerald"
+                  placeholder="name@example.de" required />
+              </div>
+              <div class="flex items-center gap-3">
+                <input id="mobility" name="mobility" type="checkbox"
+                  class="h-5 w-5 rounded border-white/30 bg-white/80 text-brand-accent focus:ring-brand-emerald" />
+                <label for="mobility" class="text-sm text-text-light">Ersatzwagen oder Hol-&amp;Bringservice
+                  benötigt</label>
+              </div>
+              <div class="flex items-start gap-3 text-xs text-text-light">
+                <input id="privacy" name="privacy" type="checkbox"
+                  class="mt-0.5 h-4 w-4 rounded border-white/30 bg-white/80 text-brand-accent focus:ring-brand-emerald"
+                  required />
+                <label for="privacy">
+                  Ich stimme den Datenschutzbestimmungen zu und erlaube die Verarbeitung meiner Daten zur
+                  Terminvereinbarung.
+                </label>
+              </div>
+              <button type="submit"
+                class="flex w-full items-center justify-center rounded-xl bg-brand-accent px-5 py-3 text-base font-semibold text-brand-dark transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-dark">
+                Termin anfragen
+              </button>
+              <p class="text-xs text-text-light">
+                Dauer ca. 2 Minuten · Ihre Angaben werden in Ihrem Browser gespeichert, um den Vorgang fortzusetzen.
+              </p>
+            </form>
+          </aside>
+        </div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-[1.4fr,1fr]">
+          <div class="overflow-hidden rounded-3xl border border-white/10 shadow-glow">
+            <iframe title="KFZ Meisterbetrieb Standort"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.258795875201!2d8.681495876937718!3d50.1106449715195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0f90ffbb332d%3A0x676f27514ab3d83d!2sFrankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde"
+              width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              class="h-full w-full border-0"></iframe>
+          </div>
+          <div class="flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/10 p-6 text-sm text-text-light">
+            <h3 class="text-lg font-semibold text-white">Schnelle Hilfe</h3>
+            <p>Notfall-Hotline: <a class="underline hover:text-brand-light" href="tel:+49691239999">+49 69 123 9999</a>
+            </p>
+            <p>
+              WhatsApp Service: <a class="underline hover:text-brand-light" href="https://wa.me/49691234567">Jetzt
+                chatten</a>
+            </p>
+            <p>Live-Status Ihres Fahrzeugs jederzeit abrufbar im Kundenportal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="border-t border-brand-dark/10 bg-white py-16 text-sm text-text-subtle">
+    <div class="mx-auto grid max-w-7xl gap-10 px-6 sm:grid-cols-2 lg:grid-cols-4 xl:px-10">
+      <div>
+        <a href="#hero" class="inline-flex items-center gap-3" aria-label="Zurück zum Seitenanfang">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-lg font-semibold text-white">
+            KFZ
+          </span>
+          <span class="font-display text-lg font-semibold text-brand-dark">Meisterbetrieb</span>
+        </a>
+        <p class="mt-4 max-w-xs">
+          Ihr digitaler KFZ-Meisterbetrieb für Inspektion, Diagnose und Reparatur. Nachhaltig, transparent und
+          persönlich.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-base font-semibold text-brand-dark">Navigation</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#leistungen"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">Leistungen</a>
+          </li>
+          <li><a href="#prozess"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">Ablauf</a>
+          </li>
+          <li><a href="#bewertungen"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">Bewertungen</a>
+          </li>
+          <li><a href="#faq"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-base font-semibold text-brand-dark">Rechtliches</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">Impressum</a>
+          </li>
+          <li><a href="#"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">Datenschutz</a>
+          </li>
+          <li><a href="#"
+              class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">AGB</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-base font-semibold text-brand-dark">Updates</h3>
+        <p class="mt-4">Werkstatt-News und Wartungs-Tipps per E-Mail.</p>
+        <form class="mt-4 flex gap-2">
+          <label for="newsletter" class="sr-only">E-Mail für Newsletter</label>
+          <input id="newsletter" type="email" required placeholder="E-Mail Adresse"
+            class="flex-1 rounded-xl border border-brand-dark/10 bg-brand-light px-4 py-3 text-sm text-brand-dark focus:border-brand-emerald focus:outline-none focus:ring-2 focus:ring-brand-emerald" />
+          <button type="submit"
+            class="inline-flex items-center justify-center rounded-xl bg-brand-accent px-4 py-3 text-base font-semibold text-brand-dark transition hover:bg-brand-accentHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark">
+            Anmelden
+          </button>
+        </form>
+        <div class="mt-6 flex gap-4 text-lg text-brand-dark" style="align-items: center;">
+          <a href="#" aria-label="Instagram"
+            class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent"><img
+              src="https://img.icons8.com/?size=100&id=44907&format=png&color=000000" style="max-height: 20px;">
+          </a>
+          <a href="#" aria-label="LinkedIn"
+            class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">in</a>
+          <a href="#" aria-label="YouTube"
+            class="transition hover:text-brand-textAccent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-textAccent">▶</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 border-t border-brand-dark/10 pt-6 text-center text-xs text-text-subtle">
+      <p>© <time datetime="2025">2025</time> Meisterbetrieb GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+  <!-- Minimal JS for interactivity and progressive enhancement -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      // Sticky header background toggle
+      const header = document.querySelector("[data-header]");
+
+      const header_logotext = document.querySelectorAll('.header-logotext');
+      const nav = document.querySelector('nav')
+      const setHeaderState = () => {
+        if (window.scrollY > 16) {
+          header.classList.add("bg-brand-dark/90", "shadow-lg");
+          nav.classList.add('text-white')
+
+          header_logotext[0].style.color = 'white'
+          header_logotext[1].style.colors = 'white'
+
+
+        } else {
+          nav.classList.remove('text-white')
+
+          header.classList.remove("bg-brand-dark/90", "shadow-lg",);
+          header_logotext[0].style.color = ''
+          header_logotext[1].style.colors = ''
+        }
+      };
+      setHeaderState();
+      window.addEventListener("scroll", setHeaderState, { passive: true });
+
+      // Mobile menu toggle
+      const menuBtn = document.querySelector("[data-menu-btn]");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+          menuBtn.setAttribute("aria-expanded", String(!expanded));
+          mobileMenu.hidden = expanded;
+          mobileMenu.classList.toggle("pointer-events-none", expanded);
+          mobileMenu.classList.toggle("opacity-0", expanded);
+          mobileMenu.classList.toggle("scale-y-95", expanded);
+        });
+      }
+
+      // Scroll reveal animations
+      if (!prefersReducedMotion && "IntersectionObserver" in window) {
+        const style = document.createElement("style");
+        style.textContent = `
+            @keyframes fadeSlideUp {
+              0% { opacity: 0; transform: translateY(24px); }
+              100% { opacity: 1; transform: translateY(0); }
+            }
+            .reveal-hidden { opacity: 0; transform: translateY(24px); }
+            .reveal-visible { opacity: 1; transform: translateY(0); animation: fadeSlideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+          `;
+        document.head.appendChild(style);
+        const revealElements = document.querySelectorAll("section, article, .rounded-3xl");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.remove("reveal-hidden");
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -15%", threshold: 0.1 }
+        );
+        revealElements.forEach((el) => {
+          el.classList.add("reveal-hidden");
+          observer.observe(el);
+        });
+      }
+
+      // Testimonials carousel
+      const carousel = document.querySelector("[data-carousel]");
+      if (carousel) {
+        const track = carousel.querySelector("[data-carousel-track]");
+        const slides = Array.from(track.children);
+        const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+        const prevBtn = document.querySelector("[data-carousel-prev]");
+        const nextBtn = document.querySelector("[data-carousel-next]");
+        let currentIndex = 0;
+        let autoplayId;
+
+        const updateCarousel = (index) => {
+          const slideWidth = slides[0].getBoundingClientRect().width + parseInt(getComputedStyle(track).gap || "0", 10);
+          track.style.transform = `translateX(-${index * slideWidth}px)`;
+          slides.forEach((slide, idx) => {
+            slide.setAttribute("aria-label", `${idx + 1} von ${slides.length}`);
+          });
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle("bg-brand-accent/40", idx === index);
+            dot.classList.toggle("bg-brand-accent/20", idx !== index);
+          });
+          currentIndex = index;
+        };
+
+        const next = () => updateCarousel((currentIndex + 1) % slides.length);
+        const prev = () => updateCarousel((currentIndex - 1 + slides.length) % slides.length);
+
+        dots.forEach((dot, idx) => {
+          dot.addEventListener("click", () => {
+            updateCarousel(idx);
+            restartAutoplay();
+          });
+        });
+        if (nextBtn) nextBtn.addEventListener("click", () => { next(); restartAutoplay(); });
+        if (prevBtn) prevBtn.addEventListener("click", () => { prev(); restartAutoplay(); });
+
+        const restartAutoplay = () => {
+          if (prefersReducedMotion) return;
+          clearInterval(autoplayId);
+          autoplayId = setInterval(next, 6000);
+        };
+
+        if (!prefersReducedMotion) {
+          autoplayId = setInterval(next, 6000);
+          carousel.addEventListener("mouseenter", () => clearInterval(autoplayId));
+          carousel.addEventListener("mouseleave", restartAutoplay);
+        }
+
+        carousel.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowRight") {
+            next();
+            restartAutoplay();
+          }
+          if (event.key === "ArrowLeft") {
+            prev();
+            restartAutoplay();
+          }
+        });
+
+        let startX = 0;
+        let isDragging = false;
+        const onDragStart = (event) => {
+          isDragging = true;
+          startX = event.touches ? event.touches[0].clientX : event.clientX;
+        };
+        const onDragMove = (event) => {
+          if (!isDragging) return;
+          const currentX = event.touches ? event.touches[0].clientX : event.clientX;
+          const deltaX = currentX - startX;
+          if (Math.abs(deltaX) > 80) {
+            isDragging = false;
+            if (deltaX < 0) next();
+            else prev();
+            restartAutoplay();
+          }
+        };
+        const onDragEnd = () => {
+          isDragging = false;
+        };
+        carousel.addEventListener("pointerdown", onDragStart);
+        carousel.addEventListener("pointermove", onDragMove);
+        carousel.addEventListener("pointerup", onDragEnd);
+        carousel.addEventListener("touchstart", onDragStart, { passive: true });
+        carousel.addEventListener("touchmove", onDragMove, { passive: true });
+        carousel.addEventListener("touchend", onDragEnd);
+
+        updateCarousel(0);
+      }
+
+      // FAQ accordion
+      const accordion = document.querySelector("[data-accordion]");
+      if (accordion) {
+        accordion.querySelectorAll("[data-accordion-trigger]").forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const expanded = trigger.getAttribute("aria-expanded") === "true";
+            const icon = trigger.querySelector("span[aria-hidden='true']");
+            const content = document.getElementById(trigger.getAttribute("aria-controls"));
+            trigger.setAttribute("aria-expanded", String(!expanded));
+            content.classList.toggle("hidden", expanded);
+            icon.textContent = expanded ? "+" : "−";
+          });
+        });
+      }
+
+      // Form enhancements: persist draft data
+      const form = document.getElementById("termin");
+      const storageKey = "kfz-termin-draft";
+      if (form && "localStorage" in window) {
+        const populateFromStorage = () => {
+          try {
+            const stored = JSON.parse(localStorage.getItem(storageKey) || "{}");
+            Object.entries(stored).forEach(([key, value]) => {
+              const input = form.elements.namedItem(key);
+              if (!input) return;
+              if (input.type === "checkbox") {
+                input.checked = Boolean(value);
+              } else {
+                input.value = value;
+              }
+            });
+          } catch (error) {
+            console.warn("Konnte Entwurf nicht laden", error);
+          }
+        };
+        const persistToStorage = () => {
+          const formData = new FormData(form);
+          const payload = {};
+          formData.forEach((value, key) => {
+            payload[key] = value;
+          });
+          const mobilityField = form.elements.namedItem("mobility");
+          const privacyField = form.elements.namedItem("privacy");
+          if (mobilityField) payload.mobility = mobilityField.checked;
+          if (privacyField) payload.privacy = privacyField.checked;
+          localStorage.setItem(storageKey, JSON.stringify(payload));
+        };
+        populateFromStorage();
+        form.addEventListener("input", persistToStorage);
+        form.addEventListener("change", persistToStorage);
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          form.reset();
+          localStorage.removeItem(storageKey);
+          alert("Vielen Dank! Wir melden uns in Kürze mit einer Terminbestätigung.");
+        });
+      }
+
+      // Date input min attribute (today)
+      const dateInput = document.getElementById("date");
+      if (dateInput) {
+        const today = new Date();
+        const formatted = today.toISOString().split("T")[0];
+        dateInput.min = formatted;
+      }
+    });
+  </script>
+</body>
+
+</html>

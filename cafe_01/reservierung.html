@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café Sonnengold</title>
+  <meta name="description" content="Café, Bäckerei & Konditorei in Ihrer Nähe – frisch gebacken, mit Liebe serviert." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: custom colors & fonts
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
+            display: ['"Playfair Display"', 'Georgia', 'serif']
+          },
+          colors: {
+            coffee: {
+              50: '#f8f4f1',
+              100:'#f3ebe4',
+              200:'#e7d9cc',
+              300:'#d6c1ad',
+              400:'#be9c7e',
+              500:'#a97859',
+              600:'#8b5e43',
+              700:'#704a35',
+              800:'#543728',
+              900:'#3a251b',
+            },
+            cream: '#f9f5ee',
+            accent: '#f97316'
+          },
+          boxShadow: {
+            soft: '0 10px 25px -10px rgba(0,0,0,.15)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+  <body class="bg-cream text-coffee-900 font-sans selection:bg-accent/20 selection:text-coffee-900">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <span class="text-2xl">☕</span>
+          <span class="font-display text-xl tracking-wide group-hover:text-accent transition">Café Sonnengold</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="hover:text-accent transition" href="index.html">Home</a>
+          <a class="hover:text-accent transition" href="menu.html">Menü</a>
+          <a class="hover:text-accent transition" href="reservierung.html">Reservierung</a>
+          <a class="hover:text-accent transition" href="#">Impressum</a>
+          <a class="hover:text-accent transition" href="#">Datenschutz</a>
+        </nav>
+        <a href="reservierung.html" class="ml-3 inline-flex items-center rounded-xl bg-accent text-white px-4 py-2 text-sm shadow-soft hover:opacity-90 transition">
+          Jetzt reservieren
+        </a>
+      </div>
+    </header>
+    <main class="pt-20">
+
+      <section class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10">
+        <div>
+          <h1 class="font-display text-3xl mb-4">Reservierung</h1>
+          <p class="text-coffee-700 mb-6">Wir freuen uns auf Ihren Besuch. Bitte füllen Sie das Formular aus.</p>
+          <form onsubmit="handleReserve(event)" class="bg-white rounded-2xl shadow-soft p-6 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block text-sm">
+                <span class="block mb-1">Name</span>
+                <input required class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" type="text" name="name" placeholder="Ihr Name">
+              </label>
+              <label class="block text-sm">
+                <span class="block mb-1">E-Mail</span>
+                <input required class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" type="email" name="email" placeholder="name@mail.de">
+              </label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block text-sm">
+                <span class="block mb-1">Telefon</span>
+                <input class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" type="tel" name="phone" placeholder="+49...">
+              </label>
+              <label class="block text-sm">
+                <span class="block mb-1">Gäste</span>
+                <input required min="1" max="20" class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" type="number" name="guests" placeholder="2">
+              </label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block text-sm">
+                <span class="block mb-1">Datum</span>
+                <input required class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" type="date" name="date">
+              </label>
+              <label class="block text-sm">
+                <span class="block mb-1">Zeit</span>
+                <input required class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" type="time" name="time">
+              </label>
+            </div>
+            <label class="block text-sm">
+              <span class="block mb-1">Nachricht</span>
+              <textarea rows="4" class="w-full rounded-xl border border-coffee-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent/30" name="message" placeholder="Anlass, Präferenzen..."></textarea>
+            </label>
+            <button class="w-full rounded-xl bg-accent text-white py-3 font-medium shadow-soft hover:opacity-90 transition">Jetzt reservieren</button>
+            <p id="reserve-note" class="hidden text-green-700 bg-green-50 border border-green-200 rounded-xl px-3 py-2">
+              Vielen Dank! Ihre Reservierungsanfrage wurde übermittelt. Wir melden uns in Kürze.
+            </p>
+          </form>
+        </div>
+        <div>
+          <div class="rounded-2xl overflow-hidden shadow-soft h-[420px] bg-white">
+            <iframe class="w-full h-full" loading="lazy"
+              src="https://www.google.com/maps?q=Karlsruhe%20Hauptstrasse%2012&output=embed"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <div class="mt-4 text-sm">
+            <p><span class="font-medium">Adresse:</span> Hauptstraße 12, 76133 Karlsruhe</p>
+            <p><span class="font-medium">Telefon:</span> +49 721 123456</p>
+            <p><span class="font-medium">E-Mail:</span> hallo@sonnengold.cafe</p>
+            <p class="mt-2"><span class="font-medium">Öffnungszeiten:</span> Mo–Fr 7:00–18:00 · Sa–So 8:00–16:00</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-16 border-t border-coffee-100 bg-white/60">
+      <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl">☕</span>
+            <span class="font-display text-lg">Café Sonnengold</span>
+          </div>
+          <p class="text-sm text-coffee-700">Frisch gebacken, mit Liebe serviert.</p>
+        </div>
+        <nav class="text-sm space-y-2">
+          <a class="block hover:text-accent" href="index.html">Home</a>
+          <a class="block hover:text-accent" href="menu.html">Menü</a>
+          <a class="block hover:text-accent" href="reservierung.html">Reservierung</a>
+          <a class="block hover:text-accent" href="#">Impressum</a>
+          <a class="block hover:text-accent" href="#">Datenschutz</a>
+        </nav>
+        <div class="text-sm">
+          <p class="font-medium mb-2">Kontakt</p>
+          <p>Hauptstraße 12, 76133 Karlsruhe</p>
+          <p>+49 721 123456</p>
+          <p>hallo@sonnengold.cafe</p>
+          <div class="mt-3 flex gap-3">
+            <a aria-label="Instagram" class="hover:text-accent" href="#">Instagram</a>
+            <a aria-label="Facebook" class="hover:text-accent" href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-xs text-coffee-600 py-4 bg-white/80">© 2025 Café Sonnengold</div>
+    </footer>
+    <script>
+      // Tiny helper for menu filters (only used on menu.html)
+      window.filterMenu = (category) => {
+        const cards = document.querySelectorAll('[data-cat]');
+        cards.forEach(c => {
+          const cat = c.getAttribute('data-cat');
+          const show = category === 'all' || cat === category;
+          c.classList.toggle('hidden', !show);
+        });
+        const tabs = document.querySelectorAll('[data-tab]');
+        tabs.forEach(t => t.classList.remove('bg-accent', 'text-white'));
+        const active = document.querySelector('[data-tab="' + category + '"]');
+        if (active) active.classList.add('bg-accent','text-white');
+      };
+      // Simple success message on reservation form
+      window.handleReserve = (e) => {
+        e.preventDefault();
+        const note = document.getElementById('reserve-note');
+        if (note){ note.classList.remove('hidden'); note.scrollIntoView({behavior:'smooth', block:'center'}); }
+        e.target.reset();
+      };
+    </script>
+  </body>
+</html>
