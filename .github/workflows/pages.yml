@@ -1,0 +1,158 @@
+name: Build & Deploy Showcase
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: true
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Prepare output dir
+              run: |
+                  rm -rf _site
+                  mkdir -p _site
+
+            - name: Build/collect projects
+              shell: bash
+              run: |
+                  shopt -s nullglob
+                  # перебираем только директории верхнего уровня
+                  for dir in */ ; do
+                    name="${dir%/}"
+                    # пропускаем служебные папки
+                    [[ "$name" == ".github" || "$name" == "_site" ]] && continue
+
+                    echo "::group::Process $name"
+
+                    if [[ -f "$dir/package.json" ]]; then
+                      echo "Found package.json in $name"
+                      # проверим, есть ли скрипт build
+                      if node -e "const p=require('./$dir/package.json'); if(!p.scripts||!p.scripts.build){process.exit(2)}"; then
+                        pushd "$dir" >/dev/null
+                        npm ci --no-audit --no-fund
+                        npm run build
+                        popd >/dev/null
+
+                        # возможные варианты выходной папки
+                        out=""
+                        [[ -d "$dir/dist"  ]] && out="$dir/dist"
+                        [[ -z "$out" && -d "$dir/build" ]] && out="$dir/build"
+
+                        if [[ -z "$out" ]]; then
+                          echo "WARN: не найден dist/build у $name — пропускаю"
+                          echo "::endgroup::"
+                          continue
+                        fi
+
+                        mkdir -p "_site/$name"
+                        rsync -a --delete "$out"/ "_site/$name"/
+                      else
+                        echo "WARN: у $name нет scripts.build — проверяю как статический"
+                        if [[ -f "$dir/index.html" ]]; then
+                          mkdir -p "_site/$name"
+                          rsync -a --delete \
+                            --exclude 'node_modules' --exclude 'src' --exclude '.git' \
+                            "$dir" "_site/$name-tmp"
+                          rsync -a --delete "_site/$name-tmp/$name/" "_site/$name/"
+                          rm -rf "_site/$name-tmp"
+                        fi
+                      fi
+
+                    elif [[ -f "$dir/index.html" ]]; then
+                      echo "Static site detected in $name"
+                      mkdir -p "_site/$name"
+                      rsync -a --delete \
+                        --exclude 'node_modules' --exclude 'src' --exclude '.git' \
+                        "$dir" "_site/$name-tmp"
+                      rsync -a --delete "_site/$name-tmp/$name/" "_site/$name/"
+                      rm -rf "_site/$name-tmp"
+                    else
+                      echo "No build or index.html for $name — skip"
+                      echo "::endgroup::"
+                      continue
+                    fi
+
+                    # SPA fallback: копируем 404.html = index.html
+                    if [[ -f "_site/$name/index.html" ]]; then
+                      cp "_site/$name/index.html" "_site/$name/404.html" || true
+                    fi
+
+                    echo "::endgroup::"
+                  done
+
+            - name: Generate showcase index
+              run: |
+                  cat > _site/index.html <<'HTML'
+                  <!doctype html>
+                  <html lang="ru">
+                  <head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width,initial-scale=1">
+                    <title>Showcase</title>
+                    <style>
+                      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;padding:32px;background:#0f1220;color:#eef}
+                      h1{margin:0 0 16px}
+                      .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+                      .card{background:#161a2b;border:1px solid #242944;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}
+                      .btn{display:inline-block;margin-top:auto;padding:10px 12px;border-radius:12px;border:1px solid #3a3f60;text-decoration:none;color:#eef}
+                      .btn:hover{background:#1b2040}
+                      iframe{width:100%;height:220px;border:1px solid #242944;border-radius:12px;background:#000}
+                    </style>
+                  </head>
+                  <body>
+                    <h1>Showcase</h1>
+                    <div class="grid">
+                  HTML
+
+                  for p in _site/*/ ; do
+                    name="$(basename "$p")"
+                    [[ "$name" == ".git" ]] && continue
+                    [[ "$name" == "assets" ]] && continue
+                    cat >> _site/index.html <<HTML
+                      <div class="card">
+                        <strong>${name}</strong>
+                        <iframe src="./${name}/" loading="lazy"></iframe>
+                        <a class="btn" href="./${name}/" target="_blank">Open demo</a>
+                      </div>
+                  HTML
+                  done
+
+                  cat >> _site/index.html <<'HTML'
+                    </div>
+                  </body>
+                  </html>
+                  HTML
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: _site
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - id: deployment
+              uses: actions/deploy-pages@v4

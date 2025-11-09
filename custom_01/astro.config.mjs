@@ -7,13 +7,16 @@ import sitemap from "@astrojs/sitemap";
 
 // Iconify collections (TLA ok in Astro)
 const simpleIcons = (
-  await import("@iconify-json/simple-icons/icons.json", { assert: { type: "json" } })
+  await import("@iconify-json/simple-icons/icons.json", {
+    assert: { type: "json" },
+  })
 ).default;
 const lucide = (
   await import("@iconify-json/lucide/icons.json", { assert: { type: "json" } })
 ).default;
 
 export default defineConfig({
+  base: "./", // важна относительная база
   site: "https://example.com", // ← change to your domain
   output: "static", // or 'hybrid'/'server' if using an adapter
   // adapter: vercel(), // uncomment when you deploy to Vercel
@@ -21,17 +24,17 @@ export default defineConfig({
     icon({
       collections: {
         "simple-icons": simpleIcons,
-        lucide: lucide
-      }
+        lucide: lucide,
+      },
     }),
-    sitemap()
+    sitemap(),
   ],
   vite: {
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        assets: fileURLToPath(new URL("./src/assets", import.meta.url))
-      }
-    }
-  }
+        assets: fileURLToPath(new URL("./src/assets", import.meta.url)),
+      },
+    },
+  },
 });
