@@ -2,5 +2,5 @@
     "buildCommand": "npm ci --no-audit --no-fund && npm run build",
     "outputDirectory": "dist",
     "framework": "vite",
-    "ignoreCommand": "git diff --quiet $VERCEL_GIT_PREVIOUS_SHA $VERCEL_GIT_COMMIT_SHA -- cafe_02 && exit 0 || exit 1"
+    "ignoreCommand": "if [ -z \"$VERCEL_GIT_PREVIOUS_SHA\" ]; then exit 1; fi; git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . && exit 0 || exit 1"
 }
