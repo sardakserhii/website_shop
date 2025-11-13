@@ -1,0 +1,53 @@
+---
+import heroGridItems from "src/data/gridimages";
+---
+
+<!-- hero component with 2 horizontal sections  -->
+<section
+    class="w-full bg-gray-100 py-20"
+    style="background-image: url('/images/hero-background.jpg'); background-size: cover; background-position: center;"
+>
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <!-- Text Section -->
+        <div class="w-full gap-4 flex flex-col md:w-1/2 mb-10 md:mb-0">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Hochwertige Lederprodukte
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Entdecken Sie unsere exklusive Kollektion von
+                    handgefertigten Lederwaren. Lenkrad neu beziehen, Sitze,
+                    Kopfstützen & Kissen – lokal im Raum Heilbronn/Schwaigern.
+                    Schnelle Ausführung, Foto-Bericht, Garantie.
+                </p>
+            </div>
+            <div class="flex flex-row gap-x-4 space-x-2 justify-start">
+                <p class="py-2 px-4 rounded-md bg-black/70 text-white">
+                    ✓ Abholung
+                </p>
+                <p class="py-2 px-4 rounded-md bg-black/70 text-white">
+                    ✓ Lieferung
+                </p>
+                <p class="py-2 px-4 rounded-md bg-black/70 text-white">
+                    ✓ Foto-Preis
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="w-full md:w-1/2 flex justify-center">
+            <!-- section with 3x3 images -->
+            <div class="grid grid-cols-3 gap-4">
+                {
+                    heroGridItems.map((item) => (
+                        <img
+                            src={item.image}
+                            alt={item.alt}
+                            class="w-32 h-32 object-cover rounded-lg shadow-md"
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

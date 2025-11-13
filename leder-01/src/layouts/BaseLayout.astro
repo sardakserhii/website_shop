@@ -1,0 +1,46 @@
+---
+import Seo from "../components/Seo.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/base.css";
+import { siteMeta } from "../lib/site";
+
+interface Props {
+    title?: string;
+    description?: string;
+    url?: string;
+    image?: string;
+    locale?: string;
+}
+const seo = {
+    title: Astro.props.title ?? siteMeta.title,
+    description: Astro.props.description ?? siteMeta.description,
+    url: Astro.props.url ?? siteMeta.url,
+    image: Astro.props.image ?? siteMeta.image,
+    locale: Astro.props.locale ?? siteMeta.locale,
+};
+---
+
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Google Fonts: Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <Seo {...seo} />
+    </head>
+    <body>
+        <Header />
+        <main class="">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

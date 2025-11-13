@@ -1,0 +1,96 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<!-- section Leistungen with 4 cards, every card have Title, Price "ab", description -->
+<section class="w-full bg-gray-100 py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+            Unsere Leistungen
+        </h2>
+        <!-- icon -->
+        <Icon
+            name="lucide:tool-case"
+            class="w-12 h-12 mb-4 mx-auto text-amber-400"
+        />
+        <p class="text-center text-gray-600 mb-12">
+            Entdecken Sie unsere vielfältigen Lederarbeiten, die Qualität und
+            Handwerkskunst vereinen.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div
+                class="flex flex-col bg-gray-100 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <div class="w-full p-6 bg-amber-400 rounded-t-md flex-shrink-0">
+                    <h3 class="text-xl font-semibold mb-4">Lenkrad beziehen</h3>
+                    <Icon name="lucide:badge" class="w-12 h-12 mb-4 mx-auto" />
+                    <p class="text-lg text-gray-700 font-bold">ab 199€</p>
+                </div>
+                <div class="flex-grow">
+                    <p class="p-6 text-gray-600">
+                        Professionelles Neubeziehen Ihres Lenkrads mit
+                        hochwertigem Leder für optimalen Komfort und Stil.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="flex flex-col bg-gray-100 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <div class="w-full p-6 bg-amber-400 rounded-t-md flex-shrink-0">
+                    <h3 class="text-xl font-semibold mb-4">Sitze beziehen</h3>
+                    <Icon
+                        name="lucide:armchair"
+                        class="w-12 h-12 mb-4 mx-auto"
+                    />
+                    <p class="text-lg text-gray-700 font-bold">ab 499€</p>
+                </div>
+                <div class="flex-grow">
+                    <p class="p-6 text-gray-600">
+                        Maßgeschneiderte Lederbezüge für Ihre Autositze, die
+                        Komfort und Eleganz vereinen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="flex flex-col bg-gray-100 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <div class="w-full p-6 bg-amber-400 rounded-t-md flex-shrink-0">
+                    <h3 class="text-xl font-semibold mb-4">Kopfstützen</h3>
+                    <Icon name="lucide:barrel" class="w-12 h-12 mb-4 mx-auto" />
+                    <p class="text-lg text-gray-700 font-bold">ab 99€</p>
+                </div>
+                <div class="flex-grow">
+                    <p class="p-6 text-gray-600">
+                        Hochwertige Lederbezüge für Kopfstützen, die Ihren
+                        Fahrkomfort verbessern.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="flex flex-col bg-gray-100 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <div class="w-full p-6 bg-amber-400 rounded-t-md flex-shrink-0">
+                    <h3 class="text-xl font-semibold mb-4">Kissenbezüge</h3>
+                    <Icon
+                        name="lucide:palette"
+                        class="w-12 h-12 mb-4 mx-auto"
+                    />
+                    <p class="text-lg text-gray-700 font-bold">ab 49€</p>
+                </div>
+                <div class="flex-grow">
+                    <p class="p-6 text-gray-600">
+                        Stilvolle und bequeme Lederkissenbezüge, die perfekt zu
+                        Ihrem Interieur passen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

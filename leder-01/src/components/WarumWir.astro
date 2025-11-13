@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<!-- row section with 4 quad blocks, every block have icon, title, desctription   -->
+<section class="w-full bg-white py-20">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Block 1 -->
+            <div
+                class="flex flex-col items-center justify-between text-center p-6 bg-amber-400/70 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <!-- medal icon -->
+                <Icon name="lucide:medal" class="w-12 h-12 mb-4" />
+
+                <h3 class="text-xl font-semibold mb-2">Höchste Qualität</h3>
+                <p class="text-gray-600">
+                    Wir verwenden nur die besten Materialien für unsere
+                    Lederprodukte, um Langlebigkeit und Komfort zu
+                    gewährleisten.
+                </p>
+            </div>
+
+            <!-- Block 2 -->
+            <div
+                class="flex flex-col items-center justify-between text-center p-6 bg-amber-400/70 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <Icon name="lucide:settings" class="w-12 h-12 mb-4" />
+                <h3 class="text-xl font-semibold mb-2">
+                    Individuelle Anpassung
+                </h3>
+                <p class="text-gray-600">
+                    Jedes Produkt wird nach Ihren Wünschen gefertigt, um perfekt
+                    zu Ihrem Stil und Bedarf zu passen.
+                </p>
+            </div>
+
+            <!-- Block 3 -->
+            <div
+                class="flex flex-col items-center justify-between text-center p-6 bg-amber-400/70 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <Icon name="lucide:axe" class="w-12 h-12 mb-4" />
+
+                <h3 class="text-xl font-semibold mb-2">
+                    Meisterhafte Handwerkskunst
+                </h3>
+                <p class="text-gray-600">
+                    Unsere erfahrenen Handwerker legen größten Wert auf Details
+                    und Präzision bei der Herstellung jedes Produkts.
+                </p>
+            </div>
+
+            <!-- Block 4 -->
+            <div
+                class="flex flex-col items-center justify-between text-center p-6 bg-amber-400/70 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+                <Icon name="lucide:leaf" class="w-12 h-12 mb-4" />
+                <h3 class="text-xl font-semibold mb-2">Nachhaltigkeit</h3>
+                <p class="text-gray-600">
+                    Wir engagieren uns für umweltfreundliche Praktiken und
+                    verwenden nachhaltige Materialien, wo immer es möglich ist.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
