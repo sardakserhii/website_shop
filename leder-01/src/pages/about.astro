@@ -1,7 +1,74 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="About — Astro Starter" description="About this starter">
-  <h1 class="text-2xl font-semibold mb-4">About</h1>
-  <p class="text-white/70">This starter provides a compact yet scalable foundation for content and landing pages. Extend freely.</p>
+
+<BaseLayout
+    title="About Us — Leder-01"
+    description="The history of the Leder-01 workshop, our team, and our approach to working with natural leather."
+    image="/hero_bg.avif"
+>
+    <!-- Hero Section -->
+    <section
+        class="pt-12 px-6 md:px-8 bg-gradient-to-b from-neutral-50 to-white"
+    >
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Über Leder-01</h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Traditionelles Handwerk trifft auf zeitloses Design
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 md:py-24 px-6 md:px-8">
+        <div class="max-w-6xl mx-auto space-y-24">
+            <!-- Our Story -->
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+            >
+                <div class="relative group">
+                    <img
+                        src="/about/workshop.avif"
+                        alt="Unsere Werkstatt"
+                        class="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-3xl md:text-4xl font-bold">
+                        Unsere Geschichte
+                    </h2>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Leder-01 wurde aus der Leidenschaft gegründet,
+                        hochwertige Lederwaren herzustellen. Wir verbinden
+                        traditionelles Handwerk mit modernem Design, um zeitlose
+                        Stücke zu schaffen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Approach -->
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+            >
+                <div class="space-y-4 lg:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold">Unser Ansatz</h2>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Wir arbeiten ausschließlich mit natürlichem Leder und
+                        wählen jedes Stück sorgfältig nach Qualität und
+                        Charakter aus. Jeder Artikel wird mit Liebe zum Detail
+                        handgefertigt und ist auf Langlebigkeit ausgelegt.
+                    </p>
+                </div>
+                <div class="relative group lg:order-2">
+                    <img
+                        src="/about/craftsmanship.avif"
+                        alt="Handwerkskunst"
+                        class="w-full h-auto max-h-[600px] object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
 </BaseLayout>

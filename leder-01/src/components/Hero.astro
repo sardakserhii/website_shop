@@ -5,45 +5,57 @@ import heroGridItems from "src/data/gridimages";
 <!-- hero component with 2 horizontal sections  -->
 <section
     class="w-full bg-gray-100 py-20"
-    style="background-image: url('/images/hero-background.jpg'); background-size: cover; background-position: center;"
+    style="background-image: url('/hero_bg.avif'); background-size: cover; background-position: center;"
 >
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+    <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-stretch gap-8"
+    >
         <!-- Text Section -->
-        <div class="w-full gap-4 flex flex-col md:w-1/2 mb-10 md:mb-0">
+        <div
+            class="w-full gap-4 flex flex-col justify-evenly md:w-1/2 bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg"
+        >
             <div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                     Hochwertige Lederprodukte
                 </h1>
-                <p class="text-lg text-gray-600 mb-8">
+                <p class="text-lg text-gray-800 mb-8">
                     Entdecken Sie unsere exklusive Kollektion von
                     handgefertigten Lederwaren. Lenkrad neu beziehen, Sitze,
                     Kopfstützen & Kissen – lokal im Raum Heilbronn/Schwaigern.
                     Schnelle Ausführung, Foto-Bericht, Garantie.
                 </p>
             </div>
-            <div class="flex flex-row gap-x-4 space-x-2 justify-start">
-                <p class="py-2 px-4 rounded-md bg-black/70 text-white">
+            <div class="flex flex-row gap-x-4 justify-start">
+                <p
+                    class="py-2 px-4 rounded-md bg-black text-white font-semibold"
+                >
                     ✓ Abholung
                 </p>
-                <p class="py-2 px-4 rounded-md bg-black/70 text-white">
+                <p
+                    class="py-2 px-4 rounded-md bg-black text-white font-semibold"
+                >
                     ✓ Lieferung
                 </p>
-                <p class="py-2 px-4 rounded-md bg-black/70 text-white">
+                <p
+                    class="py-2 px-4 rounded-md bg-black text-white font-semibold"
+                >
                     ✓ Foto-Preis
                 </p>
             </div>
         </div>
 
         <!-- Image Section -->
-        <div class="w-full md:w-1/2 flex justify-center">
+        <div class="w-full md:w-1/2 flex justify-center items-center">
             <!-- section with 3x3 images -->
-            <div class="grid grid-cols-3 gap-4">
+            <div
+                class="grid grid-cols-3 gap-4 p-6 bg-white/60 backdrop-blur-sm rounded-lg shadow-lg"
+            >
                 {
                     heroGridItems.map((item) => (
                         <img
                             src={item.image}
                             alt={item.alt}
-                            class="w-32 h-32 object-cover rounded-lg shadow-md"
+                            class="w-32 h-32 object-cover rounded-lg shadow-md border-2 border-gray-200"
                         />
                     ))
                 }
