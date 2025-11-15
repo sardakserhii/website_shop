@@ -50,3 +50,5 @@ tmp/
 temp/
 test-starter/
 
+# vercel files
+.vercel/
